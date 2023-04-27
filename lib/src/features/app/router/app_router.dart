@@ -10,7 +10,7 @@ import 'package:umyra/src/features/screens/home/pages/book_page.dart';
 import 'package:umyra/src/features/screens/home/pages/home_page.dart';
 import 'package:umyra/src/features/screens/home/pages/tasbih_detail.dart';
 import 'package:umyra/src/features/screens/home/pages/tasbih_page.dart';
-import 'package:umyra/src/features/screens/location/pages/location_page.dart';
+import 'package:umyra/src/features/screens/tour/pages/tour_page.dart';
 import 'package:umyra/src/features/screens/profile/pages/profile_page.dart';
 
 part 'app_router.gr.dart';
@@ -69,9 +69,9 @@ part 'app_router.gr.dart';
       AutoRoute(
         page: EmptyRouterPage,
         path: 'location',
-        name: "LocationRouter",
+        name: "TourRouter",
         children: [
-          AutoRoute(page: LoactionScreen, path: ''),
+          AutoRoute(page: TourScreen, path: ''),
         ],
       ),
       AutoRoute(

@@ -41,7 +41,7 @@ class _$AppRouter extends RootStackRouter {
         child: const EmptyRouterPage(),
       );
     },
-    LocationRouter.name: (routeData) {
+    TourRouter.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
         child: const EmptyRouterPage(),
@@ -95,10 +95,10 @@ class _$AppRouter extends RootStackRouter {
         child: const QuranScreen(),
       );
     },
-    LoactionScreenRoute.name: (routeData) {
+    TourScreenRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const LoactionScreen(),
+        child: const TourScreen(),
       );
     },
     ProfileScreenRoute.name: (routeData) {
@@ -169,14 +169,14 @@ class _$AppRouter extends RootStackRouter {
               ],
             ),
             RouteConfig(
-              LocationRouter.name,
+              TourRouter.name,
               path: 'location',
               parent: CustomNavigationWidgetRoute.name,
               children: [
                 RouteConfig(
-                  LoactionScreenRoute.name,
+                  TourScreenRoute.name,
                   path: '',
-                  parent: LocationRouter.name,
+                  parent: TourRouter.name,
                 )
               ],
             ),
@@ -250,15 +250,15 @@ class QuranRouter extends PageRouteInfo<void> {
 
 /// generated route for
 /// [EmptyRouterPage]
-class LocationRouter extends PageRouteInfo<void> {
-  const LocationRouter({List<PageRouteInfo>? children})
+class TourRouter extends PageRouteInfo<void> {
+  const TourRouter({List<PageRouteInfo>? children})
       : super(
-          LocationRouter.name,
+          TourRouter.name,
           path: 'location',
           initialChildren: children,
         );
 
-  static const String name = 'LocationRouter';
+  static const String name = 'TourRouter';
 }
 
 /// generated route for
@@ -359,15 +359,15 @@ class QuranScreenRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [LoactionScreen]
-class LoactionScreenRoute extends PageRouteInfo<void> {
-  const LoactionScreenRoute()
+/// [TourScreen]
+class TourScreenRoute extends PageRouteInfo<void> {
+  const TourScreenRoute()
       : super(
-          LoactionScreenRoute.name,
+          TourScreenRoute.name,
           path: '',
         );
 
-  static const String name = 'LoactionScreenRoute';
+  static const String name = 'TourScreenRoute';
 }
 
 /// generated route for
