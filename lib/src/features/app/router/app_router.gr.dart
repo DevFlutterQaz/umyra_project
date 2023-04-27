@@ -95,6 +95,18 @@ class _$AppRouter extends RootStackRouter {
         child: const LocationScreen(),
       );
     },
+    UmraScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const UmraScreen(),
+      );
+    },
+    UmraDetailScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const UmraDetailScreen(),
+      );
+    },
     QuranScreenRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
@@ -163,6 +175,16 @@ class _$AppRouter extends RootStackRouter {
                 RouteConfig(
                   LocationScreenRoute.name,
                   path: 'location',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  UmraScreenRoute.name,
+                  path: 'umra',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  UmraDetailScreenRoute.name,
+                  path: 'umradetail',
                   parent: HomeRoute.name,
                 ),
               ],
@@ -367,6 +389,30 @@ class LocationScreenRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'LocationScreenRoute';
+}
+
+/// generated route for
+/// [UmraScreen]
+class UmraScreenRoute extends PageRouteInfo<void> {
+  const UmraScreenRoute()
+      : super(
+          UmraScreenRoute.name,
+          path: 'umra',
+        );
+
+  static const String name = 'UmraScreenRoute';
+}
+
+/// generated route for
+/// [UmraDetailScreen]
+class UmraDetailScreenRoute extends PageRouteInfo<void> {
+  const UmraDetailScreenRoute()
+      : super(
+          UmraDetailScreenRoute.name,
+          path: 'umradetail',
+        );
+
+  static const String name = 'UmraDetailScreenRoute';
 }
 
 /// generated route for
