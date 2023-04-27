@@ -71,6 +71,12 @@ class _$AppRouter extends RootStackRouter {
         child: const TasbihScreen(),
       );
     },
+    NamazScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const NamazScreen(),
+      );
+    },
     QuranScreenRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
@@ -119,6 +125,11 @@ class _$AppRouter extends RootStackRouter {
                 RouteConfig(
                   TasbihScreenRoute.name,
                   path: 'tasbih',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  NamazScreenRoute.name,
+                  path: 'namaz',
                   parent: HomeRoute.name,
                 ),
               ],
@@ -275,6 +286,18 @@ class TasbihScreenRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'TasbihScreenRoute';
+}
+
+/// generated route for
+/// [NamazScreen]
+class NamazScreenRoute extends PageRouteInfo<void> {
+  const NamazScreenRoute()
+      : super(
+          NamazScreenRoute.name,
+          path: 'namaz',
+        );
+
+  static const String name = 'NamazScreenRoute';
 }
 
 /// generated route for

@@ -12,6 +12,7 @@ class AppSvgImages {
   static const String namaz = 'assets/images/svg/namaz.svg';
   static const String navigation = 'assets/images/svg/navigation.svg';
   static const String next = 'assets/images/svg/next.svg';
+  static const String notwork = 'assets/images/svg/notwork.svg';
   static const String qibla = 'assets/images/svg/qibla.svg';
   static const String replay = 'assets/images/svg/replay.svg';
   static const String tasbih = 'assets/images/svg/tasbih.svg';
