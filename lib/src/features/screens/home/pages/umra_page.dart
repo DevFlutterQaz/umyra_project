@@ -1,10 +1,12 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:umyra/src/core/widgets/column_spacer.dart';
 import 'package:umyra/src/core/widgets/custom_app_bar.dart';
-import 'package:umyra/src/features/screens/home/widgets/navigation_content.dart';
+import 'package:umyra/src/features/app/router/app_router.dart';
+import 'package:umyra/src/features/screens/home/widgets/custom_umra_button.dart';
 
-class NavigationScreen extends StatelessWidget {
-  const NavigationScreen({super.key});
+class UmraScreen extends StatelessWidget {
+  const UmraScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,16 +17,18 @@ class NavigationScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const CustomAppBar(title: 'Navigation'),
+              const CustomAppBar(title: 'How to perform Umra'),
               const ColumnSpacer(2),
               Expanded(
                 child: ListView.separated(
-                  itemBuilder: (context, index) => const NavigationContent(),
+                  itemBuilder: (context, index) => GestureDetector(
+                      onTap: () =>
+                          context.router.push(const UmraDetailScreenRoute()),
+                      child: const CustomUmraButton()),
                   separatorBuilder: (context, index) => const ColumnSpacer(0.8),
-                  itemCount: 7,
+                  itemCount: 8,
                 ),
-              ),
-              const ColumnSpacer(0.8)
+              )
             ],
           ),
         ),
