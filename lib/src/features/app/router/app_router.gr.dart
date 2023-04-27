@@ -17,6 +17,12 @@ class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    TasbihDetailRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const TasbihDetail(),
+      );
+    },
     CustomNavigationWidgetRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
@@ -59,6 +65,12 @@ class _$AppRouter extends RootStackRouter {
         child: const BookScreen(),
       );
     },
+    TasbihScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const TasbihScreen(),
+      );
+    },
     QuranScreenRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
@@ -82,6 +94,10 @@ class _$AppRouter extends RootStackRouter {
   @override
   List<RouteConfig> get routes => [
         RouteConfig(
+          TasbihDetailRoute.name,
+          path: 'tasbihDetail',
+        ),
+        RouteConfig(
           CustomNavigationWidgetRoute.name,
           path: 'navigate',
           children: [
@@ -98,6 +114,11 @@ class _$AppRouter extends RootStackRouter {
                 RouteConfig(
                   BookScreenRoute.name,
                   path: 'book',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  TasbihScreenRoute.name,
+                  path: 'tasbih',
                   parent: HomeRoute.name,
                 ),
               ],
@@ -139,8 +160,20 @@ class _$AppRouter extends RootStackRouter {
               ],
             ),
           ],
-        )
+        ),
       ];
+}
+
+/// generated route for
+/// [TasbihDetail]
+class TasbihDetailRoute extends PageRouteInfo<void> {
+  const TasbihDetailRoute()
+      : super(
+          TasbihDetailRoute.name,
+          path: 'tasbihDetail',
+        );
+
+  static const String name = 'TasbihDetailRoute';
 }
 
 /// generated route for
@@ -230,6 +263,18 @@ class BookScreenRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'BookScreenRoute';
+}
+
+/// generated route for
+/// [TasbihScreen]
+class TasbihScreenRoute extends PageRouteInfo<void> {
+  const TasbihScreenRoute()
+      : super(
+          TasbihScreenRoute.name,
+          path: 'tasbih',
+        );
+
+  static const String name = 'TasbihScreenRoute';
 }
 
 /// generated route for

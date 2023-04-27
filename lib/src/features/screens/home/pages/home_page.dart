@@ -84,6 +84,7 @@ class HomeScreen extends StatelessWidget {
   }
 
   void homeMainNavigate(BuildContext context, int id) {
+    id == 2 ? context.router.push(const TasbihScreenRoute()) : null;
     id == 3 ? context.router.push(const BookScreenRoute()) : null;
   }
 }
