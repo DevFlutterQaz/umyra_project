@@ -87,5 +87,6 @@ class HomeScreen extends StatelessWidget {
     id == 2 ? context.router.push(const TasbihScreenRoute()) : null;
     id == 3 ? context.router.push(const BookScreenRoute()) : null;
     id == 5 ? context.router.push(const NamazScreenRoute()) : null;
+    id == 6 ? context.router.push(const CalendarScreenRoute()) : null;
   }
 }
