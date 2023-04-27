@@ -28,7 +28,7 @@ class _CustomNavigationWidgetState extends State<CustomNavigationWidget> {
       routes: const [
         HomeRoute(),
         QuranRouter(),
-        LocationRouter(),
+        TourRouter(),
         ProfileRouter(),
       ],
       builder: (context, child, animation) {
