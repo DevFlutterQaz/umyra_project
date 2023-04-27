@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:auto_route/empty_router_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:umyra/src/features/navigation_bar.dart';
-import 'package:umyra/src/features/screens/book/pages/quran_page.dart';
+import 'package:umyra/src/features/screens/quran/pages/quran_page.dart';
 import 'package:umyra/src/features/screens/home/pages/book_page.dart';
 import 'package:umyra/src/features/screens/home/pages/home_page.dart';
 import 'package:umyra/src/features/screens/home/pages/tasbih_detail.dart';
