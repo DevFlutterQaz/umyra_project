@@ -9,6 +9,7 @@ void main() {
     expect(File(AppSvgImages.book).existsSync(), true);
     expect(File(AppSvgImages.calendar).existsSync(), true);
     expect(File(AppSvgImages.calendar2).existsSync(), true);
+    expect(File(AppSvgImages.heart).existsSync(), true);
     expect(File(AppSvgImages.namaz).existsSync(), true);
     expect(File(AppSvgImages.navigation).existsSync(), true);
     expect(File(AppSvgImages.next).existsSync(), true);
