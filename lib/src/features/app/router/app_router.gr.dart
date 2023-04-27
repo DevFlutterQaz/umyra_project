@@ -83,6 +83,12 @@ class _$AppRouter extends RootStackRouter {
         child: const CalendarScreen(),
       );
     },
+    NavigationScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const NavigationScreen(),
+      );
+    },
     QuranScreenRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
@@ -141,6 +147,11 @@ class _$AppRouter extends RootStackRouter {
                 RouteConfig(
                   CalendarScreenRoute.name,
                   path: 'calendar',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  NavigationScreenRoute.name,
+                  path: 'navigation',
                   parent: HomeRoute.name,
                 ),
               ],
@@ -321,6 +332,18 @@ class CalendarScreenRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'CalendarScreenRoute';
+}
+
+/// generated route for
+/// [NavigationScreen]
+class NavigationScreenRoute extends PageRouteInfo<void> {
+  const NavigationScreenRoute()
+      : super(
+          NavigationScreenRoute.name,
+          path: 'navigation',
+        );
+
+  static const String name = 'NavigationScreenRoute';
 }
 
 /// generated route for

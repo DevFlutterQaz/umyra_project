@@ -10,7 +10,10 @@ class UmyraApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      theme: ThemeData(scaffoldBackgroundColor: AppColors.background),
+      theme: ThemeData(
+        scaffoldBackgroundColor: AppColors.background,
+        dividerColor: Colors.transparent,
+      ),
       routeInformationParser: _appRouter.defaultRouteParser(),
       routerDelegate: _appRouter
           .delegate(initialRoutes: [const CustomNavigationWidgetRoute()]),
