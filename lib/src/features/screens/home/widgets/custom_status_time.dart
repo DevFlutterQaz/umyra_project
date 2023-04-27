@@ -1,6 +1,8 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:umyra/src/core/resources/app_colors.dart';
 import 'package:umyra/src/core/widgets/column_spacer.dart';
+import 'package:umyra/src/features/app/router/app_router.dart';
 import 'package:umyra/src/features/screens/home/widgets/namaz_time.dart';
 
 class StatusTimeCustomWidget extends StatelessWidget {
@@ -17,8 +19,7 @@ class StatusTimeCustomWidget extends StatelessWidget {
             Radius.circular(20),
           )),
       child: Padding(
-        padding:
-            const EdgeInsets.symmetric(horizontal: 11, vertical: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 16),
         child: Column(
           children: [
             Row(
@@ -40,9 +41,13 @@ class StatusTimeCustomWidget extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Text(
-                      'Almaty',
-                      style: Theme.of(context).textTheme.titleLarge,
+                    GestureDetector(
+                      onTap: () =>
+                          context.router.push(const LocationScreenRoute()),
+                      child: Text(
+                        'Almaty',
+                        style: Theme.of(context).textTheme.titleLarge,
+                      ),
                     ),
                     Text(
                       'Казахстан',
