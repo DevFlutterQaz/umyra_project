@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:umyra/src/core/resources/app_colors.dart';
-import 'package:umyra/src/core/resources/resources.dart';
 import 'package:umyra/src/core/widgets/column_spacer.dart';
 
 class CustomHomeButtom extends StatelessWidget {
+  final String image;
+  final String title;
   const CustomHomeButtom({
     super.key,
+    required this.image,
+    required this.title,
   });
 
   @override
@@ -25,12 +28,38 @@ class CustomHomeButtom extends StatelessWidget {
                     shape: BoxShape.circle,
                     color: AppColors.lightgrayColor3,
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(15),
-                    child: SvgPicture.asset(AppSvgImages.qibla),
-                  )),
+                  child: image.contains('tasbih')
+                      ? Padding(
+                          padding: const EdgeInsets.all(15),
+                          child: Stack(
+                            children: [
+                              SvgPicture.asset(image),
+                              Positioned.fill(
+                                child: Align(
+                                  alignment: Alignment.center,
+                                  child: Text('33',
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodySmall
+                                          ?.copyWith(
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.w500)),
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                      : Padding(
+                          padding:
+                              EdgeInsets.all(image.contains('svg') ? 15 : 14),
+                          child: image.contains('svg')
+                              ? SvgPicture.asset(image)
+                              : Image.asset(image),
+                        )),
               const ColumnSpacer(0.8),
-              Text('Qibla', style: Theme.of(context).textTheme.titleSmall),
+              Text(title,
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                      fontWeight: FontWeight.w500, color: Colors.black)),
             ],
           ),
         ));
