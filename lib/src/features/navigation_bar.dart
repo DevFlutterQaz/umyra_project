@@ -27,12 +27,14 @@ class _CustomNavigationWidgetState extends State<CustomNavigationWidget> {
     return AutoTabsRouter(
       routes: const [
         HomeRoute(),
-        BookRouter(),
+        QuranRouter(),
         LocationRouter(),
         ProfileRouter(),
       ],
       builder: (context, child, animation) {
         final tabsRouter = AutoTabsRouter.of(context);
+        final currentIndex =
+            AutoTabsRouter.of(context, watch: true).activeIndex;
         return Scaffold(
           body: FadeTransition(
             opacity: animation,
@@ -44,7 +46,9 @@ class _CustomNavigationWidgetState extends State<CustomNavigationWidget> {
             type: BottomNavigationBarType.fixed,
             currentIndex: tabsRouter.activeIndex,
             selectedItemColor: Colors.red,
-            onTap: (index) => tabsRouter.setActiveIndex(index),
+            onTap: (index) async => index == currentIndex
+                ? await _canPopSelf(tabsRouter)
+                : tabsRouter.setActiveIndex(index),
             items: const [
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),

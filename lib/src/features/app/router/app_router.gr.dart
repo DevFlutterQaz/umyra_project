@@ -29,7 +29,7 @@ class _$AppRouter extends RootStackRouter {
         child: const EmptyRouterPage(),
       );
     },
-    BookRouter.name: (routeData) {
+    QuranRouter.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
         child: const EmptyRouterPage(),
@@ -57,6 +57,12 @@ class _$AppRouter extends RootStackRouter {
       return MaterialPageX<dynamic>(
         routeData: routeData,
         child: const BookScreen(),
+      );
+    },
+    QuranScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const QuranScreen(),
       );
     },
     LoactionScreenRoute.name: (routeData) {
@@ -88,18 +94,23 @@ class _$AppRouter extends RootStackRouter {
                   HomeScreenRoute.name,
                   path: '',
                   parent: HomeRoute.name,
-                )
+                ),
+                RouteConfig(
+                  BookScreenRoute.name,
+                  path: 'book',
+                  parent: HomeRoute.name,
+                ),
               ],
             ),
             RouteConfig(
-              BookRouter.name,
-              path: 'book',
+              QuranRouter.name,
+              path: 'quran',
               parent: CustomNavigationWidgetRoute.name,
               children: [
                 RouteConfig(
-                  BookScreenRoute.name,
+                  QuranScreenRoute.name,
                   path: '',
-                  parent: BookRouter.name,
+                  parent: QuranRouter.name,
                 )
               ],
             ),
@@ -160,15 +171,15 @@ class HomeRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [EmptyRouterPage]
-class BookRouter extends PageRouteInfo<void> {
-  const BookRouter({List<PageRouteInfo>? children})
+class QuranRouter extends PageRouteInfo<void> {
+  const QuranRouter({List<PageRouteInfo>? children})
       : super(
-          BookRouter.name,
-          path: 'book',
+          QuranRouter.name,
+          path: 'quran',
           initialChildren: children,
         );
 
-  static const String name = 'BookRouter';
+  static const String name = 'QuranRouter';
 }
 
 /// generated route for
@@ -215,10 +226,22 @@ class BookScreenRoute extends PageRouteInfo<void> {
   const BookScreenRoute()
       : super(
           BookScreenRoute.name,
-          path: '',
+          path: 'book',
         );
 
   static const String name = 'BookScreenRoute';
+}
+
+/// generated route for
+/// [QuranScreen]
+class QuranScreenRoute extends PageRouteInfo<void> {
+  const QuranScreenRoute()
+      : super(
+          QuranScreenRoute.name,
+          path: '',
+        );
+
+  static const String name = 'QuranScreenRoute';
 }
 
 /// generated route for

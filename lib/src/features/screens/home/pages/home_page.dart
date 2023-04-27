@@ -1,8 +1,10 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:umyra/src/core/resources/resources.dart';
 import 'package:umyra/src/core/widgets/column_spacer.dart';
+import 'package:umyra/src/features/app/router/app_router.dart';
 import 'package:umyra/src/features/screens/home/logic/data/local/local.dart';
 import 'package:umyra/src/features/screens/home/widgets/come_event.dart';
 import 'package:umyra/src/features/screens/home/widgets/custom_home_button.dart';
@@ -35,6 +37,7 @@ class HomeScreen extends StatelessWidget {
                   shrinkWrap: true,
                   itemCount: Local.mainButton.length,
                   itemBuilder: (context, index) => CustomHomeButtom(
+                    onTap: () => context.router.push(const BookScreenRoute()),
                     image: Local.mainButton[index].image,
                     title: Local.mainButton[index].title,
                   ),
