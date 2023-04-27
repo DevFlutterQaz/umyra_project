@@ -3,6 +3,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:umyra/src/core/resources/resources.dart';
 import 'package:umyra/src/core/widgets/column_spacer.dart';
+import 'package:umyra/src/features/screens/home/logic/data/local/local.dart';
 import 'package:umyra/src/features/screens/home/widgets/come_event.dart';
 import 'package:umyra/src/features/screens/home/widgets/custom_home_button.dart';
 import 'package:umyra/src/features/screens/home/widgets/custom_status_time.dart';
@@ -32,8 +33,11 @@ class HomeScreen extends StatelessWidget {
                   crossAxisSpacing: 8,
                   physics: const NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: 6,
-                  itemBuilder: (context, index) => const CustomHomeButtom(),
+                  itemCount: Local.mainButton.length,
+                  itemBuilder: (context, index) => CustomHomeButtom(
+                    image: Local.mainButton[index].image,
+                    title: Local.mainButton[index].title,
+                  ),
                 ),
                 const ColumnSpacer(2),
                 Text('Umra',
