@@ -37,7 +37,8 @@ class HomeScreen extends StatelessWidget {
                   shrinkWrap: true,
                   itemCount: Local.mainButton.length,
                   itemBuilder: (context, index) => CustomHomeButtom(
-                    onTap: () => context.router.push(const BookScreenRoute()),
+                    onTap: () =>
+                        homeMainNavigate(context, Local.mainButton[index].id),
                     image: Local.mainButton[index].image,
                     title: Local.mainButton[index].title,
                   ),
@@ -80,5 +81,9 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void homeMainNavigate(BuildContext context, int id) {
+    id == 3 ? context.router.push(const BookScreenRoute()) : null;
   }
 }
