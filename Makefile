@@ -1,4 +1,4 @@
-.PHONY: get gen-images install-pods run upgrade upgrade-major deep-clean gen-build gen-build-delete gen-clean gen-watch gen-pigeon create-splash prepare first-run metrics-analyze metrics-unused-files metrics-unused-l10n metrics-unused-code set-icon google-localizations emulator simulator stats analyze-code test test-update-goldens
+.PHONY: get gen-images install-pods run upgrade upgrade-major deep-clean gen-build gen-build-delete gen-clean gen-watch gen-pigeon create-splash prepare first-run metrics-analyze metrics-unused-files metrics-unused-l10n metrics-unused-code set-icon google-localizations emulator simulator stats analyze-code test
 
 get:
 	@echo "* Getting latest dependencies *"
@@ -67,6 +67,18 @@ create-splash: get
 
 prepare: get gen-build-delete create-splash
 
+generate-o:
+	@echo "* Generating localizations -o*"
+	@flutter pub run easy_localization:generate -O lib/src/core/res/ -o localization_loader.g.dart  -S assets/translations/
+
+generate-f:
+	@echo "* Generating localizations -f *"
+	@flutter pub run easy_localization:generate -f keys -o localization_keys.g.dart -S assets/translations/ -O lib/src/core/res/
+
+
+	
+
+
 first-run: prepare run
 
 define run_metrics
@@ -94,15 +106,11 @@ metrics-unused-code:
 
 analyze-code:
 	@echo "* Running code analyzer *"
-	@sh ./scripts/flutter-analyze.sh
+	@sh ./scripts/flutter_analyze.sh
 
 test:
 	@echo "* Running tests *"
 	@flutter test
-
-test-update-goldens:
-	@echo "* Running tests with updating golden images *"
-	@flutter test --update-goldens
 
 
 set-icon: get
@@ -115,7 +123,7 @@ google-localizations:
 	@echo "* Getting dependencies for google localizer *"
 	@(cd ./tool/google_localizer; fvm dart pub get)
 	@echo "* Generating automated localizations *"
-	@dart ./tool/google_localizer/main.dart "./lib/src/core/l10n/"
+	@dart ./tool/google_localizer/main.dart "./lib/src/common/l10n/"
 
 #setup:
 #	@echo "* Getting dependencies for setup tool *"

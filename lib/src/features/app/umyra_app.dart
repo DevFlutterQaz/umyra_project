@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:umyra/src/core/resources/app_colors.dart';
 import 'package:umyra/src/features/app/router/app_router.dart';
 
 class UmyraApp extends StatelessWidget {
@@ -9,8 +10,10 @@ class UmyraApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      theme: ThemeData(scaffoldBackgroundColor: AppColors.background),
       routeInformationParser: _appRouter.defaultRouteParser(),
-      routerDelegate: _appRouter.delegate(initialRoutes: [const CustomNavigationWidgetRoute()]),
+      routerDelegate: _appRouter
+          .delegate(initialRoutes: [const CustomNavigationWidgetRoute()]),
     );
   }
 }
