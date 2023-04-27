@@ -89,6 +89,12 @@ class _$AppRouter extends RootStackRouter {
         child: const NavigationScreen(),
       );
     },
+    LocationScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const LocationScreen(),
+      );
+    },
     QuranScreenRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
@@ -152,6 +158,11 @@ class _$AppRouter extends RootStackRouter {
                 RouteConfig(
                   NavigationScreenRoute.name,
                   path: 'navigation',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  LocationScreenRoute.name,
+                  path: 'location',
                   parent: HomeRoute.name,
                 ),
               ],
@@ -344,6 +355,18 @@ class NavigationScreenRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'NavigationScreenRoute';
+}
+
+/// generated route for
+/// [LocationScreen]
+class LocationScreenRoute extends PageRouteInfo<void> {
+  const LocationScreenRoute()
+      : super(
+          LocationScreenRoute.name,
+          path: 'location',
+        );
+
+  static const String name = 'LocationScreenRoute';
 }
 
 /// generated route for
