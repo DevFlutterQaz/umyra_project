@@ -107,6 +107,22 @@ class _$AppRouter extends RootStackRouter {
         child: const UmraDetailScreen(),
       );
     },
+    UmraCourseScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const UmraCourseScreen(),
+      );
+    },
+    UmraLessanRoute.name: (routeData) {
+      final args = routeData.argsAs<UmraLessanRouteArgs>();
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: UmraLessan(
+          key: args.key,
+          index: args.index,
+        ),
+      );
+    },
     QuranScreenRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
@@ -185,6 +201,16 @@ class _$AppRouter extends RootStackRouter {
                 RouteConfig(
                   UmraDetailScreenRoute.name,
                   path: 'umradetail',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  UmraCourseScreenRoute.name,
+                  path: 'umracourse',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  UmraLessanRoute.name,
+                  path: 'umralesson',
                   parent: HomeRoute.name,
                 ),
               ],
@@ -413,6 +439,52 @@ class UmraDetailScreenRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'UmraDetailScreenRoute';
+}
+
+/// generated route for
+/// [UmraCourseScreen]
+class UmraCourseScreenRoute extends PageRouteInfo<void> {
+  const UmraCourseScreenRoute()
+      : super(
+          UmraCourseScreenRoute.name,
+          path: 'umracourse',
+        );
+
+  static const String name = 'UmraCourseScreenRoute';
+}
+
+/// generated route for
+/// [UmraLessan]
+class UmraLessanRoute extends PageRouteInfo<UmraLessanRouteArgs> {
+  UmraLessanRoute({
+    Key? key,
+    required int index,
+  }) : super(
+          UmraLessanRoute.name,
+          path: 'umralesson',
+          args: UmraLessanRouteArgs(
+            key: key,
+            index: index,
+          ),
+        );
+
+  static const String name = 'UmraLessanRoute';
+}
+
+class UmraLessanRouteArgs {
+  const UmraLessanRouteArgs({
+    this.key,
+    required this.index,
+  });
+
+  final Key? key;
+
+  final int index;
+
+  @override
+  String toString() {
+    return 'UmraLessanRouteArgs{key: $key, index: $index}';
+  }
 }
 
 /// generated route for

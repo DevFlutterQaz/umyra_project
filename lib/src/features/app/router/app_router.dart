@@ -6,7 +6,9 @@ import 'package:umyra/src/features/screens/home/pages/calendar_page.dart';
 import 'package:umyra/src/features/screens/home/pages/location_page.dart';
 import 'package:umyra/src/features/screens/home/pages/namaz_page.dart';
 import 'package:umyra/src/features/screens/home/pages/navigation_page.dart';
+import 'package:umyra/src/features/screens/home/pages/umra_course_page.dart';
 import 'package:umyra/src/features/screens/home/pages/umra_detail_page.dart';
+import 'package:umyra/src/features/screens/home/pages/umra_lesson.dart';
 import 'package:umyra/src/features/screens/home/pages/umra_page.dart';
 import 'package:umyra/src/features/screens/quran/pages/quran_page.dart';
 import 'package:umyra/src/features/screens/home/pages/book_page.dart';
@@ -67,6 +69,14 @@ part 'app_router.gr.dart';
           AutoRoute(
             page: UmraDetailScreen,
             path: 'umradetail',
+          ),
+          AutoRoute(
+            page: UmraCourseScreen,
+            path: 'umracourse',
+          ),
+          AutoRoute(
+            page: UmraLessan,
+            path: 'umralesson',
           ),
         ],
       ),

@@ -50,7 +50,7 @@ class HomeScreen extends StatelessWidget {
                         .headlineSmall
                         ?.copyWith(fontWeight: FontWeight.w700)),
                 const ColumnSpacer(1.2),
-                UmraButton(id: 1, onTap: () {}),
+                UmraButton(id: 1, onTap: () => context.router.push(const UmraCourseScreenRoute())),
                 const ColumnSpacer(0.8),
                 UmraButton(id: 2, onTap: () => context.router.push(const UmraScreenRoute())),
                 const ColumnSpacer(2),

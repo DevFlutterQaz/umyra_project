@@ -1,12 +1,18 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:umyra/src/core/resources/app_colors.dart';
+import 'package:umyra/src/core/resources/resources.dart';
 
 class CustomAppBar extends StatelessWidget {
   final String title;
+  final bool alert;
+  final Function()? onTap;
   const CustomAppBar({
     super.key,
     required this.title,
+    this.alert = false,
+    this.onTap,
   });
 
   @override
@@ -40,6 +46,18 @@ class CustomAppBar extends StatelessWidget {
             ),
           ),
         ),
+        alert
+            ? Align(
+                alignment: Alignment.centerRight,
+                child: GestureDetector(
+                  onTap: onTap,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 12),
+                    child: SvgPicture.asset(AppSvgImages.alert),
+                  ),
+                ),
+              )
+            : Container(),
       ],
     );
   }
