@@ -34,4 +34,9 @@ class AppSvgImages {
   static const String users = 'assets/images/svg/users.svg';
   static const String vector1 = 'assets/images/svg/vector1.svg';
   static const String vector2 = 'assets/images/svg/vector2.svg';
+
+  static const String plusIcon = 'assets/images/svg/plus.svg';
+
+  static const String paymentCard = 'assets/images/svg/paymentCard.svg';
+
 }

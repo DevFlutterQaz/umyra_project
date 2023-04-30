@@ -7,6 +7,8 @@ import 'package:umyra/src/features/screens/profile/widgets/main_profile_content.
 import 'package:umyra/src/features/screens/profile/widgets/other_profile_content.dart';
 import 'package:umyra/src/features/screens/profile/widgets/question_profile_content.dart';
 
+import '../widgets/modal_message.dart';
+
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
@@ -42,7 +44,13 @@ class ProfileScreen extends StatelessWidget {
             const ColumnSpacer(1.2),
             const OtherProfileContent(),
             const ColumnSpacer(1.2),
-            CustomExitButton(onTap: () {}),
+            CustomExitButton(
+              onTap: () => showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return const ModalMessage();
+                  }),
+            ),
             const ColumnSpacer(1.2),
           ],
         ),

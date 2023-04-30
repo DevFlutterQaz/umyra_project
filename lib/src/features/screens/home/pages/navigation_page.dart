@@ -10,23 +10,19 @@ class NavigationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 19),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              const CustomAppBar(title: 'Navigation'),
-              const ColumnSpacer(2),
-              Expanded(
-                child: ListView.separated(
-                  itemBuilder: (context, index) => const NavigationContent(),
-                  separatorBuilder: (context, index) => const ColumnSpacer(0.8),
-                  itemCount: 7,
-                ),
+        child: Column(
+          children: [
+            const CustomAppBar(title: 'Navigation'),
+            const ColumnSpacer(2),
+            Expanded(
+              child: ListView.separated(
+                itemBuilder: (context, index) => const NavigationContent(),
+                separatorBuilder: (context, index) => const ColumnSpacer(0.8),
+                itemCount: 7,
               ),
-              const ColumnSpacer(0.8)
-            ],
-          ),
+            ),
+            const ColumnSpacer(0.8)
+          ],
         ),
       ),
     );

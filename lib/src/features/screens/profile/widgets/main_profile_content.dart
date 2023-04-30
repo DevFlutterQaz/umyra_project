@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:umyra/src/core/resources/app_colors.dart';
+import 'package:umyra/src/features/app/router/app_router.dart';
 import 'package:umyra/src/features/screens/profile/widgets/custom_profilr_button.dart';
 
 class MainProfileContent extends StatelessWidget {
@@ -19,9 +21,17 @@ class MainProfileContent extends StatelessWidget {
         ),
         child: Column(
           children: [
-            CustomProfileButton(text: 'Менің деректерім', onTap: () {}),
-            CustomProfileButton(text: 'Сатып алынған қызметтер', onTap: () {}),
-            CustomProfileButton(text: 'Менің карталарым', onTap: () {}),
+            CustomProfileButton(
+                text: 'Менің деректерім',
+                onTap: () =>
+                    context.router.push(const MyInformationScreenRoute())),
+            CustomProfileButton(
+                text: 'Сатып алынған қызметтер',
+                onTap: () =>
+                    context.router.push(const BoughtServicesScreenRoute())),
+            CustomProfileButton(
+                text: 'Менің карталарым',
+                onTap: () => context.router.push(const MyCardsScreenRoute())),
           ],
         ),
       ),

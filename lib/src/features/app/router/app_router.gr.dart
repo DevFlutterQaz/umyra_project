@@ -201,6 +201,66 @@ class _$AppRouter extends RootStackRouter {
         child: const ProfileScreen(),
       );
     },
+    AboutProjectScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const AboutProjectScreen(),
+      );
+    },
+    BoughtServicesScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const BoughtServicesScreen(),
+      );
+    },
+    ChangePasswordScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const ChangePasswordScreen(),
+      );
+    },
+    FaqScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const FaqScreen(),
+      );
+    },
+    LanguageScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const LanguageScreen(),
+      );
+    },
+    MyCardsScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const MyCardsScreen(),
+      );
+    },
+    MyInformationScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const MyInformationScreen(),
+      );
+    },
+    TechnicalSupportScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const TechnicalSupportScreen(),
+      );
+    },
+    MessageNoteScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const MessageNoteScreen(),
+      );
+    },
+    NewPasswordScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const NewPasswordScreen(),
+      );
+    },
   };
 
   @override
@@ -355,7 +415,57 @@ class _$AppRouter extends RootStackRouter {
                   ProfileScreenRoute.name,
                   path: '',
                   parent: ProfileRouter.name,
-                )
+                ),
+                RouteConfig(
+                  AboutProjectScreenRoute.name,
+                  path: 'aboutproject',
+                  parent: ProfileRouter.name,
+                ),
+                RouteConfig(
+                  BoughtServicesScreenRoute.name,
+                  path: 'boughtservices',
+                  parent: ProfileRouter.name,
+                ),
+                RouteConfig(
+                  ChangePasswordScreenRoute.name,
+                  path: 'changepassword',
+                  parent: ProfileRouter.name,
+                ),
+                RouteConfig(
+                  FaqScreenRoute.name,
+                  path: 'faqscreen',
+                  parent: ProfileRouter.name,
+                ),
+                RouteConfig(
+                  LanguageScreenRoute.name,
+                  path: 'languagescreen',
+                  parent: ProfileRouter.name,
+                ),
+                RouteConfig(
+                  MyCardsScreenRoute.name,
+                  path: 'mycardsscreen',
+                  parent: ProfileRouter.name,
+                ),
+                RouteConfig(
+                  MyInformationScreenRoute.name,
+                  path: 'myinformationscreen',
+                  parent: ProfileRouter.name,
+                ),
+                RouteConfig(
+                  TechnicalSupportScreenRoute.name,
+                  path: 'technicalsupport',
+                  parent: ProfileRouter.name,
+                ),
+                RouteConfig(
+                  MessageNoteScreenRoute.name,
+                  path: 'messagenotescreen',
+                  parent: ProfileRouter.name,
+                ),
+                RouteConfig(
+                  NewPasswordScreenRoute.name,
+                  path: 'newpasswordscreen',
+                  parent: ProfileRouter.name,
+                ),
               ],
             ),
           ],
@@ -748,4 +858,124 @@ class ProfileScreenRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'ProfileScreenRoute';
+}
+
+/// generated route for
+/// [AboutProjectScreen]
+class AboutProjectScreenRoute extends PageRouteInfo<void> {
+  const AboutProjectScreenRoute()
+      : super(
+          AboutProjectScreenRoute.name,
+          path: 'aboutproject',
+        );
+
+  static const String name = 'AboutProjectScreenRoute';
+}
+
+/// generated route for
+/// [BoughtServicesScreen]
+class BoughtServicesScreenRoute extends PageRouteInfo<void> {
+  const BoughtServicesScreenRoute()
+      : super(
+          BoughtServicesScreenRoute.name,
+          path: 'boughtservices',
+        );
+
+  static const String name = 'BoughtServicesScreenRoute';
+}
+
+/// generated route for
+/// [ChangePasswordScreen]
+class ChangePasswordScreenRoute extends PageRouteInfo<void> {
+  const ChangePasswordScreenRoute()
+      : super(
+          ChangePasswordScreenRoute.name,
+          path: 'changepassword',
+        );
+
+  static const String name = 'ChangePasswordScreenRoute';
+}
+
+/// generated route for
+/// [FaqScreen]
+class FaqScreenRoute extends PageRouteInfo<void> {
+  const FaqScreenRoute()
+      : super(
+          FaqScreenRoute.name,
+          path: 'faqscreen',
+        );
+
+  static const String name = 'FaqScreenRoute';
+}
+
+/// generated route for
+/// [LanguageScreen]
+class LanguageScreenRoute extends PageRouteInfo<void> {
+  const LanguageScreenRoute()
+      : super(
+          LanguageScreenRoute.name,
+          path: 'languagescreen',
+        );
+
+  static const String name = 'LanguageScreenRoute';
+}
+
+/// generated route for
+/// [MyCardsScreen]
+class MyCardsScreenRoute extends PageRouteInfo<void> {
+  const MyCardsScreenRoute()
+      : super(
+          MyCardsScreenRoute.name,
+          path: 'mycardsscreen',
+        );
+
+  static const String name = 'MyCardsScreenRoute';
+}
+
+/// generated route for
+/// [MyInformationScreen]
+class MyInformationScreenRoute extends PageRouteInfo<void> {
+  const MyInformationScreenRoute()
+      : super(
+          MyInformationScreenRoute.name,
+          path: 'myinformationscreen',
+        );
+
+  static const String name = 'MyInformationScreenRoute';
+}
+
+/// generated route for
+/// [TechnicalSupportScreen]
+class TechnicalSupportScreenRoute extends PageRouteInfo<void> {
+  const TechnicalSupportScreenRoute()
+      : super(
+          TechnicalSupportScreenRoute.name,
+          path: 'technicalsupport',
+        );
+
+  static const String name = 'TechnicalSupportScreenRoute';
+}
+
+/// generated route for
+/// [MessageNoteScreen]
+class MessageNoteScreenRoute extends PageRouteInfo<void> {
+  const MessageNoteScreenRoute()
+      : super(
+          MessageNoteScreenRoute.name,
+          path: 'messagenotescreen',
+        );
+
+  static const String name = 'MessageNoteScreenRoute';
+}
+
+/// generated route for
+/// [NewPasswordScreen]
+class NewPasswordScreenRoute extends PageRouteInfo<void> {
+  const NewPasswordScreenRoute()
+      : super(
+          NewPasswordScreenRoute.name,
+          path: 'newpasswordscreen',
+        );
+
+  static const String name = 'NewPasswordScreenRoute';
 }
