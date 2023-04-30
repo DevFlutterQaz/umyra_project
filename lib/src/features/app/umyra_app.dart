@@ -17,6 +17,7 @@ class UmyraApp extends StatelessWidget {
       routeInformationParser: _appRouter.defaultRouteParser(),
       routerDelegate: _appRouter
           .delegate(initialRoutes: [const CustomNavigationWidgetRoute()]),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
