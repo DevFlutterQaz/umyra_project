@@ -12,6 +12,7 @@ import 'package:umyra/src/features/screens/home/widgets/custom_status_time.dart'
 import 'package:umyra/src/features/screens/home/widgets/home_news_widget.dart';
 import 'package:umyra/src/features/screens/home/widgets/umra_button.dart';
 
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -50,7 +51,7 @@ class HomeScreen extends StatelessWidget {
                         .headlineSmall
                         ?.copyWith(fontWeight: FontWeight.w700)),
                 const ColumnSpacer(1.2),
-                UmraButton(id: 1, onTap: () {}),
+                UmraButton(id: 1, onTap: () => context.router.push(const UmraCourseScreenRoute())),
                 const ColumnSpacer(0.8),
                 UmraButton(
                     id: 2,
