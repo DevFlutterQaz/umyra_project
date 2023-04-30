@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:umyra/src/core/resources/app_colors.dart';
-import 'package:umyra/src/core/resources/resources.dart';
 import 'package:umyra/src/core/widgets/column_spacer.dart';
-import 'package:umyra/src/core/widgets/row_spacer.dart';
 import 'package:umyra/src/features/screens/profile/widgets/custom_exit_button.dart';
 import 'package:umyra/src/features/screens/profile/widgets/custom_profile_avater.dart';
 import 'package:umyra/src/features/screens/profile/widgets/main_profile_content.dart';
