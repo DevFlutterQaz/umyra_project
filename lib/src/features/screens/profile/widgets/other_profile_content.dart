@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:umyra/src/core/resources/app_colors.dart';
+import 'package:umyra/src/features/app/router/app_router.dart';
 import 'package:umyra/src/features/screens/profile/widgets/custom_profilr_button.dart';
 
 class OtherProfileContent extends StatelessWidget {
@@ -20,9 +22,17 @@ class OtherProfileContent extends StatelessWidget {
         child: Column(
           children: [
             CustomProfileButton(
-                text: 'Жоба туралы', language: true, onTap: () {}),
-            CustomProfileButton(text: 'Құпия сөзді өзгерту', onTap: () {}),
-            CustomProfileButton(text: 'Хабарлама', onTap: () {}),
+                text: 'Тіл өзгерту',
+                language: true,
+                onTap: () => context.router.push(const LanguageScreenRoute())),
+            CustomProfileButton(
+                text: 'Құпия сөзді өзгерту',
+                onTap: () =>
+                    context.router.push(const NewPasswordScreenRoute())),
+            CustomProfileButton(
+                text: 'Хабарлама',
+                onTap: () =>
+                    context.router.push(const MessageNoteScreenRoute())),
           ],
         ),
       ),

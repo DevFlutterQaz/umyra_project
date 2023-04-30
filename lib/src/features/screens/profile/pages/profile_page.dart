@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:umyra/src/core/resources/app_colors.dart';
-import 'package:umyra/src/core/resources/resources.dart';
 import 'package:umyra/src/core/widgets/column_spacer.dart';
-import 'package:umyra/src/core/widgets/row_spacer.dart';
 import 'package:umyra/src/features/screens/profile/widgets/custom_exit_button.dart';
 import 'package:umyra/src/features/screens/profile/widgets/custom_profile_avater.dart';
 import 'package:umyra/src/features/screens/profile/widgets/main_profile_content.dart';
 import 'package:umyra/src/features/screens/profile/widgets/other_profile_content.dart';
 import 'package:umyra/src/features/screens/profile/widgets/question_profile_content.dart';
+
+import '../widgets/modal_message.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -45,7 +44,13 @@ class ProfileScreen extends StatelessWidget {
             const ColumnSpacer(1.2),
             const OtherProfileContent(),
             const ColumnSpacer(1.2),
-            CustomExitButton(onTap: () {}),
+            CustomExitButton(
+              onTap: () => showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return const ModalMessage();
+                  }),
+            ),
             const ColumnSpacer(1.2),
           ],
         ),

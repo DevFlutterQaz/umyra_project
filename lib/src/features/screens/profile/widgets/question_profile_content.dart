@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:umyra/src/core/resources/app_colors.dart';
+import 'package:umyra/src/features/app/router/app_router.dart';
 import 'package:umyra/src/features/screens/profile/widgets/custom_profilr_button.dart';
 
 class QuestionProfileContent extends StatelessWidget {
@@ -19,9 +21,17 @@ class QuestionProfileContent extends StatelessWidget {
         ),
         child: Column(
           children: [
-            CustomProfileButton(text: 'Жоба туралы', onTap: () {}),
-            CustomProfileButton(text: 'FAQ', onTap: () {}),
-            CustomProfileButton(text: 'Техникалық қолдау', onTap: () {}),
+            CustomProfileButton(
+                text: 'Жоба туралы',
+                onTap: () =>
+                    context.router.push(const AboutProjectScreenRoute())),
+            CustomProfileButton(
+                text: 'FAQ',
+                onTap: () => context.router.push(const FaqScreenRoute())),
+            CustomProfileButton(
+                text: 'Техникалық қолдау',
+                onTap: () =>
+                    context.router.push(const TechnicalSupportScreenRoute())),
           ],
         ),
       ),
