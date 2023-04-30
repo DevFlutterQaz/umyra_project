@@ -12,8 +12,10 @@ void main() {
     expect(File(AppSvgImages.calendar).existsSync(), true);
     expect(File(AppSvgImages.calendar2).existsSync(), true);
     expect(File(AppSvgImages.exit).existsSync(), true);
+    expect(File(AppSvgImages.glob).existsSync(), true);
     expect(File(AppSvgImages.heart).existsSync(), true);
     expect(File(AppSvgImages.image).existsSync(), true);
+    expect(File(AppSvgImages.location).existsSync(), true);
     expect(File(AppSvgImages.marker).existsSync(), true);
     expect(File(AppSvgImages.namaz).existsSync(), true);
     expect(File(AppSvgImages.navigation).existsSync(), true);
@@ -23,7 +25,9 @@ void main() {
     expect(File(AppSvgImages.profileConstant).existsSync(), true);
     expect(File(AppSvgImages.qibla).existsSync(), true);
     expect(File(AppSvgImages.replay).existsSync(), true);
+    expect(File(AppSvgImages.tarif).existsSync(), true);
     expect(File(AppSvgImages.tasbih).existsSync(), true);
+    expect(File(AppSvgImages.users).existsSync(), true);
     expect(File(AppSvgImages.vector1).existsSync(), true);
     expect(File(AppSvgImages.vector2).existsSync(), true);
   });
