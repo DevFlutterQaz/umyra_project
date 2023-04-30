@@ -9,6 +9,7 @@ class AppSvgImages {
   static const String book = 'assets/images/svg/book.svg';
   static const String calendar = 'assets/images/svg/calendar.svg';
   static const String calendar2 = 'assets/images/svg/calendar2.svg';
+  static const String exit = 'assets/images/svg/exit.svg';
   static const String heart = 'assets/images/svg/heart.svg';
   static const String image = 'assets/images/svg/image.svg';
   static const String marker = 'assets/images/svg/marker.svg';
@@ -17,6 +18,8 @@ class AppSvgImages {
   static const String next = 'assets/images/svg/next.svg';
   static const String notwork = 'assets/images/svg/notwork.svg';
   static const String nozhnisy = 'assets/images/svg/nozhnisy.svg';
+  static const String profileConstant =
+      'assets/images/svg/profile_constant.svg';
   static const String qibla = 'assets/images/svg/qibla.svg';
   static const String replay = 'assets/images/svg/replay.svg';
   static const String tasbih = 'assets/images/svg/tasbih.svg';
