@@ -20,9 +20,10 @@ class CustomAppBar extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
               color: AppColors.whiteColor,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
+              boxShadow: kElevationToShadow[1],
+              borderRadius: const BorderRadius.all(Radius.circular(12))),
           child: Padding(
             padding: const EdgeInsets.all(12),
             child: GestureDetector(

@@ -17,6 +17,24 @@ class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    StartScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const StartScreen(),
+      );
+    },
+    LogInScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const LogInScreen(),
+      );
+    },
+    RegisterScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const RegisterScreen(),
+      );
+    },
     TasbihDetailRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
@@ -188,6 +206,18 @@ class _$AppRouter extends RootStackRouter {
   @override
   List<RouteConfig> get routes => [
         RouteConfig(
+          StartScreenRoute.name,
+          path: '/',
+        ),
+        RouteConfig(
+          LogInScreenRoute.name,
+          path: 'login',
+        ),
+        RouteConfig(
+          RegisterScreenRoute.name,
+          path: 'register',
+        ),
+        RouteConfig(
           TasbihDetailRoute.name,
           path: 'tasbihDetail',
         ),
@@ -331,6 +361,42 @@ class _$AppRouter extends RootStackRouter {
           ],
         ),
       ];
+}
+
+/// generated route for
+/// [StartScreen]
+class StartScreenRoute extends PageRouteInfo<void> {
+  const StartScreenRoute()
+      : super(
+          StartScreenRoute.name,
+          path: '/',
+        );
+
+  static const String name = 'StartScreenRoute';
+}
+
+/// generated route for
+/// [LogInScreen]
+class LogInScreenRoute extends PageRouteInfo<void> {
+  const LogInScreenRoute()
+      : super(
+          LogInScreenRoute.name,
+          path: 'login',
+        );
+
+  static const String name = 'LogInScreenRoute';
+}
+
+/// generated route for
+/// [RegisterScreen]
+class RegisterScreenRoute extends PageRouteInfo<void> {
+  const RegisterScreenRoute()
+      : super(
+          RegisterScreenRoute.name,
+          path: 'register',
+        );
+
+  static const String name = 'RegisterScreenRoute';
 }
 
 /// generated route for
