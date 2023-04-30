@@ -6,19 +6,20 @@ publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.19.6 <3.0.0"
+  sdk: ">=2.19.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
   # Rest API and State management
-  flutter_bloc: ^8.0.0
+  flutter_bloc: ^8.1.2
   json_annotation: ^4.3.0
   equatable: ^2.0.3
-  dio: ^4.0.0
+  dio: ^5.1.1
   provider: ^6.0.2
   get_it: ^7.2.0
+  
 
   # Local Storage
   path_provider: ^2.0.8

@@ -27,6 +27,8 @@ class AppSvgImages {
   static const String tarif = 'assets/images/svg/tarif.svg';
   static const String tasbih = 'assets/images/svg/tasbih.svg';
   static const String users = 'assets/images/svg/users.svg';
+  static const String rightArrowBlack = 'assets/images/svg/rightArrowBlack.svg';
   static const String vector1 = 'assets/images/svg/vector1.svg';
   static const String vector2 = 'assets/images/svg/vector2.svg';
+
 }

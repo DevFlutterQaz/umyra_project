@@ -129,6 +129,48 @@ class _$AppRouter extends RootStackRouter {
         child: const QuranScreen(),
       );
     },
+    CardDetailScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const CardDetailScreen(),
+      );
+    },
+    DugalarScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const DugalarScreen(),
+      );
+    },
+    ZikrScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const ZikrScreen(),
+      );
+    },
+    SuraScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const SuraScreen(),
+      );
+    },
+    NamesScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const NamesScreen(),
+      );
+    },
+    SalauatScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const SalauatScreen(),
+      );
+    },
+    SuraScreenDetailRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const SuraScreenDetail(),
+      );
+    },
     TourScreenRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
@@ -224,7 +266,42 @@ class _$AppRouter extends RootStackRouter {
                   QuranScreenRoute.name,
                   path: '',
                   parent: QuranRouter.name,
-                )
+                ),
+                RouteConfig(
+                  CardDetailScreenRoute.name,
+                  path: 'carddetail',
+                  parent: QuranRouter.name,
+                ),
+                RouteConfig(
+                  DugalarScreenRoute.name,
+                  path: 'dugalarscreen',
+                  parent: QuranRouter.name,
+                ),
+                RouteConfig(
+                  ZikrScreenRoute.name,
+                  path: 'zikrscreen',
+                  parent: QuranRouter.name,
+                ),
+                RouteConfig(
+                  SuraScreenRoute.name,
+                  path: 'surascreen',
+                  parent: QuranRouter.name,
+                ),
+                RouteConfig(
+                  NamesScreenRoute.name,
+                  path: 'namesscreen',
+                  parent: QuranRouter.name,
+                ),
+                RouteConfig(
+                  SalauatScreenRoute.name,
+                  path: 'salauatscreen',
+                  parent: QuranRouter.name,
+                ),
+                RouteConfig(
+                  SuraScreenDetailRoute.name,
+                  path: 'surascreendetail',
+                  parent: QuranRouter.name,
+                ),
               ],
             ),
             RouteConfig(
@@ -497,6 +574,90 @@ class QuranScreenRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'QuranScreenRoute';
+}
+
+/// generated route for
+/// [CardDetailScreen]
+class CardDetailScreenRoute extends PageRouteInfo<void> {
+  const CardDetailScreenRoute()
+      : super(
+          CardDetailScreenRoute.name,
+          path: 'carddetail',
+        );
+
+  static const String name = 'CardDetailScreenRoute';
+}
+
+/// generated route for
+/// [DugalarScreen]
+class DugalarScreenRoute extends PageRouteInfo<void> {
+  const DugalarScreenRoute()
+      : super(
+          DugalarScreenRoute.name,
+          path: 'dugalarscreen',
+        );
+
+  static const String name = 'DugalarScreenRoute';
+}
+
+/// generated route for
+/// [ZikrScreen]
+class ZikrScreenRoute extends PageRouteInfo<void> {
+  const ZikrScreenRoute()
+      : super(
+          ZikrScreenRoute.name,
+          path: 'zikrscreen',
+        );
+
+  static const String name = 'ZikrScreenRoute';
+}
+
+/// generated route for
+/// [SuraScreen]
+class SuraScreenRoute extends PageRouteInfo<void> {
+  const SuraScreenRoute()
+      : super(
+          SuraScreenRoute.name,
+          path: 'surascreen',
+        );
+
+  static const String name = 'SuraScreenRoute';
+}
+
+/// generated route for
+/// [NamesScreen]
+class NamesScreenRoute extends PageRouteInfo<void> {
+  const NamesScreenRoute()
+      : super(
+          NamesScreenRoute.name,
+          path: 'namesscreen',
+        );
+
+  static const String name = 'NamesScreenRoute';
+}
+
+/// generated route for
+/// [SalauatScreen]
+class SalauatScreenRoute extends PageRouteInfo<void> {
+  const SalauatScreenRoute()
+      : super(
+          SalauatScreenRoute.name,
+          path: 'salauatscreen',
+        );
+
+  static const String name = 'SalauatScreenRoute';
+}
+
+/// generated route for
+/// [SuraScreenDetail]
+class SuraScreenDetailRoute extends PageRouteInfo<void> {
+  const SuraScreenDetailRoute()
+      : super(
+          SuraScreenDetailRoute.name,
+          path: 'surascreendetail',
+        );
+
+  static const String name = 'SuraScreenDetailRoute';
 }
 
 /// generated route for
