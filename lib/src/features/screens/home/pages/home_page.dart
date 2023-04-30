@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 19),
+          padding: const EdgeInsets.symmetric(horizontal: 19, vertical: 10),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -52,7 +52,9 @@ class HomeScreen extends StatelessWidget {
                 const ColumnSpacer(1.2),
                 UmraButton(id: 1, onTap: () {}),
                 const ColumnSpacer(0.8),
-                UmraButton(id: 2, onTap: () => context.router.push(const UmraScreenRoute())),
+                UmraButton(
+                    id: 2,
+                    onTap: () => context.router.push(const UmraScreenRoute())),
                 const ColumnSpacer(2),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

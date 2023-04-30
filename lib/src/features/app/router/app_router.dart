@@ -8,13 +8,21 @@ import 'package:umyra/src/features/screens/home/pages/namaz_page.dart';
 import 'package:umyra/src/features/screens/home/pages/navigation_page.dart';
 import 'package:umyra/src/features/screens/home/pages/umra_detail_page.dart';
 import 'package:umyra/src/features/screens/home/pages/umra_page.dart';
+import 'package:umyra/src/features/screens/quran/pages/dugalar_screen.dart';
+import 'package:umyra/src/features/screens/quran/pages/names_screen.dart';
 import 'package:umyra/src/features/screens/quran/pages/quran_page.dart';
 import 'package:umyra/src/features/screens/home/pages/book_page.dart';
 import 'package:umyra/src/features/screens/home/pages/home_page.dart';
 import 'package:umyra/src/features/screens/home/pages/tasbih_detail.dart';
 import 'package:umyra/src/features/screens/home/pages/tasbih_page.dart';
+import 'package:umyra/src/features/screens/quran/pages/salauat_screen.dart';
+import 'package:umyra/src/features/screens/quran/pages/sura_screen.dart';
+import 'package:umyra/src/features/screens/quran/pages/sura_screen_detail.dart';
+import 'package:umyra/src/features/screens/quran/pages/zikr_screen.dart';
 import 'package:umyra/src/features/screens/tour/pages/tour_page.dart';
 import 'package:umyra/src/features/screens/profile/pages/profile_page.dart';
+
+import '../../screens/quran/pages/card_detail_page.dart';
 
 part 'app_router.gr.dart';
 
@@ -78,6 +86,34 @@ part 'app_router.gr.dart';
           AutoRoute(
             page: QuranScreen,
             path: '',
+          ),
+          AutoRoute(
+            page: CardDetailScreen,
+            path: 'carddetail',
+          ),
+          AutoRoute(
+            page: DugalarScreen,
+            path: 'dugalarscreen',
+          ),
+          AutoRoute(
+            page: ZikrScreen,
+            path: 'zikrscreen',
+          ),
+          AutoRoute(
+            page: SuraScreen,
+            path: 'surascreen',
+          ),
+          AutoRoute(
+            page: NamesScreen,
+            path: 'namesscreen',
+          ),
+          AutoRoute(
+            page: SalauatScreen,
+            path: 'salauatscreen',
+          ),
+          AutoRoute(
+            page: SuraScreenDetail,
+            path: 'surascreendetail',
           ),
         ],
       ),

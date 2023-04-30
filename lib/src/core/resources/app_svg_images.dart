@@ -17,4 +17,5 @@ class AppSvgImages {
   static const String qibla = 'assets/images/svg/qibla.svg';
   static const String replay = 'assets/images/svg/replay.svg';
   static const String tasbih = 'assets/images/svg/tasbih.svg';
+  static const String rightArrowBlack = 'assets/images/svg/rightArrowBlack.svg';
 }
