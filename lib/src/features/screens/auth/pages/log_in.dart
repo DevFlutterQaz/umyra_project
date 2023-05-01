@@ -46,8 +46,8 @@ class _LogInScreenState extends State<LogInScreen> {
                 ),
                 const ColumnSpacer(4),
                 CustomButton(
-                  title: 'Кіру',
-                  onTap: () {},
+                  label: 'Кіру',
+                  onPressed: () {},
                 ),
               ],
             ),

@@ -33,10 +33,6 @@ class CustomAppBar extends StatelessWidget {
               ),
             ],
           ),
-          const Icon(
-            Icons.search,
-            size: 30,
-          ),
         ],
       ),
     );

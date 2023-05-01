@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:umyra/src/core/widgets/column_spacer.dart';
+import 'package:umyra/src/core/widgets/custom_app_bar.dart';
 
 class TechnicalSupportScreen extends StatelessWidget {
   const TechnicalSupportScreen({super.key});
@@ -8,8 +10,12 @@ class TechnicalSupportScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
           child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          const Padding(
+            padding: EdgeInsets.only(top: 10),
+            child: CustomAppBar(title: 'Support'),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
@@ -17,7 +23,8 @@ class TechnicalSupportScreen extends StatelessWidget {
                 'Link to the telegram',
               ),
             ],
-          )
+          ),
+          Container(),
         ],
       )),
     );

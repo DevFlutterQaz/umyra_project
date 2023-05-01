@@ -70,13 +70,14 @@ class _StartScreenState extends State<StartScreen> {
               ),
               const Spacer(flex: 6),
               CustomButton(
-                title: 'Регистрация',
-                onTap: () => context.router.push(const RegisterScreenRoute()),
+                label: 'Регистрация',
+                onPressed: () =>
+                    context.router.push(const RegisterScreenRoute()),
               ),
               const ColumnSpacer(1.5),
               CustomButton(
-                title: 'Войти как гость',
-                onTap: () =>
+                label: 'Войти как гость',
+                onPressed: () =>
                     context.router.push(const CustomNavigationWidgetRoute()),
               ),
               const ColumnSpacer(1.5),
