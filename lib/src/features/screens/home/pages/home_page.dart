@@ -12,6 +12,7 @@ import 'package:umyra/src/features/screens/home/widgets/custom_status_time.dart'
 import 'package:umyra/src/features/screens/home/widgets/home_news_widget.dart';
 import 'package:umyra/src/features/screens/home/widgets/umra_button.dart';
 
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -20,7 +21,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 19),
+          padding: const EdgeInsets.symmetric(horizontal: 19, vertical: 10),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -50,9 +51,11 @@ class HomeScreen extends StatelessWidget {
                         .headlineSmall
                         ?.copyWith(fontWeight: FontWeight.w700)),
                 const ColumnSpacer(1.2),
-                UmraButton(id: 1, onTap: () {}),
+                UmraButton(id: 1, onTap: () => context.router.push(const UmraCourseScreenRoute())),
                 const ColumnSpacer(0.8),
-                UmraButton(id: 2, onTap: () => context.router.push(const UmraScreenRoute())),
+                UmraButton(
+                    id: 2,
+                    onTap: () => context.router.push(const UmraScreenRoute())),
                 const ColumnSpacer(2),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

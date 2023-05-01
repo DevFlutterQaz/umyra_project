@@ -17,6 +17,24 @@ class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    StartScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const StartScreen(),
+      );
+    },
+    LogInScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const LogInScreen(),
+      );
+    },
+    RegisterScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const RegisterScreen(),
+      );
+    },
     TasbihDetailRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
@@ -107,10 +125,79 @@ class _$AppRouter extends RootStackRouter {
         child: const UmraDetailScreen(),
       );
     },
-    QuranScreenRoute.name: (routeData) {
+    UmraCourseScreenRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const QuranScreen(),
+        child: const UmraCourseScreen(),
+      );
+    },
+    UmraLessanRoute.name: (routeData) {
+      final args = routeData.argsAs<UmraLessanRouteArgs>();
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: UmraLessan(
+          key: args.key,
+          index: args.index,
+        ),
+      );
+    },
+    MainQuranScrennRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const MainQuranScrenn(),
+      );
+    },
+    QuarnDetailScreenRoute.name: (routeData) {
+      final args = routeData.argsAs<QuarnDetailScreenRouteArgs>();
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: QuarnDetailScreen(
+          key: args.key,
+          quranData: args.quranData,
+          quranArabData: args.quranArabData,
+        ),
+      );
+    },
+    CardDetailScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const CardDetailScreen(),
+      );
+    },
+    DugalarScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const DugalarScreen(),
+      );
+    },
+    ZikrScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const ZikrScreen(),
+      );
+    },
+    SuraScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const SuraScreen(),
+      );
+    },
+    NamesScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const NamesScreen(),
+      );
+    },
+    SalauatScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const SalauatScreen(),
+      );
+    },
+    SuraScreenDetailRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const SuraScreenDetail(),
       );
     },
     TourScreenRoute.name: (routeData) {
@@ -125,10 +212,82 @@ class _$AppRouter extends RootStackRouter {
         child: const ProfileScreen(),
       );
     },
+    AboutProjectScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const AboutProjectScreen(),
+      );
+    },
+    BoughtServicesScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const BoughtServicesScreen(),
+      );
+    },
+    ChangePasswordScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const ChangePasswordScreen(),
+      );
+    },
+    FaqScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const FaqScreen(),
+      );
+    },
+    LanguageScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const LanguageScreen(),
+      );
+    },
+    MyCardsScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const MyCardsScreen(),
+      );
+    },
+    MyInformationScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const MyInformationScreen(),
+      );
+    },
+    TechnicalSupportScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const TechnicalSupportScreen(),
+      );
+    },
+    MessageNoteScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const MessageNoteScreen(),
+      );
+    },
+    NewPasswordScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const NewPasswordScreen(),
+      );
+    },
   };
 
   @override
   List<RouteConfig> get routes => [
+        RouteConfig(
+          StartScreenRoute.name,
+          path: '/',
+        ),
+        RouteConfig(
+          LogInScreenRoute.name,
+          path: 'login',
+        ),
+        RouteConfig(
+          RegisterScreenRoute.name,
+          path: 'register',
+        ),
         RouteConfig(
           TasbihDetailRoute.name,
           path: 'tasbihDetail',
@@ -187,6 +346,16 @@ class _$AppRouter extends RootStackRouter {
                   path: 'umradetail',
                   parent: HomeRoute.name,
                 ),
+                RouteConfig(
+                  UmraCourseScreenRoute.name,
+                  path: 'umracourse',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  UmraLessanRoute.name,
+                  path: 'umralesson',
+                  parent: HomeRoute.name,
+                ),
               ],
             ),
             RouteConfig(
@@ -195,10 +364,50 @@ class _$AppRouter extends RootStackRouter {
               parent: CustomNavigationWidgetRoute.name,
               children: [
                 RouteConfig(
-                  QuranScreenRoute.name,
+                  MainQuranScrennRoute.name,
                   path: '',
                   parent: QuranRouter.name,
-                )
+                ),
+                RouteConfig(
+                  QuarnDetailScreenRoute.name,
+                  path: '',
+                  parent: QuranRouter.name,
+                ),
+                RouteConfig(
+                  CardDetailScreenRoute.name,
+                  path: 'carddetail',
+                  parent: QuranRouter.name,
+                ),
+                RouteConfig(
+                  DugalarScreenRoute.name,
+                  path: 'dugalarscreen',
+                  parent: QuranRouter.name,
+                ),
+                RouteConfig(
+                  ZikrScreenRoute.name,
+                  path: 'zikrscreen',
+                  parent: QuranRouter.name,
+                ),
+                RouteConfig(
+                  SuraScreenRoute.name,
+                  path: 'surascreen',
+                  parent: QuranRouter.name,
+                ),
+                RouteConfig(
+                  NamesScreenRoute.name,
+                  path: 'namesscreen',
+                  parent: QuranRouter.name,
+                ),
+                RouteConfig(
+                  SalauatScreenRoute.name,
+                  path: 'salauatscreen',
+                  parent: QuranRouter.name,
+                ),
+                RouteConfig(
+                  SuraScreenDetailRoute.name,
+                  path: 'surascreendetail',
+                  parent: QuranRouter.name,
+                ),
               ],
             ),
             RouteConfig(
@@ -222,12 +431,98 @@ class _$AppRouter extends RootStackRouter {
                   ProfileScreenRoute.name,
                   path: '',
                   parent: ProfileRouter.name,
-                )
+                ),
+                RouteConfig(
+                  AboutProjectScreenRoute.name,
+                  path: 'aboutproject',
+                  parent: ProfileRouter.name,
+                ),
+                RouteConfig(
+                  BoughtServicesScreenRoute.name,
+                  path: 'boughtservices',
+                  parent: ProfileRouter.name,
+                ),
+                RouteConfig(
+                  ChangePasswordScreenRoute.name,
+                  path: 'changepassword',
+                  parent: ProfileRouter.name,
+                ),
+                RouteConfig(
+                  FaqScreenRoute.name,
+                  path: 'faqscreen',
+                  parent: ProfileRouter.name,
+                ),
+                RouteConfig(
+                  LanguageScreenRoute.name,
+                  path: 'languagescreen',
+                  parent: ProfileRouter.name,
+                ),
+                RouteConfig(
+                  MyCardsScreenRoute.name,
+                  path: 'mycardsscreen',
+                  parent: ProfileRouter.name,
+                ),
+                RouteConfig(
+                  MyInformationScreenRoute.name,
+                  path: 'myinformationscreen',
+                  parent: ProfileRouter.name,
+                ),
+                RouteConfig(
+                  TechnicalSupportScreenRoute.name,
+                  path: 'technicalsupport',
+                  parent: ProfileRouter.name,
+                ),
+                RouteConfig(
+                  MessageNoteScreenRoute.name,
+                  path: 'messagenotescreen',
+                  parent: ProfileRouter.name,
+                ),
+                RouteConfig(
+                  NewPasswordScreenRoute.name,
+                  path: 'newpasswordscreen',
+                  parent: ProfileRouter.name,
+                ),
               ],
             ),
           ],
         ),
       ];
+}
+
+/// generated route for
+/// [StartScreen]
+class StartScreenRoute extends PageRouteInfo<void> {
+  const StartScreenRoute()
+      : super(
+          StartScreenRoute.name,
+          path: '/',
+        );
+
+  static const String name = 'StartScreenRoute';
+}
+
+/// generated route for
+/// [LogInScreen]
+class LogInScreenRoute extends PageRouteInfo<void> {
+  const LogInScreenRoute()
+      : super(
+          LogInScreenRoute.name,
+          path: 'login',
+        );
+
+  static const String name = 'LogInScreenRoute';
+}
+
+/// generated route for
+/// [RegisterScreen]
+class RegisterScreenRoute extends PageRouteInfo<void> {
+  const RegisterScreenRoute()
+      : super(
+          RegisterScreenRoute.name,
+          path: 'register',
+        );
+
+  static const String name = 'RegisterScreenRoute';
 }
 
 /// generated route for
@@ -416,15 +711,184 @@ class UmraDetailScreenRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [QuranScreen]
-class QuranScreenRoute extends PageRouteInfo<void> {
-  const QuranScreenRoute()
+/// [UmraCourseScreen]
+class UmraCourseScreenRoute extends PageRouteInfo<void> {
+  const UmraCourseScreenRoute()
       : super(
-          QuranScreenRoute.name,
+          UmraCourseScreenRoute.name,
+          path: 'umracourse',
+        );
+
+  static const String name = 'UmraCourseScreenRoute';
+}
+
+/// generated route for
+/// [UmraLessan]
+class UmraLessanRoute extends PageRouteInfo<UmraLessanRouteArgs> {
+  UmraLessanRoute({
+    Key? key,
+    required int index,
+  }) : super(
+          UmraLessanRoute.name,
+          path: 'umralesson',
+          args: UmraLessanRouteArgs(
+            key: key,
+            index: index,
+          ),
+        );
+
+  static const String name = 'UmraLessanRoute';
+}
+
+class UmraLessanRouteArgs {
+  const UmraLessanRouteArgs({
+    this.key,
+    required this.index,
+  });
+
+  final Key? key;
+
+  final int index;
+
+  @override
+  String toString() {
+    return 'UmraLessanRouteArgs{key: $key, index: $index}';
+  }
+}
+
+/// generated route for
+/// [MainQuranScrenn]
+class MainQuranScrennRoute extends PageRouteInfo<void> {
+  const MainQuranScrennRoute()
+      : super(
+          MainQuranScrennRoute.name,
           path: '',
         );
 
-  static const String name = 'QuranScreenRoute';
+  static const String name = 'MainQuranScrennRoute';
+}
+
+/// generated route for
+/// [QuarnDetailScreen]
+class QuarnDetailScreenRoute extends PageRouteInfo<QuarnDetailScreenRouteArgs> {
+  QuarnDetailScreenRoute({
+    Key? key,
+    required Surah quranData,
+    required SurahArab quranArabData,
+  }) : super(
+          QuarnDetailScreenRoute.name,
+          path: '',
+          args: QuarnDetailScreenRouteArgs(
+            key: key,
+            quranData: quranData,
+            quranArabData: quranArabData,
+          ),
+        );
+
+  static const String name = 'QuarnDetailScreenRoute';
+}
+
+class QuarnDetailScreenRouteArgs {
+  const QuarnDetailScreenRouteArgs({
+    this.key,
+    required this.quranData,
+    required this.quranArabData,
+  });
+
+  final Key? key;
+
+  final Surah quranData;
+
+  final SurahArab quranArabData;
+
+  @override
+  String toString() {
+    return 'QuarnDetailScreenRouteArgs{key: $key, quranData: $quranData, quranArabData: $quranArabData}';
+  }
+}
+
+/// generated route for
+/// [CardDetailScreen]
+class CardDetailScreenRoute extends PageRouteInfo<void> {
+  const CardDetailScreenRoute()
+      : super(
+          CardDetailScreenRoute.name,
+          path: 'carddetail',
+        );
+
+  static const String name = 'CardDetailScreenRoute';
+}
+
+/// generated route for
+/// [DugalarScreen]
+class DugalarScreenRoute extends PageRouteInfo<void> {
+  const DugalarScreenRoute()
+      : super(
+          DugalarScreenRoute.name,
+          path: 'dugalarscreen',
+        );
+
+  static const String name = 'DugalarScreenRoute';
+}
+
+/// generated route for
+/// [ZikrScreen]
+class ZikrScreenRoute extends PageRouteInfo<void> {
+  const ZikrScreenRoute()
+      : super(
+          ZikrScreenRoute.name,
+          path: 'zikrscreen',
+        );
+
+  static const String name = 'ZikrScreenRoute';
+}
+
+/// generated route for
+/// [SuraScreen]
+class SuraScreenRoute extends PageRouteInfo<void> {
+  const SuraScreenRoute()
+      : super(
+          SuraScreenRoute.name,
+          path: 'surascreen',
+        );
+
+  static const String name = 'SuraScreenRoute';
+}
+
+/// generated route for
+/// [NamesScreen]
+class NamesScreenRoute extends PageRouteInfo<void> {
+  const NamesScreenRoute()
+      : super(
+          NamesScreenRoute.name,
+          path: 'namesscreen',
+        );
+
+  static const String name = 'NamesScreenRoute';
+}
+
+/// generated route for
+/// [SalauatScreen]
+class SalauatScreenRoute extends PageRouteInfo<void> {
+  const SalauatScreenRoute()
+      : super(
+          SalauatScreenRoute.name,
+          path: 'salauatscreen',
+        );
+
+  static const String name = 'SalauatScreenRoute';
+}
+
+/// generated route for
+/// [SuraScreenDetail]
+class SuraScreenDetailRoute extends PageRouteInfo<void> {
+  const SuraScreenDetailRoute()
+      : super(
+          SuraScreenDetailRoute.name,
+          path: 'surascreendetail',
+        );
+
+  static const String name = 'SuraScreenDetailRoute';
 }
 
 /// generated route for
@@ -449,4 +913,124 @@ class ProfileScreenRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'ProfileScreenRoute';
+}
+
+/// generated route for
+/// [AboutProjectScreen]
+class AboutProjectScreenRoute extends PageRouteInfo<void> {
+  const AboutProjectScreenRoute()
+      : super(
+          AboutProjectScreenRoute.name,
+          path: 'aboutproject',
+        );
+
+  static const String name = 'AboutProjectScreenRoute';
+}
+
+/// generated route for
+/// [BoughtServicesScreen]
+class BoughtServicesScreenRoute extends PageRouteInfo<void> {
+  const BoughtServicesScreenRoute()
+      : super(
+          BoughtServicesScreenRoute.name,
+          path: 'boughtservices',
+        );
+
+  static const String name = 'BoughtServicesScreenRoute';
+}
+
+/// generated route for
+/// [ChangePasswordScreen]
+class ChangePasswordScreenRoute extends PageRouteInfo<void> {
+  const ChangePasswordScreenRoute()
+      : super(
+          ChangePasswordScreenRoute.name,
+          path: 'changepassword',
+        );
+
+  static const String name = 'ChangePasswordScreenRoute';
+}
+
+/// generated route for
+/// [FaqScreen]
+class FaqScreenRoute extends PageRouteInfo<void> {
+  const FaqScreenRoute()
+      : super(
+          FaqScreenRoute.name,
+          path: 'faqscreen',
+        );
+
+  static const String name = 'FaqScreenRoute';
+}
+
+/// generated route for
+/// [LanguageScreen]
+class LanguageScreenRoute extends PageRouteInfo<void> {
+  const LanguageScreenRoute()
+      : super(
+          LanguageScreenRoute.name,
+          path: 'languagescreen',
+        );
+
+  static const String name = 'LanguageScreenRoute';
+}
+
+/// generated route for
+/// [MyCardsScreen]
+class MyCardsScreenRoute extends PageRouteInfo<void> {
+  const MyCardsScreenRoute()
+      : super(
+          MyCardsScreenRoute.name,
+          path: 'mycardsscreen',
+        );
+
+  static const String name = 'MyCardsScreenRoute';
+}
+
+/// generated route for
+/// [MyInformationScreen]
+class MyInformationScreenRoute extends PageRouteInfo<void> {
+  const MyInformationScreenRoute()
+      : super(
+          MyInformationScreenRoute.name,
+          path: 'myinformationscreen',
+        );
+
+  static const String name = 'MyInformationScreenRoute';
+}
+
+/// generated route for
+/// [TechnicalSupportScreen]
+class TechnicalSupportScreenRoute extends PageRouteInfo<void> {
+  const TechnicalSupportScreenRoute()
+      : super(
+          TechnicalSupportScreenRoute.name,
+          path: 'technicalsupport',
+        );
+
+  static const String name = 'TechnicalSupportScreenRoute';
+}
+
+/// generated route for
+/// [MessageNoteScreen]
+class MessageNoteScreenRoute extends PageRouteInfo<void> {
+  const MessageNoteScreenRoute()
+      : super(
+          MessageNoteScreenRoute.name,
+          path: 'messagenotescreen',
+        );
+
+  static const String name = 'MessageNoteScreenRoute';
+}
+
+/// generated route for
+/// [NewPasswordScreen]
+class NewPasswordScreenRoute extends PageRouteInfo<void> {
+  const NewPasswordScreenRoute()
+      : super(
+          NewPasswordScreenRoute.name,
+          path: 'newpasswordscreen',
+        );
+
+  static const String name = 'NewPasswordScreenRoute';
 }

@@ -15,8 +15,10 @@ class UmyraApp extends StatelessWidget {
         dividerColor: Colors.transparent,
       ),
       routeInformationParser: _appRouter.defaultRouteParser(),
-      routerDelegate: _appRouter
-          .delegate(initialRoutes: [const CustomNavigationWidgetRoute()]),
+      routerDelegate: _appRouter.delegate(),
+      // routerDelegate: _appRouter
+      //     .delegate(initialRoutes: [const CustomNavigationWidgetRoute()]),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

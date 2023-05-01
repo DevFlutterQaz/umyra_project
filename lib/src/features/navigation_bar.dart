@@ -2,6 +2,8 @@
 
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:umyra/src/core/resources/resources.dart';
 import 'package:umyra/src/features/app/router/app_router.dart';
 
 class CustomNavigationWidget extends StatefulWidget {
@@ -49,21 +51,31 @@ class _CustomNavigationWidgetState extends State<CustomNavigationWidget> {
             onTap: (index) async => index == currentIndex
                 ? await _canPopSelf(tabsRouter)
                 : tabsRouter.setActiveIndex(index),
-            items: const [
+            items: [
               BottomNavigationBarItem(
-                icon: Icon(Icons.home),
+                icon: SvgPicture.asset(AppSvgImages.home),
+                activeIcon:
+                    SvgPicture.asset(AppSvgImages.home, color: Colors.black),
                 label: '',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.book),
+                icon: SvgPicture.asset(AppSvgImages.book2),
+                activeIcon: SvgPicture.asset(
+                  AppSvgImages.book2,
+                  color: Colors.black,
+                ),
                 label: '',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.location_history),
+                icon: SvgPicture.asset(AppSvgImages.location2),
+                activeIcon: SvgPicture.asset(AppSvgImages.location2,
+                    color: Colors.black),
                 label: '',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.person),
+                icon: SvgPicture.asset(AppSvgImages.profile),
+                activeIcon:
+                    SvgPicture.asset(AppSvgImages.profile, color: Colors.black),
                 label: '',
               ),
             ],

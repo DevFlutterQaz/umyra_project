@@ -13,10 +13,10 @@ dependencies:
     sdk: flutter
 
   # Rest API and State management
-  flutter_bloc: ^8.0.0
+  flutter_bloc: ^8.1.2
   json_annotation: ^4.3.0
   equatable: ^2.0.3
-  dio: ^4.0.0
+  dio: ^5.1.1
   provider: ^6.0.2
   get_it: ^7.2.0
 
@@ -46,6 +46,7 @@ dependencies:
   dropdown_textfield: ^1.0.8
   figma_squircle: ^0.5.3
   mask_text_input_formatter: ^2.3.0
+  audioplayers: ^0.20.1
 
 dev_dependencies:
   flutter_test:
