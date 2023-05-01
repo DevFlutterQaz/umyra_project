@@ -77,8 +77,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     checkBoxValue: checkBoxValue, onChanged: statusCheckBox),
                 const ColumnSpacer(2),
                 CustomButton(
-                  title: 'Кіру',
-                  onTap: () =>
+                  label: 'Кіру',
+                  onPressed: () =>
                       context.router.push(const CustomNavigationWidgetRoute()),
                 ),
               ],

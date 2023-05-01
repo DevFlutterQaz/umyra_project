@@ -20,8 +20,12 @@ import 'package:umyra/src/features/screens/profile/pages/message_note_page.dart'
 import 'package:umyra/src/features/screens/profile/pages/my_cards_page.dart';
 import 'package:umyra/src/features/screens/profile/pages/my_information_page.dart';
 import 'package:umyra/src/features/screens/profile/pages/techncal_support_page.dart';
+import 'package:umyra/src/features/screens/quran/logic/data/model/model_arab_quran.dart';
+import 'package:umyra/src/features/screens/quran/logic/data/model/model_quran.dart';
 import 'package:umyra/src/features/screens/quran/pages/dugalar_screen.dart';
+import 'package:umyra/src/features/screens/quran/pages/main_quran.dart';
 import 'package:umyra/src/features/screens/quran/pages/names_screen.dart';
+import 'package:umyra/src/features/screens/quran/pages/quran_detail.dart';
 import 'package:umyra/src/features/screens/quran/pages/quran_page.dart';
 import 'package:umyra/src/features/screens/home/pages/book_page.dart';
 import 'package:umyra/src/features/screens/home/pages/home_page.dart';
@@ -34,14 +38,10 @@ import 'package:umyra/src/features/screens/quran/pages/zikr_screen.dart';
 import 'package:umyra/src/features/screens/tour/pages/tour_page.dart';
 import 'package:umyra/src/features/screens/profile/pages/profile_page.dart';
 
-
-import '../../../core/widgets/new_password_screen.dart';
-import '../../screens/profile/pages/about_project_page.dart';
-import '../../screens/profile/pages/change_password.dart';
-import '../../screens/quran/pages/card_detail_page.dart';
-
+import 'package:umyra/src/core/widgets/new_password_screen.dart';
+import 'package:umyra/src/features/screens/profile/pages/about_project_page.dart';
+import 'package:umyra/src/features/screens/profile/pages/change_password.dart';
 import 'package:umyra/src/features/screens/quran/pages/card_detail_page.dart';
-
 
 part 'app_router.gr.dart';
 
@@ -124,7 +124,11 @@ part 'app_router.gr.dart';
         name: "QuranRouter",
         children: [
           AutoRoute(
-            page: QuranScreen,
+            page: MainQuranScrenn,
+            path: '',
+          ),
+          AutoRoute(
+            page: QuarnDetailScreen,
             path: '',
           ),
           AutoRoute(

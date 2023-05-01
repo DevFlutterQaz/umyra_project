@@ -1,8 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:umyra/src/core/resources/app_colors.dart';
-import 'package:umyra/src/core/widgets/launch_in_browser_util.dart';
 
 class CheckBox extends StatelessWidget {
   const CheckBox({
