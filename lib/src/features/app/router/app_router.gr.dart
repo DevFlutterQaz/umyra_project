@@ -141,10 +141,21 @@ class _$AppRouter extends RootStackRouter {
         ),
       );
     },
-    QuranScreenRoute.name: (routeData) {
+    MainQuranScrennRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const QuranScreen(),
+        child: const MainQuranScrenn(),
+      );
+    },
+    QuarnDetailScreenRoute.name: (routeData) {
+      final args = routeData.argsAs<QuarnDetailScreenRouteArgs>();
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: QuarnDetailScreen(
+          key: args.key,
+          quranData: args.quranData,
+          quranArabData: args.quranArabData,
+        ),
       );
     },
     CardDetailScreenRoute.name: (routeData) {
@@ -353,7 +364,12 @@ class _$AppRouter extends RootStackRouter {
               parent: CustomNavigationWidgetRoute.name,
               children: [
                 RouteConfig(
-                  QuranScreenRoute.name,
+                  MainQuranScrennRoute.name,
+                  path: '',
+                  parent: QuranRouter.name,
+                ),
+                RouteConfig(
+                  QuarnDetailScreenRoute.name,
                   path: '',
                   parent: QuranRouter.name,
                 ),
@@ -741,15 +757,54 @@ class UmraLessanRouteArgs {
 }
 
 /// generated route for
-/// [QuranScreen]
-class QuranScreenRoute extends PageRouteInfo<void> {
-  const QuranScreenRoute()
+/// [MainQuranScrenn]
+class MainQuranScrennRoute extends PageRouteInfo<void> {
+  const MainQuranScrennRoute()
       : super(
-          QuranScreenRoute.name,
+          MainQuranScrennRoute.name,
           path: '',
         );
 
-  static const String name = 'QuranScreenRoute';
+  static const String name = 'MainQuranScrennRoute';
+}
+
+/// generated route for
+/// [QuarnDetailScreen]
+class QuarnDetailScreenRoute extends PageRouteInfo<QuarnDetailScreenRouteArgs> {
+  QuarnDetailScreenRoute({
+    Key? key,
+    required Surah quranData,
+    required SurahArab quranArabData,
+  }) : super(
+          QuarnDetailScreenRoute.name,
+          path: '',
+          args: QuarnDetailScreenRouteArgs(
+            key: key,
+            quranData: quranData,
+            quranArabData: quranArabData,
+          ),
+        );
+
+  static const String name = 'QuarnDetailScreenRoute';
+}
+
+class QuarnDetailScreenRouteArgs {
+  const QuarnDetailScreenRouteArgs({
+    this.key,
+    required this.quranData,
+    required this.quranArabData,
+  });
+
+  final Key? key;
+
+  final Surah quranData;
+
+  final SurahArab quranArabData;
+
+  @override
+  String toString() {
+    return 'QuarnDetailScreenRouteArgs{key: $key, quranData: $quranData, quranArabData: $quranArabData}';
+  }
 }
 
 /// generated route for

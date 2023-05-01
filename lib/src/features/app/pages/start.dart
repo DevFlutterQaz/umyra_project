@@ -71,8 +71,7 @@ class _StartScreenState extends State<StartScreen> {
               const Spacer(flex: 6),
               CustomButton(
                 label: 'Регистрация',
-                onPressed: () =>
-                    context.router.push(const RegisterScreenRoute()),
+                onPressed: () => context.router.push(const RegisterScreenRoute()),
               ),
               const ColumnSpacer(1.5),
               CustomButton(
