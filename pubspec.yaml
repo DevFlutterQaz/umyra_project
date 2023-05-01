@@ -19,7 +19,6 @@ dependencies:
   dio: ^5.1.1
   provider: ^6.0.2
   get_it: ^7.2.0
-  
 
   # Local Storage
   path_provider: ^2.0.8
@@ -47,6 +46,7 @@ dependencies:
   dropdown_textfield: ^1.0.8
   figma_squircle: ^0.5.3
   mask_text_input_formatter: ^2.3.0
+  audioplayers: ^0.20.1
 
 dev_dependencies:
   flutter_test:

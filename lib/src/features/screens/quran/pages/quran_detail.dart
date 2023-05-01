@@ -5,7 +5,7 @@ import 'package:umyra/src/features/screens/quran/logic/data/model/model_arab_qur
 import 'package:umyra/src/features/screens/quran/logic/data/model/model_quran.dart';
 import 'package:umyra/src/features/screens/quran/widgets/sure_widget.dart';
 
-class QuarnDetailScreen extends StatelessWidget {
+class QuarnDetailScreen extends StatefulWidget {
   final Surah quranData;
   final SurahArab quranArabData;
   const QuarnDetailScreen({
@@ -14,6 +14,11 @@ class QuarnDetailScreen extends StatelessWidget {
     required this.quranArabData,
   });
 
+  @override
+  State<QuarnDetailScreen> createState() => _QuarnDetailScreenState();
+}
+
+class _QuarnDetailScreenState extends State<QuarnDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,14 +33,14 @@ class QuarnDetailScreen extends StatelessWidget {
               Expanded(
                 child: ListView.separated(
                   itemBuilder: (context, index) => SureWidget(
-                    arabName: quranArabData.ayahs[index].text,
-                    description: quranData.ayahs[index].text,
-                    numberSura: quranData.ayahs[index].numberInSurah,
+                    arabName: widget.quranArabData.ayahs[index].text,
+                    description: widget.quranData.ayahs[index].text,
+                    numberSura: widget.quranData.ayahs[index].numberInSurah,
                     index: index,
-                    audio: quranArabData.ayahs[index].audio,
+                    audio: widget.quranArabData.ayahs[index].audio,
                   ),
                   separatorBuilder: (context, index) => const ColumnSpacer(0.8),
-                  itemCount: quranData.ayahs.length,
+                  itemCount: widget.quranData.ayahs.length,
                 ),
               )
             ],
