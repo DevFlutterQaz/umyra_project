@@ -28,7 +28,7 @@ class _QuarnDetailScreenState extends State<QuarnDetailScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const CustomAppBar(title: 'Sure'),
+              CustomAppBar(title: quranData.englishName),
               const ColumnSpacer(2),
               Expanded(
                 child: ListView.separated(
