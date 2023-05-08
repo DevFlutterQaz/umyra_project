@@ -26,25 +26,29 @@ class UmraCourseScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     CustomCourseButton(
+                        number: "1",
                         course: 'Ihram',
                         id: 1,
                         onTap: () =>
-                            context.router.push(UmraLessanRoute(index: 1))),
+                            context.router.push(IhramScreenRoute(index: 1))),
                     SvgPicture.asset(AppSvgImages.vector1),
                     CustomCourseButton(
+                        number: "2",
                         course: 'Talbiyah',
                         id: 2,
                         onTap: () =>
-                            context.router.push(UmraLessanRoute(index: 2))),
+                            context.router.push(TalbiyahScreenRoute(index: 2))),
                     SvgPicture.asset(AppSvgImages.vector2),
                     CustomCourseButton(
-                        course: 'Tawwaf',
+                        number: "3",
+                        course: 'Tawaf',
                         id: 1,
-                        onTap: () =>
-                            context.router.push(UmraLessanRoute(index: 1))),
+                        onTap: () => context.router
+                            .push(const TawafScreenRoute(index: 1))),
                     SvgPicture.asset(AppSvgImages.vector1),
                     CustomCourseButton(
-                        course: 'Maqan Ibrahim',
+                        number: "4",
+                        course: '''Sa'i''',
                         id: 2,
                         onTap: () =>
                             context.router.push(UmraLessanRoute(index: 2))),
