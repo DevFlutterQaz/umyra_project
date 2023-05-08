@@ -6,7 +6,7 @@ publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.19.0 <3.0.0"
+  sdk: ">=2.19.6 <3.0.0"
 
 dependencies:
   flutter:
@@ -47,6 +47,8 @@ dependencies:
   figma_squircle: ^0.5.3
   mask_text_input_formatter: ^2.3.0
   audioplayers: ^0.20.1
+  roundcheckbox: ^2.0.5
+  
 
 dev_dependencies:
   flutter_test:

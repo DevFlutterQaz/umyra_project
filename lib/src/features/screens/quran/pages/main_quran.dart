@@ -43,6 +43,11 @@ class MainQuranScrenn extends StatelessWidget {
                       ),
                     ),
                     title: state.quranData.data.surahs[index].englishName,
+                    city: state.quranArabData.data.surahs[index].revelationType,
+                    numberSura:
+                        state.quranArabData.data.surahs[index].ayahs.length,
+                    numberOfSurahs:
+                        state.quranArabData.data.surahs[index].number,
                   ),
                   separatorBuilder: (context, index) => const ColumnSpacer(0.8),
                   itemCount: state.quranData.data.surahs.length,
