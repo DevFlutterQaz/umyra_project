@@ -4,16 +4,19 @@ import 'package:flutter_svg/svg.dart';
 import 'package:umyra/src/core/resources/app_colors.dart';
 import 'package:umyra/src/core/resources/resources.dart';
 import 'package:umyra/src/features/app/router/app_router.dart';
+import 'package:umyra/src/features/screens/home/logic/api/model/model_tasbih.dart';
 
 class TasbihContent extends StatelessWidget {
+  final TasbihModel tasbihData;
   const TasbihContent({
     super.key,
+    required this.tasbihData,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => context.router.push(const TasbihDetailRoute()),
+      onTap: () => context.router.push(TasbihDetailRoute(tasbihData: tasbihData)),
       child: Container(
         decoration: const BoxDecoration(
             color: AppColors.whiteColor,
@@ -23,7 +26,7 @@ class TasbihContent extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('Субханаллаһ',
+              Text(tasbihData.title,
                   style: Theme.of(context).textTheme.titleLarge),
               SvgPicture.asset(AppSvgImages.next)
             ],

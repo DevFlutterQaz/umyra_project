@@ -6,6 +6,15 @@ part of 'namaz_time_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+NamazModel _$NamazModelFromJson(Map<String, dynamic> json) => NamazModel(
+      NamazTimeModel.fromJson(json['time'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$NamazModelToJson(NamazModel instance) =>
+    <String, dynamic>{
+      'time': instance.time,
+    };
+
 NamazTimeModel _$NamazTimeModelFromJson(Map<String, dynamic> json) =>
     NamazTimeModel(
       json['fajr'] as String,
