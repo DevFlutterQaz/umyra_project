@@ -3,6 +3,18 @@ import 'package:json_annotation/json_annotation.dart';
 part 'namaz_time_model.g.dart';
 
 @JsonSerializable()
+class NamazModel {
+  final NamazTimeModel time;
+
+  NamazModel(this.time);
+
+  factory NamazModel.fromJson(Map<String, dynamic> json) =>
+      _$NamazModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NamazModelToJson(this);
+}
+
+@JsonSerializable()
 class NamazTimeModel {
   final String fajr;
   final String sunrise;

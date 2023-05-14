@@ -3,8 +3,12 @@ import 'package:umyra/src/core/resources/app_colors.dart';
 import 'package:umyra/src/core/widgets/column_spacer.dart';
 
 class NamazTime extends StatelessWidget {
+  final String name;
+  final String time;
   const NamazTime({
     super.key,
+    required this.name,
+    required this.time,
   });
 
   @override
@@ -18,7 +22,7 @@ class NamazTime extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              'Таң',
+              name,
               style: Theme.of(context)
                   .textTheme
                   .titleSmall
@@ -26,7 +30,7 @@ class NamazTime extends StatelessWidget {
             ),
             const ColumnSpacer(0.4),
             Text(
-              '05:53',
+              time,
               style: Theme.of(context).textTheme.titleSmall,
             ),
           ],

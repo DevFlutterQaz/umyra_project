@@ -5,6 +5,7 @@ import 'package:umyra/src/features/app/pages/start.dart';
 import 'package:umyra/src/features/navigation_bar.dart';
 import 'package:umyra/src/features/screens/auth/pages/log_in.dart';
 import 'package:umyra/src/features/screens/auth/pages/register.dart';
+import 'package:umyra/src/features/screens/home/logic/api/model/model_tasbih.dart';
 import 'package:umyra/src/features/screens/home/pages/calendar_page.dart';
 import 'package:umyra/src/features/screens/home/pages/location_page.dart';
 import 'package:umyra/src/features/screens/home/pages/namaz_page.dart';

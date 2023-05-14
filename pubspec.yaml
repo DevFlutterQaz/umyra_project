@@ -47,6 +47,8 @@ dependencies:
   figma_squircle: ^0.5.3
   mask_text_input_formatter: ^2.3.0
   audioplayers: ^0.20.1
+  slide_digital_clock: ^1.0.3
+  one_clock: ^1.0.8
 
 dev_dependencies:
   flutter_test:

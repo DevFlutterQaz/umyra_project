@@ -36,9 +36,13 @@ class _$AppRouter extends RootStackRouter {
       );
     },
     TasbihDetailRoute.name: (routeData) {
+      final args = routeData.argsAs<TasbihDetailRouteArgs>();
       return MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const TasbihDetail(),
+        child: TasbihDetail(
+          key: args.key,
+          tasbihData: args.tasbihData,
+        ),
       );
     },
     CustomNavigationWidgetRoute.name: (routeData) {
@@ -527,14 +531,36 @@ class RegisterScreenRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [TasbihDetail]
-class TasbihDetailRoute extends PageRouteInfo<void> {
-  const TasbihDetailRoute()
-      : super(
+class TasbihDetailRoute extends PageRouteInfo<TasbihDetailRouteArgs> {
+  TasbihDetailRoute({
+    Key? key,
+    required TasbihModel tasbihData,
+  }) : super(
           TasbihDetailRoute.name,
           path: 'tasbihDetail',
+          args: TasbihDetailRouteArgs(
+            key: key,
+            tasbihData: tasbihData,
+          ),
         );
 
   static const String name = 'TasbihDetailRoute';
+}
+
+class TasbihDetailRouteArgs {
+  const TasbihDetailRouteArgs({
+    this.key,
+    required this.tasbihData,
+  });
+
+  final Key? key;
+
+  final TasbihModel tasbihData;
+
+  @override
+  String toString() {
+    return 'TasbihDetailRouteArgs{key: $key, tasbihData: $tasbihData}';
+  }
 }
 
 /// generated route for

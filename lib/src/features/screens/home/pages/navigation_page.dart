@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:umyra/src/core/dependencies/injection_container.dart';
 import 'package:umyra/src/core/widgets/column_spacer.dart';
 import 'package:umyra/src/core/widgets/custom_app_bar.dart';
+import 'package:umyra/src/core/widgets/custom_loader.dart';
+import 'package:umyra/src/features/screens/home/logic/bloc/time_bloc.dart';
+import 'package:umyra/src/features/screens/home/logic/bloc/time_event.dart';
+import 'package:umyra/src/features/screens/home/logic/bloc/time_state.dart';
 import 'package:umyra/src/features/screens/home/widgets/navigation_content.dart';
 
 class NavigationScreen extends StatelessWidget {
@@ -8,21 +14,45 @@ class NavigationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-            const CustomAppBar(title: 'Navigation'),
-            const ColumnSpacer(2),
-            Expanded(
-              child: ListView.separated(
-                itemBuilder: (context, index) => const NavigationContent(),
-                separatorBuilder: (context, index) => const ColumnSpacer(0.8),
-                itemCount: 7,
-              ),
-            ),
-            const ColumnSpacer(0.8)
-          ],
+    return BlocProvider(
+      create: (context) => getIt<TimeBloc>()..add(NavigationData()),
+      child: Scaffold(
+        body: BlocBuilder<TimeBloc, TimeState>(
+          builder: (context, state) {
+            if (state is NavigationSuccess) {
+              return SafeArea(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 19),
+                  child: Column(
+                    children: [
+                      const CustomAppBar(title: 'Navigation'),
+                      const ColumnSpacer(2),
+                      Expanded(
+                        child: ListView.separated(
+                          itemBuilder: (context, index) => NavigationContent(
+                              navigationData: state.navigationData[index]),
+                          separatorBuilder: (context, index) =>
+                              const ColumnSpacer(0.8),
+                          itemCount: state.navigationData.length,
+                        ),
+                      ),
+                      const ColumnSpacer(0.8)
+                    ],
+                  ),
+                ),
+              );
+            } else if (state is NavigationLoading) {
+              return const Center(
+                child: CircleLoader(),
+              );
+            } else if (state is NavigationFailed) {
+              return Center(
+                child: Text(state.message),
+              );
+            } else {
+              return Container();
+            }
+          },
         ),
       ),
     );
