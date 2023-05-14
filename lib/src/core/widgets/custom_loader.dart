@@ -19,7 +19,7 @@ class CircleLoader extends StatelessWidget {
           height: 35,
           decoration: const BoxDecoration(
             shape: BoxShape.circle,
-            color: AppColors.greenColor,
+            color: AppColors.darkBlue,
           ),
           child: const Padding(
             padding: EdgeInsets.all(8),

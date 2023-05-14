@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:umyra/src/core/resources/app_colors.dart';
 import 'package:umyra/src/core/widgets/column_spacer.dart';
 import 'package:umyra/src/core/widgets/custom_app_bar.dart';
-import 'package:umyra/src/features/screens/home/widgets/custom_lesson_button.dart';
 
 class UmraLessan extends StatelessWidget {
   final int index;
@@ -25,13 +24,12 @@ class UmraLessan extends StatelessWidget {
                     const ColumnSpacer(2),
                     Expanded(
                       child: ListView.separated(
-                        itemBuilder: (context, index) =>
-                            const CustomLessonButton(),
+                        itemBuilder: (context, index) => Container(),
                         separatorBuilder: (context, index) =>
                             const ColumnSpacer(0.8),
                         itemCount: 7,
                       ),
-                    )
+                    ),
                   ],
                 )
               : Column(

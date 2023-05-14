@@ -23,7 +23,8 @@ class QuarnDetailScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              CustomAppBar(title: quranData.englishName),
+
+              CustomAppBar(title: widget.quranArabData.englishName),
               const ColumnSpacer(2),
               Expanded(
                 child: ListView.separated(

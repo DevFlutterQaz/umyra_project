@@ -10,10 +10,12 @@ import 'package:umyra/src/features/screens/home/pages/calendar_page.dart';
 import 'package:umyra/src/features/screens/home/pages/location_page.dart';
 import 'package:umyra/src/features/screens/home/pages/namaz_page.dart';
 import 'package:umyra/src/features/screens/home/pages/navigation_page.dart';
+import 'package:umyra/src/features/screens/home/pages/talbiyah_page.dart';
 import 'package:umyra/src/features/screens/home/pages/umra_course_page.dart';
 import 'package:umyra/src/features/screens/home/pages/umra_detail_page.dart';
 import 'package:umyra/src/features/screens/home/pages/umra_lesson.dart';
 import 'package:umyra/src/features/screens/home/pages/umra_page.dart';
+import 'package:umyra/src/features/screens/home/widgets/tawaf_page_view.dart';
 import 'package:umyra/src/features/screens/profile/pages/bought_services_page.dart';
 import 'package:umyra/src/features/screens/profile/pages/faq_page.dart';
 import 'package:umyra/src/features/screens/profile/pages/language_page.dart';
@@ -27,7 +29,6 @@ import 'package:umyra/src/features/screens/quran/pages/dugalar_screen.dart';
 import 'package:umyra/src/features/screens/quran/pages/main_quran.dart';
 import 'package:umyra/src/features/screens/quran/pages/names_screen.dart';
 import 'package:umyra/src/features/screens/quran/pages/quran_detail.dart';
-import 'package:umyra/src/features/screens/quran/pages/quran_page.dart';
 import 'package:umyra/src/features/screens/home/pages/book_page.dart';
 import 'package:umyra/src/features/screens/home/pages/home_page.dart';
 import 'package:umyra/src/features/screens/home/pages/tasbih_detail.dart';
@@ -43,6 +44,9 @@ import 'package:umyra/src/core/widgets/new_password_screen.dart';
 import 'package:umyra/src/features/screens/profile/pages/about_project_page.dart';
 import 'package:umyra/src/features/screens/profile/pages/change_password.dart';
 import 'package:umyra/src/features/screens/quran/pages/card_detail_page.dart';
+
+import '../../screens/home/pages/ihram_page.dart';
+import '../../screens/home/pages/tawaf_page.dart';
 
 part 'app_router.gr.dart';
 
@@ -116,6 +120,22 @@ part 'app_router.gr.dart';
           AutoRoute(
             page: UmraLessan,
             path: 'umralesson',
+          ),
+          AutoRoute(
+            page: IhramScreen,
+            path: 'ihramscreen',
+          ),
+          AutoRoute(
+            page: TawafScreen,
+            path: 'tawahscreen',
+          ),
+          AutoRoute(
+            page: TalbiyahScreen,
+            path: 'talbiyahscren',
+          ),
+          AutoRoute(
+            page: TawafPageViewScreen,
+            path: 'talbiyahscren',
           ),
         ],
       ),

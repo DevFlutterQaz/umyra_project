@@ -145,6 +145,38 @@ class _$AppRouter extends RootStackRouter {
         ),
       );
     },
+    IhramScreenRoute.name: (routeData) {
+      final args = routeData.argsAs<IhramScreenRouteArgs>();
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: IhramScreen(
+          key: args.key,
+          index: args.index,
+        ),
+      );
+    },
+    TawafScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const TawafScreen(),
+      );
+    },
+    TalbiyahScreenRoute.name: (routeData) {
+      final args = routeData.argsAs<TalbiyahScreenRouteArgs>();
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: TalbiyahScreen(
+          key: args.key,
+          index: args.index,
+        ),
+      );
+    },
+    TawafPageViewScreenRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const TawafPageViewScreen(),
+      );
+    },
     MainQuranScrennRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
@@ -358,6 +390,26 @@ class _$AppRouter extends RootStackRouter {
                 RouteConfig(
                   UmraLessanRoute.name,
                   path: 'umralesson',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  IhramScreenRoute.name,
+                  path: 'ihramscreen',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  TawafScreenRoute.name,
+                  path: 'tawahscreen',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  TalbiyahScreenRoute.name,
+                  path: 'talbiyahscren',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  TawafPageViewScreenRoute.name,
+                  path: 'talbiyahscren',
                   parent: HomeRoute.name,
                 ),
               ],
@@ -780,6 +832,98 @@ class UmraLessanRouteArgs {
   String toString() {
     return 'UmraLessanRouteArgs{key: $key, index: $index}';
   }
+}
+
+/// generated route for
+/// [IhramScreen]
+class IhramScreenRoute extends PageRouteInfo<IhramScreenRouteArgs> {
+  IhramScreenRoute({
+    Key? key,
+    required int? index,
+  }) : super(
+          IhramScreenRoute.name,
+          path: 'ihramscreen',
+          args: IhramScreenRouteArgs(
+            key: key,
+            index: index,
+          ),
+        );
+
+  static const String name = 'IhramScreenRoute';
+}
+
+class IhramScreenRouteArgs {
+  const IhramScreenRouteArgs({
+    this.key,
+    required this.index,
+  });
+
+  final Key? key;
+
+  final int? index;
+
+  @override
+  String toString() {
+    return 'IhramScreenRouteArgs{key: $key, index: $index}';
+  }
+}
+
+/// generated route for
+/// [TawafScreen]
+class TawafScreenRoute extends PageRouteInfo<void> {
+  const TawafScreenRoute({required int index})
+      : super(
+          TawafScreenRoute.name,
+          path: 'tawahscreen',
+        );
+
+  static const String name = 'TawafScreenRoute';
+}
+
+/// generated route for
+/// [TalbiyahScreen]
+class TalbiyahScreenRoute extends PageRouteInfo<TalbiyahScreenRouteArgs> {
+  TalbiyahScreenRoute({
+    Key? key,
+    required int? index,
+  }) : super(
+          TalbiyahScreenRoute.name,
+          path: 'talbiyahscren',
+          args: TalbiyahScreenRouteArgs(
+            key: key,
+            index: index,
+          ),
+        );
+
+  static const String name = 'TalbiyahScreenRoute';
+}
+
+class TalbiyahScreenRouteArgs {
+  const TalbiyahScreenRouteArgs({
+    this.key,
+    required this.index,
+  });
+
+  final Key? key;
+
+  final int? index;
+
+  @override
+  String toString() {
+    return 'TalbiyahScreenRouteArgs{key: $key, index: $index}';
+  }
+}
+
+/// generated route for
+/// [TawafPageViewScreen]
+class TawafPageViewScreenRoute extends PageRouteInfo<void> {
+  const TawafPageViewScreenRoute()
+      : super(
+          TawafPageViewScreenRoute.name,
+          path: 'talbiyahscren',
+        );
+
+  static const String name = 'TawafPageViewScreenRoute';
 }
 
 /// generated route for
