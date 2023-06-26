@@ -124,19 +124,19 @@ class _SureWidgetState extends State<SureWidget> {
                     icon: Icon(isPlaying ? Icons.pause : Icons.play_arrow),
                     iconSize: 30,
                   ),
-                  Slider(
-                    min: 0,
-                    inactiveColor: AppColors.lightgrayColor6,
-                    activeColor: AppColors.darkBlue2,
-                    max: duration.inSeconds.toDouble(),
-                    value: position.inSeconds.toDouble(),
-                    onChanged: (value) async {
-                      final position = Duration(seconds: value.toInt());
-                      await audioplayer.seek(position);
+                  // Slider(
+                  //   min: 0,
+                  //   inactiveColor: AppColors.lightgrayColor6,
+                  //   activeColor: AppColors.darkBlue2,
+                  //   max: duration.inSeconds.toDouble(),
+                  //   value: position.inSeconds.toDouble(),
+                  //   onChanged: (value) async {
+                  //     final position = Duration(seconds: value.toInt());
+                  //     await audioplayer.seek(position);
 
-                      await audioplayer.resume();
-                    },
-                  ),
+                  //     await audioplayer.resume();
+                  //   },
+                  // ),
                   Text(formatTime(position)),
                   // Row(
                   //   mainAxisAlignment: MainAxisAlignment.spaceBetween,

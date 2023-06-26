@@ -20,41 +20,44 @@ class CustomQuranButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          color: AppColors.whiteColor,
-          borderRadius: const BorderRadius.all(Radius.circular(12)),
-          border: Border.all(color: AppColors.lightgrayColor5)),
-      child: ListTile(
-          minLeadingWidth: 10,
-          dense: true,
-          leading: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                numberOfSurahs.toString(),
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      fontWeight: FontWeight.w400,
-                    ),
-              ),
-            ],
-          ),
-          title: Text(
-            title,
-            style: Theme.of(context)
-                .textTheme
-                .titleLarge
-                ?.copyWith(fontWeight: FontWeight.w500),
-          ),
-          subtitle: Text(
-            '$city - $numberSura ayahs',
-            style: Theme.of(context)
-                .textTheme
-                .titleSmall
-                ?.copyWith(fontWeight: FontWeight.w400),
-          ),
-          trailing: IconButton(
-              onPressed: null, icon: SvgPicture.asset(AppSvgImages.next))),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        decoration: BoxDecoration(
+            color: AppColors.whiteColor,
+            borderRadius: const BorderRadius.all(Radius.circular(12)),
+            border: Border.all(color: AppColors.lightgrayColor5)),
+        child: ListTile(
+            minLeadingWidth: 10,
+            dense: true,
+            leading: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  numberOfSurahs.toString(),
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                        fontWeight: FontWeight.w400,
+                      ),
+                ),
+              ],
+            ),
+            title: Text(
+              title,
+              style: Theme.of(context)
+                  .textTheme
+                  .titleLarge
+                  ?.copyWith(fontWeight: FontWeight.w500),
+            ),
+            subtitle: Text(
+              '$city - $numberSura ayahs',
+              style: Theme.of(context)
+                  .textTheme
+                  .titleSmall
+                  ?.copyWith(fontWeight: FontWeight.w400),
+            ),
+            trailing: IconButton(
+                onPressed: null, icon: SvgPicture.asset(AppSvgImages.next))),
+      ),
     );
   }
 }
