@@ -28,11 +28,16 @@ class UmraButton extends StatelessWidget {
               Container(
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
-                  color: AppColors.darkBlue,
+                  color: Color(0xff00A8A5),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(14),
-                  child: Image.asset(id == 1 ? AppImages.umra1 : AppImages.umra2),
+                  child: id == 1
+                      ? Image.asset(
+                          AppImages.umra1,
+                          width: 30,
+                        )
+                      : Image.asset(AppImages.umra2),
                 ),
               ),
               const RowSpacer(1.6),
@@ -40,7 +45,10 @@ class UmraButton extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(id == 1 ? 'Start your New Umra' : 'How to perform Umrah',
+                    Text(
+                        id == 1
+                            ? 'Start your New Umra'
+                            : 'How to perform Umrah',
                         style: Theme.of(context).textTheme.titleLarge),
                     Text(
                         id == 1

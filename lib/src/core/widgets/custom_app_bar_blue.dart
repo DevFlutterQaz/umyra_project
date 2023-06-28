@@ -4,11 +4,11 @@ import 'package:flutter_svg/svg.dart';
 import 'package:umyra/src/core/resources/app_colors.dart';
 import 'package:umyra/src/core/resources/resources.dart';
 
-class CustomAppBar extends StatelessWidget {
+class CustomAppBarBlue extends StatelessWidget {
   final String title;
   final bool alert;
   final Function()? onTap;
-  const CustomAppBar({
+  const CustomAppBarBlue({
     super.key,
     required this.title,
     this.alert = false,
@@ -19,33 +19,31 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(
-          child: Padding(
-            padding: const EdgeInsets.all(12),
-            child: GestureDetector(
-              onTap: () => context.router.pop(),
-              child: Container(
-                width: 40,
-                height: 40,
-                decoration: BoxDecoration(
-                  color: AppColors.whiteColor,
-                  borderRadius: BorderRadius.circular(8),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Colors.grey,
-                      blurRadius: 10.0, // soften the shadow
-                      spreadRadius: 0.5, //extend the shadow
-                      offset: Offset(
-                        0.0, // Move to right 5  horizontally
-                        0.0, // Move to bottom 5 Vertically
-                      ),
-                    )
-                  ],
-                ),
-                child: const Icon(
-                  Icons.arrow_back,
-                  color: Color(0xff00827F),
-                ),
+        Padding(
+          padding: const EdgeInsets.all(12),
+          child: GestureDetector(
+            onTap: () => context.router.pop(),
+            child: Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                color: AppColors.whiteColor,
+                borderRadius: BorderRadius.circular(8),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.grey,
+                    blurRadius: 10.0, // soften the shadow
+                    spreadRadius: 0.5, //extend the shadow
+                    offset: Offset(
+                      0.0, // Move to right 5  horizontally
+                      0.0, // Move to bottom 5 Vertically
+                    ),
+                  )
+                ],
+              ),
+              child: const Icon(
+                Icons.arrow_back,
+                color: Color(0xff00827F),
               ),
             ),
           ),
@@ -56,7 +54,7 @@ class CustomAppBar extends StatelessWidget {
             child: Text(
               title,
               style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                  fontWeight: FontWeight.w700, color: const Color(0xff00827F)),
+                  fontWeight: FontWeight.w700, color: AppColors.whiteColor),
             ),
           ),
         ),

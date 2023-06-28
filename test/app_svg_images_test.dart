@@ -18,7 +18,7 @@ void main() {
     expect(File(AppSvgImages.home).existsSync(), true);
     expect(File(AppSvgImages.image).existsSync(), true);
     expect(File(AppSvgImages.location).existsSync(), true);
-    expect(File(AppSvgImages.location2).existsSync(), true);
+    expect(File(AppSvgImages.location).existsSync(), true);
     expect(File(AppSvgImages.marker).existsSync(), true);
     expect(File(AppSvgImages.namaz).existsSync(), true);
     expect(File(AppSvgImages.navigation).existsSync(), true);

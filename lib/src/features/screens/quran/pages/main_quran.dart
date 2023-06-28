@@ -36,12 +36,14 @@ class MainQuranScrenn extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 19, vertical: 8),
                 child: ListView.separated(
                   itemBuilder: (context, index) => CustomQuranButton(
-                    onTap: () => context.router.push(
-                      QuarnDetailScreenRoute(
-                        quranData: state.quranData.data.surahs[index],
-                        quranArabData: state.quranArabData.data.surahs[index],
-                      ),
-                    ),
+                    onTap: () {
+                      context.router.push(
+                        QuarnDetailScreenRoute(
+                          quranData: state.quranData.data.surahs[index],
+                          quranArabData: state.quranArabData.data.surahs[index],
+                        ),
+                      );
+                    },
                     title: state.quranData.data.surahs[index].englishName,
                     city: state.quranArabData.data.surahs[index].revelationType,
                     numberSura:

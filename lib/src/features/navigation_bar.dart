@@ -54,28 +54,31 @@ class _CustomNavigationWidgetState extends State<CustomNavigationWidget> {
             items: [
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(AppSvgImages.home),
-                activeIcon:
-                    SvgPicture.asset(AppSvgImages.home, color: Colors.black),
+                activeIcon: SvgPicture.asset(AppSvgImages.home,
+                    color: const Color(0xff00827F)),
                 label: '',
               ),
               BottomNavigationBarItem(
-                icon: SvgPicture.asset(AppSvgImages.book2),
+                icon: SvgPicture.asset(
+                  AppSvgImages.bookOpen,
+                  color: Colors.grey,
+                ),
                 activeIcon: SvgPicture.asset(
-                  AppSvgImages.book2,
-                  color: Colors.black,
+                  AppSvgImages.bookOpen,
+                  color: const Color(0xff00827F),
                 ),
                 label: '',
               ),
               BottomNavigationBarItem(
-                icon: SvgPicture.asset(AppSvgImages.location2),
-                activeIcon: SvgPicture.asset(AppSvgImages.location2,
-                    color: Colors.black),
+                icon: SvgPicture.asset(AppSvgImages.location),
+                activeIcon: SvgPicture.asset(AppSvgImages.navigation,
+                    color: const Color(0xff00827F)),
                 label: '',
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(AppSvgImages.profile),
-                activeIcon:
-                    SvgPicture.asset(AppSvgImages.profile, color: Colors.black),
+                activeIcon: SvgPicture.asset(AppSvgImages.profile,
+                    color: const Color(0xff00827F)),
                 label: '',
               ),
             ],

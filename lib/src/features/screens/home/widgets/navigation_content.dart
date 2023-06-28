@@ -28,12 +28,14 @@ class NavigationContent extends StatelessWidget {
                 .titleMedium
                 ?.copyWith(fontWeight: FontWeight.w600)),
         collapsedTextColor: Colors.black,
-        iconColor: Colors.black,
-        collapsedIconColor: Colors.black,
+        iconColor: const Color(0xff00827F),
+        collapsedIconColor: const Color(0xff00827F),
         textColor: Colors.black,
         childrenPadding:
             const EdgeInsets.symmetric(horizontal: 17, vertical: 9),
         children: [
+          const Divider(color: Color(0xff00827F)),
+          // const SizedBox(height: 10),
           ListView.separated(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
@@ -44,7 +46,10 @@ class NavigationContent extends StatelessWidget {
                 children: [
                   Text(navigationData.title,
                       style: Theme.of(context).textTheme.titleMedium),
-                  SvgPicture.asset(AppSvgImages.marker)
+                  SvgPicture.asset(
+                    AppSvgImages.marker,
+                    color: const Color(0xff00827F),
+                  )
                 ],
               ),
             ),

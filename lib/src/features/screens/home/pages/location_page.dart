@@ -11,29 +11,31 @@ class LocationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 19),
-              child: CustomAppBar(title: 'Местоположение'),
+              child: CustomAppBar(
+                title: 'Местоположение',
+              ),
             ),
             const ColumnSpacer(3.2),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 19),
               child: Text(
                 'Выберите ваше местоположение',
-                style: Theme.of(context)
-                    .textTheme
-                    .titleMedium
-                    ?.copyWith(fontWeight: FontWeight.w500),
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.w500,
+                    color: const Color(0xff00827F)),
               ),
             ),
-            const ColumnSpacer(1),
+            const ColumnSpacer(2),
             const SearchTextField(),
             const ColumnSpacer(1),
-            const Divider(color: AppColors.darkgrayColor),
+            // const Divider(color: Color(0xff00827F)),
             const ColumnSpacer(1),
             Expanded(
               child: Padding(

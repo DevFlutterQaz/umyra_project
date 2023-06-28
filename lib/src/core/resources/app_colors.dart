@@ -29,5 +29,6 @@ class AppColors {
   static const Color darkBlue = Color(0xFF222939);
   // Dark blue2
   static const Color darkBlue2 = Color(0xFF212B37);
+  static const Color contentBlue = Color(0xff00827F);
   AppColors._();
 }

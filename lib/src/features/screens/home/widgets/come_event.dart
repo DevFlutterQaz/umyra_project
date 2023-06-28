@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:umyra/src/core/resources/app_colors.dart';
 import 'package:umyra/src/core/resources/resources.dart';
 import 'package:umyra/src/core/widgets/row_spacer.dart';
-import 'package:umyra/src/features/screens/home/widgets/alarm_button.dart';
 
 class ComeEvent extends StatelessWidget {
   const ComeEvent({
@@ -37,7 +36,6 @@ class ComeEvent extends StatelessWidget {
             ),
           ),
         ),
-        const AlarmButton()
       ],
     );
   }

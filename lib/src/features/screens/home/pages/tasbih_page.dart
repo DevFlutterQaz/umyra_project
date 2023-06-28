@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:umyra/src/core/dependencies/injection_container.dart';
 import 'package:umyra/src/core/widgets/column_spacer.dart';
-import 'package:umyra/src/core/widgets/custom_app_bar.dart';
+import 'package:umyra/src/core/widgets/custom_app_bar_blue.dart';
 import 'package:umyra/src/core/widgets/custom_loader.dart';
 import 'package:umyra/src/features/screens/home/logic/bloc/time_bloc.dart';
 import 'package:umyra/src/features/screens/home/logic/bloc/time_event.dart';
@@ -21,22 +21,35 @@ class TasbihScreen extends StatelessWidget {
           builder: (context, state) {
             if (state is TasbihSuccess) {
               return SafeArea(
-                child: Padding(
+                child: Container(
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      end: Alignment.bottomCenter,
+                      begin: Alignment.topCenter,
+                      colors: [
+                        Color(0xff14BCC2),
+                        Color(0xff14BCC2),
+                        Color(0xff025452),
+                      ],
+                    ),
+                  ),
                   padding: const EdgeInsets.symmetric(horizontal: 19),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      const CustomAppBar(title: 'Tasbih'),
+                      const CustomAppBarBlue(title: 'Tasbih'),
                       const ColumnSpacer(2),
                       Expanded(
                         child: ListView.separated(
                           itemBuilder: (contex, index) => TasbihContent(
+                              index: index,
+                              length: state.tasbihData.length,
                               tasbihData: state.tasbihData[index]),
                           separatorBuilder: (context, index) =>
                               const ColumnSpacer(0.8),
                           itemCount: state.tasbihData.length,
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),

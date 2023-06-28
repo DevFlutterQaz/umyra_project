@@ -29,4 +29,11 @@ class AppImages {
   static const String option5 = 'assets/images/option5.jpeg';
   static const String nulll = 'assets/images/null.png';
   static const String compos = 'assets/images/compos.png';
+  static const String namazFajr = 'fajr_namaz.jpg';
+  static const String namazBesinSunna = 'besin_sunna_namaz.jpg';
+  static const String namazBesinParyz = 'besin_paryz_namaz.jpg';
+  static const String namazAsr = 'asr_namaz.jpg';
+  static const String namazAqsham = 'aqsham_namaz.jpg';
+  static const String namazIsha = 'isha_namaz.jpg';
+  static const String namazIshaUtir = 'utir_uazhip_namaz.jpg';
 }
