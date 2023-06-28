@@ -19,12 +19,13 @@ class CustomHomeButtom extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 28.5, vertical: 15),
+        padding: const EdgeInsets.symmetric(vertical: 15),
         child: Column(
           children: [
             Container(
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   shape: BoxShape.circle,
+                  boxShadow: kElevationToShadow[3],
                   color: AppColors.whiteColor,
                 ),
                 child: image.contains('tasbih')
@@ -52,7 +53,7 @@ class CustomHomeButtom extends StatelessWidget {
                         padding:
                             EdgeInsets.all(image.contains('svg') ? 15 : 14),
                         child: image.contains('svg')
-                            ? SvgPicture.asset(image)
+                            ? SvgPicture.asset(image, height: 24)
                             : Image.asset(image),
                       )),
             const ColumnSpacer(0.8),

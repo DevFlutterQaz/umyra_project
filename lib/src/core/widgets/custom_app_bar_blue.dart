@@ -19,32 +19,29 @@ class CustomAppBarBlue extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Padding(
-          padding: const EdgeInsets.all(12),
-          child: GestureDetector(
-            onTap: () => context.router.pop(),
-            child: Container(
-              width: 40,
-              height: 40,
-              decoration: BoxDecoration(
-                color: AppColors.whiteColor,
-                borderRadius: BorderRadius.circular(8),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Colors.grey,
-                    blurRadius: 10.0, // soften the shadow
-                    spreadRadius: 0.5, //extend the shadow
-                    offset: Offset(
-                      0.0, // Move to right 5  horizontally
-                      0.0, // Move to bottom 5 Vertically
-                    ),
-                  )
-                ],
-              ),
-              child: const Icon(
-                Icons.arrow_back,
-                color: Color(0xff00827F),
-              ),
+        GestureDetector(
+          onTap: () => context.router.pop(),
+          child: Container(
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+              color: AppColors.whiteColor,
+              borderRadius: BorderRadius.circular(8),
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.grey,
+                  blurRadius: 10.0, // soften the shadow
+                  spreadRadius: 0.5, //extend the shadow
+                  offset: Offset(
+                    0.0, // Move to right 5  horizontally
+                    0.0, // Move to bottom 5 Vertically
+                  ),
+                )
+              ],
+            ),
+            child: const Icon(
+              Icons.arrow_back,
+              color: Color(0xff00827F),
             ),
           ),
         ),
@@ -54,7 +51,16 @@ class CustomAppBarBlue extends StatelessWidget {
             child: Text(
               title,
               style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                  fontWeight: FontWeight.w700, color: AppColors.whiteColor),
+                fontWeight: FontWeight.w700,
+                color: AppColors.whiteColor,
+                shadows: [
+                  const Shadow(
+                    offset: Offset(0, 6),
+                    blurRadius: 30.0,
+                    color: Color.fromARGB(255, 0, 0, 0),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
