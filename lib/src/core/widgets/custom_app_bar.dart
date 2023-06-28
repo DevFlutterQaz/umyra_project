@@ -19,29 +19,34 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        GestureDetector(
-          onTap: () => context.router.pop(),
-          child: Container(
-            width: 40,
-            height: 40,
-            decoration: BoxDecoration(
-              color: AppColors.whiteColor,
-              borderRadius: BorderRadius.circular(12),
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 10.0, // soften the shadow
-                  spreadRadius: 0.5, //extend the shadow
-                  offset: Offset(
-                    0.0, // Move to right 5  horizontally
-                    0.0, // Move to bottom 5 Vertically
-                  ),
-                )
-              ],
-            ),
-            child: const Icon(
-              Icons.arrow_back,
-              color: Color(0xff00827F),
+        Container(
+          child: Padding(
+            padding: const EdgeInsets.all(12),
+            child: GestureDetector(
+              onTap: () => context.router.pop(),
+              child: Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  color: AppColors.whiteColor,
+                  borderRadius: BorderRadius.circular(8),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.grey,
+                      blurRadius: 10.0, // soften the shadow
+                      spreadRadius: 0.5, //extend the shadow
+                      offset: Offset(
+                        0.0, // Move to right 5  horizontally
+                        0.0, // Move to bottom 5 Vertically
+                      ),
+                    )
+                  ],
+                ),
+                child: Icon(
+                  Icons.arrow_back,
+                  color: AppColors.contentBlue,
+                ),
+              ),
             ),
           ),
         ),
@@ -51,16 +56,7 @@ class CustomAppBar extends StatelessWidget {
             child: Text(
               title,
               style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                fontWeight: FontWeight.w600,
-                color: AppColors.whiteColor,
-                shadows: [
-                  const Shadow(
-                    offset: Offset(0, 6),
-                    blurRadius: 30.0,
-                    color: Color.fromARGB(255, 0, 0, 0),
-                  ),
-                ],
-              ),
+                  fontWeight: FontWeight.w700, color: AppColors.contentBlue),
             ),
           ),
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:umyra/src/core/resources/app_colors.dart';
 import 'package:umyra/src/core/resources/resources.dart';
 
 class SearchTextField extends StatelessWidget {
@@ -13,17 +14,17 @@ class SearchTextField extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 19),
       // child: CupertinoSearchTextField(
       //   placeholder: 'Search',
-      //   placeholderStyle: TextStyle(color: Color(0xff00827F)),
+      //   placeholderStyle: TextStyle(color: AppColors.contentBlue),
       //   padding: EdgeInsets.symmetric(vertical: 16, horizontal: 10),
       //   decoration: BoxDecoration(
       //     color: AppColors.whiteColor,
-      //     border: Border(bottom: BorderSide(color: Color(0xff00827F))),
+      //     border: Border(bottom: BorderSide(color: AppColors.contentBlue)),
       //   ),
       //   prefixIcon: Padding(
       //     padding: EdgeInsets.only(left: 10),
       //     child: Icon(
       //       CupertinoIcons.search,
-      //       color: Color(0xff00827F),
+      //       color: AppColors.contentBlue,
       //     ),
       //   ),
       // ),
@@ -36,7 +37,7 @@ class SearchTextField extends StatelessWidget {
       //   height: 40,
       //   decoration: BoxDecoration(
       //       borderRadius: BorderRadius.circular(12),
-      //       color: const Color(0xff00827F)),
+      //       color: const AppColors.contentBlue),
       //   child: SvgPicture.asset(AppSvgImages.send),
       // ),
       //   ],
@@ -44,14 +45,13 @@ class SearchTextField extends StatelessWidget {
       child: CupertinoTextField(
         padding: const EdgeInsets.symmetric(vertical: 16),
         placeholder: 'Search',
-        placeholderStyle:
-            const TextStyle(color: Color(0xff00827F), fontSize: 18),
-        decoration: const BoxDecoration(
-          border: Border(bottom: BorderSide(color: Color(0xff00827F))),
+        placeholderStyle: TextStyle(color: AppColors.contentBlue, fontSize: 18),
+        decoration: BoxDecoration(
+          border: Border(bottom: BorderSide(color: AppColors.contentBlue)),
         ),
-        prefix: const Icon(
+        prefix: Icon(
           CupertinoIcons.search,
-          color: Color(0xff00827F),
+          color: AppColors.contentBlue,
           size: 25,
         ),
         suffix: Container(
@@ -60,7 +60,7 @@ class SearchTextField extends StatelessWidget {
           height: 35,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
-              color: const Color(0xff00827F)),
+              color: AppColors.contentBlue),
           child: SvgPicture.asset(AppSvgImages.send),
         ),
       ),

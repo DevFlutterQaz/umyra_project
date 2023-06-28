@@ -11,8 +11,8 @@ class CityCountryColumn extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text('Almaty',
-            style: TextStyle(color: Color(0xff00827F), fontSize: 18)),
+        Text('Almaty',
+            style: TextStyle(color: AppColors.contentBlue, fontSize: 18)),
         Text(
           'Kazakhstan',
           style: Theme.of(context).textTheme.bodyMedium?.copyWith(

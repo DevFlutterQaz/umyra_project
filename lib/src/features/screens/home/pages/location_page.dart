@@ -28,14 +28,13 @@ class LocationScreen extends StatelessWidget {
               child: Text(
                 'Выберите ваше местоположение',
                 style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.w500,
-                    color: const Color(0xff00827F)),
+                    fontWeight: FontWeight.w500, color: AppColors.contentBlue),
               ),
             ),
             const ColumnSpacer(2),
             const SearchTextField(),
             const ColumnSpacer(1),
-            // const Divider(color: Color(0xff00827F)),
+            // const Divider(color: AppColors.contentBlue),
             const ColumnSpacer(1),
             Expanded(
               child: Padding(
