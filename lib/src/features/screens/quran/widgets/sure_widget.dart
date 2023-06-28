@@ -2,8 +2,11 @@ import 'dart:developer';
 
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:umyra/src/core/resources/app_colors.dart';
+import 'package:umyra/src/core/resources/resources.dart';
 import 'package:umyra/src/core/widgets/column_spacer.dart';
+import 'package:umyra/src/core/widgets/row_spacer.dart';
 
 class SureWidget extends StatefulWidget {
   final String arabName;
@@ -27,128 +30,131 @@ class SureWidget extends StatefulWidget {
 class _SureWidgetState extends State<SureWidget> {
   final AudioPlayer audioplayer = AudioPlayer();
   bool isPlaying = false;
-  bool isMount = true;
   Duration duration = Duration.zero;
   Duration position = Duration.zero;
 
+  bool isMount = true;
+
   @override
   void initState() {
-    audioplayer.onPlayerStateChanged.listen((event) {
-      isMount
-          ? setState(() {
-              isPlaying = event == PlayerState.PLAYING;
-            })
-          : null;
-    });
     super.initState();
-    audioplayer.onDurationChanged.listen((event) {
-      isMount
-          ? setState(() {
-              duration = event;
-            })
-          : null;
-    });
 
-    audioplayer.onAudioPositionChanged.listen((event) {
-      isMount
-          ? setState(() {
-              position = event;
-            })
-          : null;
+    audioplayer.onPlayerStateChanged.listen((state) {
+      setState(() => isPlaying = state == PlayerState.PLAYING);
     });
+    // audioplayer.onDurationChanged.listen((newDuration) {
+    //   log('New Position' + newDuration.toString());
+    //   setState(() => duration = newDuration);
+    // });
+
+    // audioplayer.onAudioPositionChanged.listen((newPosition) {
+    //   setState(() => position = newPosition);
+    // });
   }
 
   @override
   void dispose() {
-    audioplayer.dispose();
-    isMount = false;
+    // audioplayer.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        color: AppColors.darkBlue,
-        borderRadius: BorderRadius.all(Radius.circular(12)),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(13),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Text(
-              '1:${widget.numberSura.toString()}',
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyMedium
-                  ?.copyWith(color: AppColors.whiteColor),
-            ),
-            const ColumnSpacer(1.7),
-            Text(
-              widget.arabName,
-              textAlign: TextAlign.end,
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyMedium
-                  ?.copyWith(color: AppColors.whiteColor),
-            ),
-            const ColumnSpacer(1.2),
-            Text(
-              widget.description,
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyMedium
-                  ?.copyWith(color: AppColors.whiteColor),
-            ),
-            const ColumnSpacer(1.6),
-            Container(
-              decoration: const BoxDecoration(
-                color: AppColors.whiteColor,
-                borderRadius: BorderRadius.all(Radius.circular(16)),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 19),
+      child: Container(
+        decoration: BoxDecoration(
+          color: AppColors.whiteColor,
+          boxShadow: kElevationToShadow[6],
+          borderRadius: const BorderRadius.all(Radius.circular(12)),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(13),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Row(
                 children: [
-                  IconButton(
-                    onPressed: () async {
-                      if (isPlaying) {
-                        await audioplayer.pause();
-                      } else {
-                        // await audioplayer.release();
-                        String url = widget.audio;
-                        log(url);
-                        await audioplayer.play(url);
-                      }
-                    },
-                    icon: Icon(isPlaying ? Icons.pause : Icons.play_arrow),
-                    iconSize: 30,
+                  SvgPicture.asset(
+                    AppSvgImages.moonLittle,
+                    height: 18,
                   ),
-                  // Slider(
-                  //   min: 0,
-                  //   inactiveColor: AppColors.lightgrayColor6,
-                  //   activeColor: AppColors.darkBlue2,
-                  //   max: duration.inSeconds.toDouble(),
-                  //   value: position.inSeconds.toDouble(),
-                  //   onChanged: (value) async {
-                  //     final position = Duration(seconds: value.toInt());
-                  //     await audioplayer.seek(position);
-
-                  //     await audioplayer.resume();
-                  //   },
-                  // ),
-                  Text(formatTime(position)),
-                  // Row(
-                  //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  //   children: [
-                  //     Text(formatTime(position)),
-                  //     Text(formatTime(duration - position)),
-                  //   ],
-                  // ),
+                  Text(
+                    ' ${widget.numberSura}',
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        color: AppColors.contentBlue4,
+                        fontWeight: FontWeight.w500),
+                  ),
                 ],
               ),
-            ),
-          ],
+              const ColumnSpacer(1.7),
+              Text(
+                widget.arabName,
+                textAlign: TextAlign.end,
+                style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                    color: AppColors.black, fontWeight: FontWeight.w500),
+              ),
+              const ColumnSpacer(1.2),
+              Text(
+                widget.description,
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    color: AppColors.black, fontWeight: FontWeight.w300),
+              ),
+              const ColumnSpacer(1.6),
+              Container(
+                decoration: const BoxDecoration(
+                  color: AppColors.whiteColor,
+                  borderRadius: BorderRadius.all(Radius.circular(16)),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Container(
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: AppColors.contentBlue4,
+                      ),
+                      child: IconButton(
+                        onPressed: () async {
+                          if (isPlaying) {
+                            await audioplayer.pause();
+                          } else {
+                            await audioplayer.play(widget.audio);
+                          }
+                        },
+                        icon: Icon(
+                          isPlaying ? Icons.pause : Icons.play_arrow,
+                          color: AppColors.whiteColor,
+                        ),
+                        iconSize: 24,
+                      ),
+                    ),
+                    // Slider(
+                    //   min: 0,
+                    //   inactiveColor: AppColors.lightgrayColor6,
+                    //   activeColor: AppColors.darkBlue2,
+                    //   max: duration.inSeconds.toDouble(),
+                    //   value: position.inSeconds.toDouble(),
+                    //   onChanged: (value) async {
+                    //     final position = Duration(seconds: value.toInt());
+                    //     await audioplayer.seek(position);
+
+                    //     await audioplayer.resume();
+                    //   },
+                    // ),
+                    // Text(formatTime(position)),
+                    // Row(
+                    //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //   children: [
+                    //     Text(formatTime(position)),
+                    //     Text(formatTime(duration - position)),
+                    //   ],
+                    // ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

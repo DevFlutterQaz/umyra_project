@@ -17,9 +17,10 @@ class UmraButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           color: AppColors.whiteColor,
-          borderRadius: BorderRadius.all(Radius.circular(20)),
+          boxShadow: kElevationToShadow[3],
+          borderRadius: const BorderRadius.all(Radius.circular(20)),
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),

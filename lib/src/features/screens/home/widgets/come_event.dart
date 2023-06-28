@@ -15,9 +15,10 @@ class ComeEvent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             color: AppColors.whiteColor,
-            borderRadius: BorderRadius.all(
+            boxShadow: kElevationToShadow[3],
+            borderRadius: const BorderRadius.all(
               Radius.circular(20),
             ),
           ),

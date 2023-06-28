@@ -19,9 +19,10 @@ class StatusTimeCustomWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
           color: AppColors.whiteColor,
-          borderRadius: BorderRadius.all(
+          boxShadow: kElevationToShadow[3],
+          borderRadius: const BorderRadius.all(
             Radius.circular(20),
           )),
       child: Padding(

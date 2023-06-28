@@ -20,24 +20,36 @@ class CustomQuranButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        decoration: BoxDecoration(
-            color: AppColors.whiteColor,
-            borderRadius: const BorderRadius.all(Radius.circular(12)),
-            border: Border.all(color: AppColors.lightgrayColor5)),
-        child: ListTile(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 19),
+      child: GestureDetector(
+        onTap: onTap,
+        child: Container(
+          decoration: BoxDecoration(
+              color: AppColors.whiteColor,
+              borderRadius: const BorderRadius.all(Radius.circular(12)),
+              boxShadow: kElevationToShadow[6],
+              border: Border.all(color: AppColors.lightgrayColor5)),
+          child: ListTile(
             minLeadingWidth: 10,
-            dense: true,
             leading: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  numberOfSurahs.toString(),
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                        fontWeight: FontWeight.w400,
-                      ),
+                Container(
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: AppColors.contentBlue4,
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(18),
+                    child: Text(
+                      numberOfSurahs.toString(),
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                            fontWeight: FontWeight.w600,
+                            color: AppColors.whiteColor,
+                          ),
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -48,15 +60,27 @@ class CustomQuranButton extends StatelessWidget {
                   .titleLarge
                   ?.copyWith(fontWeight: FontWeight.w500),
             ),
-            subtitle: Text(
-              '$city - $numberSura ayahs',
-              style: Theme.of(context)
-                  .textTheme
-                  .titleSmall
-                  ?.copyWith(fontWeight: FontWeight.w400),
+            subtitle: Row(
+              children: [
+                Text(
+                  '$city  ',
+                  style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                        fontWeight: FontWeight.w400,
+                        color: AppColors.lightgrayColor5,
+                      ),
+                ),
+                SvgPicture.asset(AppSvgImages.moonLittle),
+                Text(
+                  '$numberSura',
+                  style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                        fontWeight: FontWeight.w400,
+                        color: AppColors.lightgrayColor5,
+                      ),
+                ),
+              ],
             ),
-            trailing: IconButton(
-                onPressed: null, icon: SvgPicture.asset(AppSvgImages.next))),
+          ),
+        ),
       ),
     );
   }

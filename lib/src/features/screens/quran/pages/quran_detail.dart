@@ -22,14 +22,26 @@ class _QuarnDetailScreenState extends State<QuarnDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 19),
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            end: Alignment.bottomCenter,
+            begin: Alignment.topCenter,
+            colors: [
+              Color(0xff14BCC2),
+              Color(0xff14BCC2),
+              Color(0xff025452),
+            ],
+          ),
+        ),
+        child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-
-              CustomAppBar(title: widget.quranArabData.englishName),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 19),
+                child: CustomAppBar(title: widget.quranArabData.englishName),
+              ),
               const ColumnSpacer(2),
               Expanded(
                 child: ListView.separated(
@@ -40,10 +52,11 @@ class _QuarnDetailScreenState extends State<QuarnDetailScreen> {
                     index: index,
                     audio: widget.quranArabData.ayahs[index].audio,
                   ),
-                  separatorBuilder: (context, index) => const ColumnSpacer(0.8),
+                  separatorBuilder: (context, index) => const ColumnSpacer(1.5),
                   itemCount: widget.quranData.ayahs.length,
                 ),
-              )
+              ),
+              const ColumnSpacer(2),
             ],
           ),
         ),

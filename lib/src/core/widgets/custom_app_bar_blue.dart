@@ -54,7 +54,16 @@ class CustomAppBarBlue extends StatelessWidget {
             child: Text(
               title,
               style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                  fontWeight: FontWeight.w700, color: AppColors.whiteColor),
+                fontWeight: FontWeight.w700,
+                color: AppColors.whiteColor,
+                shadows: [
+                  const Shadow(
+                    offset: Offset(0, 6),
+                    blurRadius: 30.0,
+                    color: Color.fromARGB(255, 0, 0, 0),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
