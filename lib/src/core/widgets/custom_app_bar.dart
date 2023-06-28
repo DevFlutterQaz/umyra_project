@@ -42,9 +42,9 @@ class CustomAppBar extends StatelessWidget {
                     )
                   ],
                 ),
-                child: const Icon(
+                child: Icon(
                   Icons.arrow_back,
-                  color: Color(0xff00827F),
+                  color: AppColors.contentBlue,
                 ),
               ),
             ),
@@ -56,7 +56,7 @@ class CustomAppBar extends StatelessWidget {
             child: Text(
               title,
               style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                  fontWeight: FontWeight.w700, color: const Color(0xff00827F)),
+                  fontWeight: FontWeight.w700, color: AppColors.contentBlue),
             ),
           ),
         ),

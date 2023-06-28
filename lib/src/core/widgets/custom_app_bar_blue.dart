@@ -41,9 +41,9 @@ class CustomAppBarBlue extends StatelessWidget {
                   )
                 ],
               ),
-              child: const Icon(
+              child: Icon(
                 Icons.arrow_back,
-                color: Color(0xff00827F),
+                color: AppColors.contentBlue,
               ),
             ),
           ),

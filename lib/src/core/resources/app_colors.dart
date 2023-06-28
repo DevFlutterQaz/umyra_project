@@ -28,7 +28,7 @@ class AppColors {
   // Dark blue
   static const Color darkBlue = Color(0xFF222939);
   // Dark blue2
-  static const Color darkBlue2 = Color(0xFF212B37);
-  static const Color contentBlue = Color(0xff00827F);
+  static const Color darkBlue2 = Color.fromARGB(255, 20, 32, 48);
+  static Color contentBlue = const Color(0xff00827F);
   AppColors._();
 }

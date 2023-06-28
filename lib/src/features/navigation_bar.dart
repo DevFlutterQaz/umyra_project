@@ -3,6 +3,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:umyra/src/core/resources/app_colors.dart';
 import 'package:umyra/src/core/resources/resources.dart';
 import 'package:umyra/src/features/app/router/app_router.dart';
 
@@ -55,7 +56,7 @@ class _CustomNavigationWidgetState extends State<CustomNavigationWidget> {
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(AppSvgImages.home),
                 activeIcon: SvgPicture.asset(AppSvgImages.home,
-                    color: const Color(0xff00827F)),
+                    color: AppColors.contentBlue),
                 label: '',
               ),
               BottomNavigationBarItem(
@@ -65,20 +66,23 @@ class _CustomNavigationWidgetState extends State<CustomNavigationWidget> {
                 ),
                 activeIcon: SvgPicture.asset(
                   AppSvgImages.bookOpen,
-                  color: const Color(0xff00827F),
+                  color: AppColors.contentBlue,
                 ),
                 label: '',
               ),
               BottomNavigationBarItem(
-                icon: SvgPicture.asset(AppSvgImages.location),
-                activeIcon: SvgPicture.asset(AppSvgImages.navigation,
-                    color: const Color(0xff00827F)),
+                icon: SvgPicture.asset(
+                  AppSvgImages.plane,
+                  color: Colors.grey,
+                ),
+                activeIcon: SvgPicture.asset(AppSvgImages.plane,
+                    color: AppColors.contentBlue),
                 label: '',
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(AppSvgImages.profile),
                 activeIcon: SvgPicture.asset(AppSvgImages.profile,
-                    color: const Color(0xff00827F)),
+                    color: AppColors.contentBlue),
                 label: '',
               ),
             ],

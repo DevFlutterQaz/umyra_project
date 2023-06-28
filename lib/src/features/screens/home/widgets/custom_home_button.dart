@@ -41,7 +41,7 @@ class CustomHomeButtom extends StatelessWidget {
                                         .textTheme
                                         .bodySmall
                                         ?.copyWith(
-                                            color: const Color(0xff00827F),
+                                            color: AppColors.contentBlue,
                                             fontWeight: FontWeight.w500)),
                               ),
                             ),
