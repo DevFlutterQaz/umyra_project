@@ -21,24 +21,38 @@ class CalendarScreen extends StatelessWidget {
           builder: (context, state) {
             if (state is EventSuccess) {
               return SafeArea(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 19),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const CustomAppBar(title: 'Calendar'),
-                      const ColumnSpacer(2),
-                      Expanded(
-                        child: ListView.separated(
-                          itemBuilder: (context, index) => CustomEventWidget(
-                              eventData: state.eventData[index]),
-                          separatorBuilder: (context, index) =>
-                              const ColumnSpacer(0.8),
-                          itemCount: state.eventData.length,
+                child: Container(
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      end: Alignment.bottomCenter,
+                      begin: Alignment.topCenter,
+                      colors: [
+                        Color(0xff14BCC2),
+                        Color(0xff14BCC2),
+                        Color(0xff025452),
+                      ],
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 19),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        const ColumnSpacer(1),
+                        const CustomAppBar(title: 'Calendar'),
+                        const ColumnSpacer(2),
+                        Expanded(
+                          child: ListView.separated(
+                            itemBuilder: (context, index) => CustomEventWidget(
+                                eventData: state.eventData[index]),
+                            separatorBuilder: (context, index) =>
+                                const ColumnSpacer(0.8),
+                            itemCount: state.eventData.length,
+                          ),
                         ),
-                      ),
-                      const ColumnSpacer(0.8),
-                    ],
+                        const ColumnSpacer(0.8),
+                      ],
+                    ),
                   ),
                 ),
               );

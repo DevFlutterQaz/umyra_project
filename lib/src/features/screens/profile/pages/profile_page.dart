@@ -41,7 +41,7 @@ class ProfileScreen extends StatelessWidget {
               const CustomProfileAvatar(),
               const ColumnSpacer(0.8),
               const Text(
-                'Sultan Qondybai',
+                'Ospan Kabdollayev',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: AppColors.whiteColor,

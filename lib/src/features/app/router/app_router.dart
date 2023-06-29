@@ -27,6 +27,7 @@ import 'package:umyra/src/features/screens/home/pages/location_page.dart';
 import 'package:umyra/src/features/screens/home/pages/namaz_page.dart';
 import 'package:umyra/src/features/screens/home/pages/navigation_page.dart';
 import 'package:umyra/src/features/screens/home/pages/pdf_viewer_page%20copy.dart';
+import 'package:umyra/src/features/screens/home/pages/qibla_screen.dart';
 import 'package:umyra/src/features/screens/home/pages/talbiyah_page.dart';
 import 'package:umyra/src/features/screens/home/pages/umra_course_page.dart';
 import 'package:umyra/src/features/screens/home/pages/umra_detail_page.dart';
@@ -216,6 +217,10 @@ part 'app_router.gr.dart';
           AutoRoute(
             page: PDFViewerPage,
             path: 'pdf',
+          ),
+          AutoRoute(
+            page: QiblaScreen,
+            path: 'qiblascreen',
           ),
         ],
       ),

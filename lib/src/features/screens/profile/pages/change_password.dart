@@ -28,7 +28,10 @@ class ChangePasswordScreen extends StatelessWidget {
           ),
           child: Column(
             children: [
-              const CustomAppBarBlue(title: 'My Information'),
+              const CustomAppBarBlue(
+                title: 'My Information',
+                color: Colors.white,
+              ),
               const ColumnSpacer(5),
               Container(
                 decoration: const BoxDecoration(

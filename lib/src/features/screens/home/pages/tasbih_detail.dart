@@ -57,7 +57,10 @@ class _TasbihDetailState extends State<TasbihDetail> {
                   child: ListView(
                     children: [
                       const ColumnSpacer(6),
-                      CustomAppBarBlue(title: widget.tasbihData.title),
+                      CustomAppBarBlue(
+                        title: widget.tasbihData.title,
+                        color: Colors.white,
+                      ),
                       const ColumnSpacer(2),
                       ListView(
                         shrinkWrap: true,
@@ -143,7 +146,7 @@ class _TasbihDetailState extends State<TasbihDetail> {
                                     onLongPress: () {
                                       number.value = 0;
                                     },
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.replay,
                                       color: AppColors.contentBlue,
                                       size: 30,
@@ -211,7 +214,7 @@ class _TasbihDetailState extends State<TasbihDetail> {
                                                 child: Text(
                                                   value.toString(),
                                                   key: UniqueKey(),
-                                                  style: TextStyle(
+                                                  style: const TextStyle(
                                                     fontSize: 70,
                                                     fontWeight: FontWeight.w700,
                                                     color:

@@ -24,7 +24,9 @@ class UmraScreen extends StatelessWidget {
                   itemBuilder: (context, index) => GestureDetector(
                       onTap: () =>
                           context.router.push(const UmraDetailScreenRoute()),
-                      child: const CustomUmraButton()),
+                      child: const CustomUmraButton(
+                        title: 'How to Perform Umra',
+                      )),
                   separatorBuilder: (context, index) => const ColumnSpacer(0.8),
                   itemCount: 8,
                 ),

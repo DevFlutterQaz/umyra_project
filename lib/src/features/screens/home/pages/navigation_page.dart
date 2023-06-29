@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:umyra/src/core/dependencies/injection_container.dart';
+import 'package:umyra/src/core/resources/app_colors.dart';
 import 'package:umyra/src/core/widgets/column_spacer.dart';
 import 'package:umyra/src/core/widgets/custom_app_bar_blue.dart';
 import 'package:umyra/src/core/widgets/custom_loader.dart';
@@ -35,7 +36,10 @@ class NavigationScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 19),
                     child: Column(
                       children: [
-                        const CustomAppBarBlue(title: 'Navigation'),
+                        const CustomAppBarBlue(
+                          title: 'Navigation',
+                          color: AppColors.whiteColor,
+                        ),
                         const ColumnSpacer(2),
                         Expanded(
                           child: ListView.separated(

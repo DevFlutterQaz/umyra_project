@@ -24,7 +24,7 @@ class CustomEventWidget extends StatelessWidget {
           children: [
             Container(
               decoration: const BoxDecoration(
-                color: AppColors.darkBlue2,
+                color: AppColors.contentBlue,
                 borderRadius: BorderRadius.all(Radius.circular(12)),
               ),
               child: Padding(
@@ -41,7 +41,7 @@ class CustomEventWidget extends StatelessWidget {
                         style: Theme.of(context)
                             .textTheme
                             .titleMedium
-                            ?.copyWith(color: AppColors.lightgrayColor5)),
+                            ?.copyWith(color: AppColors.whiteColor)),
                   ],
                 ),
               ),

@@ -20,6 +20,7 @@ class LocationScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 19),
               child: CustomAppBarBlue(
                 title: 'Местоположение',
+                color: AppColors.whiteColor,
               ),
             ),
             const ColumnSpacer(3.2),

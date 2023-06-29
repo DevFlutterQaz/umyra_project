@@ -19,13 +19,13 @@ class CustomButton extends StatelessWidget {
     return CupertinoButton(
       color: color,
       onPressed: onPressed,
-      borderRadius: BorderRadius.circular(12),
+      borderRadius: BorderRadius.circular(24),
       padding: const EdgeInsets.all(16),
       child: Text(
         label.toUpperCase(),
         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
               color: color == AppColors.whiteColor
-                  ? Colors.blue
+                  ? AppColors.contentBlue
                   : AppColors.whiteColor,
             ),
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:umyra/src/core/resources/app_colors.dart';
 import 'package:umyra/src/core/resources/resources.dart';
 import 'package:umyra/src/core/widgets/column_spacer.dart';
 import 'package:umyra/src/core/widgets/custom_app_bar_blue.dart';
@@ -48,7 +49,10 @@ class NamazScreen extends StatelessWidget {
         child: Column(
           children: [
             const ColumnSpacer(5),
-            const CustomAppBarBlue(title: 'Namaz'),
+            const CustomAppBarBlue(
+              title: 'Namaz',
+              color: AppColors.whiteColor,
+            ),
             const ColumnSpacer(2),
             Expanded(
               child: ListView.separated(

@@ -20,6 +20,8 @@ class CustomTextField extends StatelessWidget {
       obscureText: obscureText ?? false,
       keyboardType: textInputType,
       decoration: InputDecoration(
+        filled: true,
+        fillColor: Colors.white,
         labelText: placeholder,
         suffixIcon: suffix,
         labelStyle: const TextStyle(
@@ -32,7 +34,7 @@ class CustomTextField extends StatelessWidget {
           ),
         ),
         enabledBorder: const OutlineInputBorder(
-          borderSide: BorderSide(color: AppColors.contentBlue),
+          borderSide: BorderSide(color: AppColors.whiteColor),
           borderRadius: BorderRadius.all(
             Radius.circular(10),
           ),

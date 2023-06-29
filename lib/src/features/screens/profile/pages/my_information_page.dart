@@ -37,7 +37,10 @@ class _MyInformationScreenState extends State<MyInformationScreen> {
           ),
           child: Column(
             children: [
-              const CustomAppBarBlue(title: 'My Information'),
+              const CustomAppBarBlue(
+                title: 'My Information',
+                color: Colors.white,
+              ),
               const ColumnSpacer(5),
               Container(
                 decoration: const BoxDecoration(
@@ -50,7 +53,7 @@ class _MyInformationScreenState extends State<MyInformationScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       SvgPicture.asset(AppSvgImages.mail2),
-                      const Text('sultankondybay@gmail.com',
+                      const Text('ospan02@gmail.com',
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.w600)),
                       Row(),

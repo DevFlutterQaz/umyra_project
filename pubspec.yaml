@@ -52,6 +52,8 @@ dependencies:
   flutter_qiblah: ^2.2.0
   geolocator: ^9.0.2
   syncfusion_flutter_pdfviewer: ^21.1.35
+  flutter_compass: ^0.7.0
+  permission_handler: ^10.3.0
 
 dev_dependencies:
   flutter_test:

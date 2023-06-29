@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    const ColumnSpacer(6),
+                    const ColumnSpacer(3),
                     const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 19),
                       child: ComeEvent(),
@@ -123,6 +123,7 @@ class HomeScreen extends StatelessWidget {
   }
 
   void homeMainNavigate(BuildContext context, int id) {
+    id == 1 ? context.router.push(const QiblaScreenRoute()) : null;
     id == 2 ? context.router.push(const TasbihScreenRoute()) : null;
     id == 3 ? context.router.push(const BookScreenRoute()) : null;
     id == 4 ? context.router.push(const NavigationScreenRoute()) : null;

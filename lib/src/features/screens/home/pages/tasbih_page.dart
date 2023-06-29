@@ -40,7 +40,8 @@ class TasbihScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       const ColumnSpacer(5),
-                      const CustomAppBarBlue(title: 'Tasbih'),
+                      const CustomAppBarBlue(
+                          title: 'Tasbih', color: Colors.white),
                       const ColumnSpacer(2),
                       Expanded(
                         child: ListView.separated(

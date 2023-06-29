@@ -28,7 +28,10 @@ class AboutProjectScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const CustomAppBarBlue(title: 'About Project'),
+              const CustomAppBarBlue(
+                title: 'About Project',
+                color: AppColors.whiteColor,
+              ),
               const ColumnSpacer(5),
               Container(
                 height: 120,

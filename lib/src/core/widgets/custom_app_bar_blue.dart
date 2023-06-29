@@ -8,11 +8,13 @@ class CustomAppBarBlue extends StatelessWidget {
   final String title;
   final bool alert;
   final Function()? onTap;
+  final Color color;
   const CustomAppBarBlue({
     super.key,
     required this.title,
     this.alert = false,
     this.onTap,
+    required this.color,
   });
 
   @override
@@ -55,7 +57,7 @@ class CustomAppBarBlue extends StatelessWidget {
               title,
               style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                     fontWeight: FontWeight.w700,
-                    color: AppColors.contentBlue,
+                    color: color,
                     // shadows: [
                     //   const Shadow(
                     //     offset: Offset(0, 6),
