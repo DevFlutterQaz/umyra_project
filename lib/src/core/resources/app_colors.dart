@@ -35,5 +35,6 @@ class AppColors {
   static const Color contentBlue3 = Color(0xff025452);
   static const Color contentBlue4 = Color(0xff00A8A5);
   static const Color black = Colors.black;
+  static const Color grayColor2 = Color(0xffD9D9D9);
   AppColors._();
 }

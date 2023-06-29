@@ -26,7 +26,7 @@ class CustomTextField extends StatelessWidget {
             ?.copyWith(color: AppColors.darkgrayColor2),
         prefixIcon: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: SvgPicture.asset(AppSvgImages.location),
+          child: SvgPicture.asset(AppSvgImages.alarm),
         ),
         border: InputBorder.none,
         isDense: true,

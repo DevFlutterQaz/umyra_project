@@ -36,4 +36,17 @@ class AppImages {
   static const String namazAqsham = 'aqsham_namaz.jpg';
   static const String namazIsha = 'isha_namaz.jpg';
   static const String namazIshaUtir = 'utir_uazhip_namaz.jpg';
+  static const String ihram = 'assets/images/png/ihram.jpeg';
+  static const String tabiyah = 'assets/images/png/tabiyah.jpeg';
+  static const String hair = 'assets/images/png/hair.jpeg';
+  static const String tawaf = 'assets/images/png/tawaf.jpeg';
+  static const String sai = 'assets/images/png/sai.jpeg';
+  static const String ihram4 = 'assets/images/png/ihram4.png';
+  static const String talbiah1 = 'assets/images/png/talbiah1.png';
+  static const String talbiah2 = 'assets/images/png/talbiah2.png';
+  static const String talbiah3 = 'assets/images/png/talbiah3.png';
+  static const String talbiah4 = 'assets/images/png/talbiah4.png';
+  static const String qq = 'assets/images/png/qq.jpeg';
+  static const String tt = 'assets/images/png/tt.png';
+  static const String tt1 = 'assets/images/png/tt2.png';
 }
