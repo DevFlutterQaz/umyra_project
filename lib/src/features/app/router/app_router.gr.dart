@@ -297,6 +297,12 @@ class _$AppRouter extends RootStackRouter {
         child: const QiblaScreen(),
       );
     },
+    MainCalendarPageRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const MainCalendarPage(),
+      );
+    },
     MainQuranScrennRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
@@ -584,6 +590,11 @@ class _$AppRouter extends RootStackRouter {
                 RouteConfig(
                   QiblaScreenRoute.name,
                   path: 'qiblascreen',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  MainCalendarPageRoute.name,
+                  path: 'maincalendar',
                   parent: HomeRoute.name,
                 ),
               ],
@@ -1348,6 +1359,18 @@ class QiblaScreenRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'QiblaScreenRoute';
+}
+
+/// generated route for
+/// [MainCalendarPage]
+class MainCalendarPageRoute extends PageRouteInfo<void> {
+  const MainCalendarPageRoute()
+      : super(
+          MainCalendarPageRoute.name,
+          path: 'maincalendar',
+        );
+
+  static const String name = 'MainCalendarPageRoute';
 }
 
 /// generated route for

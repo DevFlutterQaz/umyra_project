@@ -7,6 +7,7 @@ abstract class HomeDatasource {
   Future<Response> getEventsRequest();
   Future<Response> getUmraRequest();
   Future<Response> getUmraDetailRequest(String id);
+  Future<Response> getTimeByMonth();
 }
 
 class HomeDatasourceImpl implements HomeDatasource {
@@ -41,5 +42,11 @@ class HomeDatasourceImpl implements HomeDatasource {
   @override
   Future<Response> getUmraDetailRequest(String id) async {
     return await dio.get('http://165.22.88.71/guides/$id');
+  }
+
+  @override
+  Future<Response> getTimeByMonth() async {
+    return await dio.get(
+        'http://165.22.88.71/pray/12?kmdb=true&asr=Hanafi&highLats=AngleBased&lat=43.234390&lng=76.862617&method=ISN');
   }
 }

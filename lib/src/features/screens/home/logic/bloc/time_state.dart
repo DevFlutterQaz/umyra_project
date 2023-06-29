@@ -4,6 +4,7 @@ import 'package:umyra/src/features/screens/home/logic/api/model/model_tasbih.dar
 import 'package:umyra/src/features/screens/home/logic/api/model/namaz_time_model.dart';
 import 'package:umyra/src/features/screens/home/logic/data/model/guids.dart';
 import 'package:umyra/src/features/screens/home/logic/data/model/guids_detail.dart';
+import 'package:umyra/src/features/screens/home/logic/data/model/time_month_model.dart';
 
 class TimeState {}
 
@@ -97,4 +98,20 @@ class GuidsDetailFailed extends TimeState {
   final String message;
 
   GuidsDetailFailed({required this.message});
+}
+
+// [Time by month]
+
+class TimeByMonthLoading extends TimeState {}
+
+class TimeByMonthSuccess extends TimeState {
+  final List<ModelTimeMonth> data;
+
+  TimeByMonthSuccess({required this.data});
+}
+
+class TimeByMonthFailed extends TimeState {
+  final String message;
+
+  TimeByMonthFailed({required this.message});
 }

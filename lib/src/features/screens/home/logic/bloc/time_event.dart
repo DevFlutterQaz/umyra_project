@@ -17,3 +17,6 @@ class GetGuidsDetail extends TimeEvent {
 
   GetGuidsDetail({required this.id});
 }
+
+// [Time by month]
+class GetTimeByMonth extends TimeEvent {}

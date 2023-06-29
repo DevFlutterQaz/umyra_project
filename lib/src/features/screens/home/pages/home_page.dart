@@ -39,74 +39,78 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    const ColumnSpacer(3),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 19),
-                      child: ComeEvent(),
-                    ),
-                    const ColumnSpacer(1.5),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 19),
-                      child: StatusTimeCustomWidget(
-                          namazData: state.namazTimeData),
-                    ),
-                    const ColumnSpacer(1),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 19),
-                      child: Text('Umra',
-                          style: Theme.of(context)
-                              .textTheme
-                              .headlineSmall
-                              ?.copyWith(
-                                  fontWeight: FontWeight.w700,
-                                  color: AppColors.whiteColor,
-                                  shadows: [
-                                const Shadow(
-                                  offset: Offset(0, 6),
-                                  blurRadius: 50.0,
-                                  color: Color.fromARGB(255, 0, 0, 0),
-                                ),
-                              ])),
-                    ),
-                    const ColumnSpacer(1.2),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 19),
-                      child: UmraButton(
-                          id: 1,
-                          onTap: () => context.router
-                              .push(const UmraCourseScreenRoute())),
-                    ),
-                    const ColumnSpacer(0.8),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 19),
-                      child: UmraButton(
-                          id: 2,
-                          onTap: () =>
-                              context.router.push(const UmraScreenRoute())),
-                    ),
-                    const ColumnSpacer(2),
-                    MediaQuery.removePadding(
-                      removeTop: true,
-                      context: context,
-                      child: AlignedGridView.count(
-                        crossAxisCount: 3,
-                        mainAxisSpacing: 8,
-                        crossAxisSpacing: 8,
-                        physics: const NeverScrollableScrollPhysics(),
-                        shrinkWrap: true,
-                        itemCount: Local.mainButton.length,
-                        itemBuilder: (context, index) => CustomHomeButtom(
-                          onTap: () => homeMainNavigate(
-                              context, Local.mainButton[index].id),
-                          image: Local.mainButton[index].image,
-                          title: Local.mainButton[index].title,
+                child: MediaQuery.removePadding(
+                  context: context,
+                  removeTop: true,
+                  child: ListView(
+                    // crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      const ColumnSpacer(7),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 19),
+                        child: ComeEvent(),
+                      ),
+                      const ColumnSpacer(1.5),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 19),
+                        child: StatusTimeCustomWidget(
+                            namazData: state.namazTimeData),
+                      ),
+                      const ColumnSpacer(1),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 19),
+                        child: Text('Umra',
+                            style: Theme.of(context)
+                                .textTheme
+                                .headlineSmall
+                                ?.copyWith(
+                                    fontWeight: FontWeight.w700,
+                                    color: AppColors.whiteColor,
+                                    shadows: [
+                                  const Shadow(
+                                    offset: Offset(0, 6),
+                                    blurRadius: 50.0,
+                                    color: Color.fromARGB(255, 0, 0, 0),
+                                  ),
+                                ])),
+                      ),
+                      const ColumnSpacer(1.2),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 19),
+                        child: UmraButton(
+                            id: 1,
+                            onTap: () => context.router
+                                .push(const UmraCourseScreenRoute())),
+                      ),
+                      const ColumnSpacer(0.8),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 19),
+                        child: UmraButton(
+                            id: 2,
+                            onTap: () =>
+                                context.router.push(const UmraScreenRoute())),
+                      ),
+                      const ColumnSpacer(2),
+                      MediaQuery.removePadding(
+                        removeTop: true,
+                        context: context,
+                        child: AlignedGridView.count(
+                          crossAxisCount: 3,
+                          mainAxisSpacing: 8,
+                          crossAxisSpacing: 8,
+                          physics: const NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
+                          itemCount: Local.mainButton.length,
+                          itemBuilder: (context, index) => CustomHomeButtom(
+                            onTap: () => homeMainNavigate(
+                                context, Local.mainButton[index].id),
+                            image: Local.mainButton[index].image,
+                            title: Local.mainButton[index].title,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               );
             } else if (state is HomeLoading) {
@@ -128,6 +132,7 @@ class HomeScreen extends StatelessWidget {
     id == 3 ? context.router.push(const BookScreenRoute()) : null;
     id == 4 ? context.router.push(const NavigationScreenRoute()) : null;
     id == 5 ? context.router.push(const NamazScreenRoute()) : null;
-    id == 6 ? context.router.push(const CalendarScreenRoute()) : null;
+    id == 6 ? context.router.push(const MainCalendarPageRoute()) : null;
+    // id == 6 ? context.router.push(const CalendarScreenRoute()) : null;
   }
 }

@@ -68,5 +68,14 @@ class TimeBloc extends Bloc<TimeEvent, TimeState> {
         emit(GuidsDetailFailed(message: e.message ?? 'Error'));
       }
     });
+
+    on<GetTimeByMonth>((event, emit) async {
+      emit(TimeByMonthLoading());
+      try {
+        emit(TimeByMonthSuccess(data: await homeRepository.getTimeByMonth()));
+      } on DioError catch (e) {
+        emit(TimeByMonthFailed(message: e.message ?? 'Error'));
+      }
+    });
   }
 }
