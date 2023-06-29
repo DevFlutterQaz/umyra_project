@@ -20,23 +20,26 @@ class TasbihScreen extends StatelessWidget {
         body: BlocBuilder<TimeBloc, TimeState>(
           builder: (context, state) {
             if (state is TasbihSuccess) {
-              return SafeArea(
-                child: Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      end: Alignment.bottomCenter,
-                      begin: Alignment.topCenter,
-                      colors: [
-                        Color(0xff14BCC2),
-                        Color(0xff14BCC2),
-                        Color(0xff025452),
-                      ],
-                    ),
+              return Container(
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    end: Alignment.bottomCenter,
+                    begin: Alignment.topCenter,
+                    colors: [
+                      Color(0xff14BCC2),
+                      Color(0xff14BCC2),
+                      Color(0xff025452),
+                    ],
                   ),
-                  padding: const EdgeInsets.symmetric(horizontal: 19),
+                ),
+                padding: const EdgeInsets.symmetric(horizontal: 19),
+                child: MediaQuery.removePadding(
+                  context: context,
+                  removeTop: true,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
+                      const ColumnSpacer(5),
                       const CustomAppBarBlue(title: 'Tasbih'),
                       const ColumnSpacer(2),
                       Expanded(

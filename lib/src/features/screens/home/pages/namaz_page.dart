@@ -29,22 +29,25 @@ class NamazScreen extends StatelessWidget {
     ];
 
     return Scaffold(
-        body: SafeArea(
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            end: Alignment.bottomCenter,
-            begin: Alignment.topCenter,
-            colors: [
-              Color(0xff14BCC2),
-              Color(0xff14BCC2),
-              Color(0xff025452),
-            ],
-          ),
+        body: Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          end: Alignment.bottomCenter,
+          begin: Alignment.topCenter,
+          colors: [
+            Color(0xff14BCC2),
+            Color(0xff14BCC2),
+            Color(0xff025452),
+          ],
         ),
+      ),
+      child: MediaQuery.removePadding(
+        context: context,
+        removeTop: true,
         child: Column(
           children: [
+            const ColumnSpacer(5),
             const CustomAppBarBlue(title: 'Namaz'),
             const ColumnSpacer(2),
             Expanded(

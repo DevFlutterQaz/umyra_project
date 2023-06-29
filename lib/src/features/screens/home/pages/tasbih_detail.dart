@@ -38,23 +38,25 @@ class _TasbihDetailState extends State<TasbihDetail> {
         body: BlocBuilder<TimeBloc, TimeState>(
           builder: (context, state) {
             if (state is TasbihSuccess) {
-              return SafeArea(
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 19),
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      end: Alignment.bottomCenter,
-                      begin: Alignment.topCenter,
-                      colors: [
-                        Color(0xff14BCC2),
-                        Color(0xff14BCC2),
-                        Color(0xff025452),
-                      ],
-                    ),
+              return Container(
+                padding: const EdgeInsets.symmetric(horizontal: 19),
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    end: Alignment.bottomCenter,
+                    begin: Alignment.topCenter,
+                    colors: [
+                      Color(0xff14BCC2),
+                      Color(0xff14BCC2),
+                      Color(0xff025452),
+                    ],
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                ),
+                child: MediaQuery.removePadding(
+                  context: context,
+                  removeTop: true,
+                  child: ListView(
                     children: [
+                      const ColumnSpacer(6),
                       CustomAppBarBlue(title: widget.tasbihData.title),
                       const ColumnSpacer(2),
                       ListView(

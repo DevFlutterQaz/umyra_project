@@ -44,7 +44,7 @@ class UmraCourseScreen extends StatelessWidget {
                     children: [
                       CourseButton(
                         title: 'Ihram',
-                        isFinish: true,
+                        isFinish: false,
                         image: AppImages.ihram,
                         onTap: () => context.router
                             .push(const CouseTeoreticalPageRoute()),
@@ -65,13 +65,13 @@ class UmraCourseScreen extends StatelessWidget {
                         onTap: () =>
                             context.router.push(const CouseTawafPageRoute()),
                       ),
-                      const ColumnSpacer(2),
-                      CourseButton(
-                        title: 'Sa’i',
-                        isFinish: false,
-                        image: AppImages.sai,
-                        onTap: () {},
-                      ),
+                      // const ColumnSpacer(2),
+                      // CourseButton(
+                      //   title: 'Sa’i',
+                      //   isFinish: false,
+                      //   image: AppImages.sai,
+                      //   onTap: () {},
+                      // ),
                       const ColumnSpacer(2),
                       CourseButton(
                         title: 'Hair Shaving',

@@ -226,9 +226,16 @@ class _$AppRouter extends RootStackRouter {
       );
     },
     CourseTawaf3PageRoute.name: (routeData) {
+      final args = routeData.argsAs<CourseTawaf3PageRouteArgs>();
       return MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const CourseTawaf3Page(),
+        child: CourseTawaf3Page(
+          key: args.key,
+          title: args.title,
+          list: args.list,
+          index: args.index,
+          subTitle: args.subTitle,
+        ),
       );
     },
     UmraLessanRoute.name: (routeData) {
@@ -1158,14 +1165,51 @@ class CourseTawaf2PageRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [CourseTawaf3Page]
-class CourseTawaf3PageRoute extends PageRouteInfo<void> {
-  const CourseTawaf3PageRoute()
-      : super(
+class CourseTawaf3PageRoute extends PageRouteInfo<CourseTawaf3PageRouteArgs> {
+  CourseTawaf3PageRoute({
+    Key? key,
+    required String title,
+    required List<dynamic> list,
+    required int index,
+    required String subTitle,
+  }) : super(
           CourseTawaf3PageRoute.name,
           path: 'umracoursetawaf3',
+          args: CourseTawaf3PageRouteArgs(
+            key: key,
+            title: title,
+            list: list,
+            index: index,
+            subTitle: subTitle,
+          ),
         );
 
   static const String name = 'CourseTawaf3PageRoute';
+}
+
+class CourseTawaf3PageRouteArgs {
+  const CourseTawaf3PageRouteArgs({
+    this.key,
+    required this.title,
+    required this.list,
+    required this.index,
+    required this.subTitle,
+  });
+
+  final Key? key;
+
+  final String title;
+
+  final List<dynamic> list;
+
+  final int index;
+
+  final String subTitle;
+
+  @override
+  String toString() {
+    return 'CourseTawaf3PageRouteArgs{key: $key, title: $title, list: $list, index: $index, subTitle: $subTitle}';
+  }
 }
 
 /// generated route for
