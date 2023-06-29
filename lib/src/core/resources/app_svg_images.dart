@@ -48,4 +48,5 @@ class AppSvgImages {
   static const String zamokClose = 'assets/images/svg/zamokClose.svg';
   static const String whatsappLogo = 'assets/images/svg/whatsappLogo.svg';
   static const String telegaLogo = 'assets/images/svg/telegaLogo.svg';
+  static const String bookread = 'assets/images/svg/bookread.svg';
 }

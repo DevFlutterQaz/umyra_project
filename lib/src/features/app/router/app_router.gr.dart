@@ -280,6 +280,12 @@ class _$AppRouter extends RootStackRouter {
         child: const TawafPageViewScreen(),
       );
     },
+    PDFViewerPageRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const PDFViewerPage(),
+      );
+    },
     MainQuranScrennRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
@@ -593,6 +599,11 @@ class _$AppRouter extends RootStackRouter {
                 RouteConfig(
                   TawafPageViewScreenRoute.name,
                   path: 'talbiyahscren',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  PDFViewerPageRoute.name,
+                  path: 'pdf',
                   parent: HomeRoute.name,
                 ),
               ],
@@ -1336,6 +1347,18 @@ class TawafPageViewScreenRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'TawafPageViewScreenRoute';
+}
+
+/// generated route for
+/// [PDFViewerPage]
+class PDFViewerPageRoute extends PageRouteInfo<void> {
+  const PDFViewerPageRoute()
+      : super(
+          PDFViewerPageRoute.name,
+          path: 'pdf',
+        );
+
+  static const String name = 'PDFViewerPageRoute';
 }
 
 /// generated route for
