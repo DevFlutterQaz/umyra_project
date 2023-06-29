@@ -4,12 +4,16 @@ import 'package:umyra/src/features/screens/home/logic/api/model/model_navigation
 import 'package:umyra/src/features/screens/home/logic/api/model/model_tasbih.dart';
 import 'package:umyra/src/features/screens/home/logic/api/model/namaz_time_model.dart';
 import 'package:umyra/src/features/screens/home/logic/data/datasource/datasource.dart';
+import 'package:umyra/src/features/screens/home/logic/data/model/guids.dart';
+import 'package:umyra/src/features/screens/home/logic/data/model/guids_detail.dart';
 
 abstract class HomeRepository {
   Future<NamazModel> getTimeRequest();
   Future<List<TasbihModel>> getTasbihRequest();
   Future<List<ModelNavigation>> getNavigationRequest();
   Future<List<EventModel>> getEventsRequest();
+  Future<List<ModelUmraGuids>> getUmraRequest();
+  Future<List<GuidsDetailModel>> getUmraDetailRequest(String id);
 }
 
 class HomeRepositoryImpl implements HomeRepository {
@@ -41,5 +45,21 @@ class HomeRepositoryImpl implements HomeRepository {
   Future<List<EventModel>> getEventsRequest() async {
     Response response = await homeDatasource.getEventsRequest();
     return (response.data as List).map((e) => EventModel.fromJson(e)).toList();
+  }
+
+  @override
+  Future<List<ModelUmraGuids>> getUmraRequest() async {
+    Response response = await homeDatasource.getUmraRequest();
+    return (response.data as List)
+        .map((e) => ModelUmraGuids.fromJson(e))
+        .toList();
+  }
+
+  @override
+  Future<List<GuidsDetailModel>> getUmraDetailRequest(String id) async {
+    Response response = await homeDatasource.getUmraDetailRequest(id);
+    return (response.data as List)
+        .map((e) => GuidsDetailModel.fromJson(e))
+        .toList();
   }
 }

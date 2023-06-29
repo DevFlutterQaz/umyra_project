@@ -124,9 +124,14 @@ class _$AppRouter extends RootStackRouter {
       );
     },
     UmraDetailScreenRoute.name: (routeData) {
+      final args = routeData.argsAs<UmraDetailScreenRouteArgs>();
       return MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const UmraDetailScreen(),
+        child: UmraDetailScreen(
+          key: args.key,
+          title: args.title,
+          id: args.id,
+        ),
       );
     },
     UmraCourseScreenRoute.name: (routeData) {
@@ -917,14 +922,41 @@ class UmraScreenRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [UmraDetailScreen]
-class UmraDetailScreenRoute extends PageRouteInfo<void> {
-  const UmraDetailScreenRoute()
-      : super(
+class UmraDetailScreenRoute extends PageRouteInfo<UmraDetailScreenRouteArgs> {
+  UmraDetailScreenRoute({
+    Key? key,
+    required String title,
+    required String id,
+  }) : super(
           UmraDetailScreenRoute.name,
           path: 'umradetail',
+          args: UmraDetailScreenRouteArgs(
+            key: key,
+            title: title,
+            id: id,
+          ),
         );
 
   static const String name = 'UmraDetailScreenRoute';
+}
+
+class UmraDetailScreenRouteArgs {
+  const UmraDetailScreenRouteArgs({
+    this.key,
+    required this.title,
+    required this.id,
+  });
+
+  final Key? key;
+
+  final String title;
+
+  final String id;
+
+  @override
+  String toString() {
+    return 'UmraDetailScreenRouteArgs{key: $key, title: $title, id: $id}';
+  }
 }
 
 /// generated route for

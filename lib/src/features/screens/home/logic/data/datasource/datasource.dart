@@ -5,6 +5,8 @@ abstract class HomeDatasource {
   Future<Response> getTasbihRequest();
   Future<Response> getNavigationRequest();
   Future<Response> getEventsRequest();
+  Future<Response> getUmraRequest();
+  Future<Response> getUmraDetailRequest(String id);
 }
 
 class HomeDatasourceImpl implements HomeDatasource {
@@ -29,5 +31,15 @@ class HomeDatasourceImpl implements HomeDatasource {
   @override
   Future<Response> getEventsRequest() async {
     return await dio.get('http://165.22.88.71/pray/get-holidays');
+  }
+
+  @override
+  Future<Response> getUmraRequest() async {
+    return await dio.get('http://165.22.88.71/guides/');
+  }
+
+  @override
+  Future<Response> getUmraDetailRequest(String id) async {
+    return await dio.get('http://165.22.88.71/guides/$id');
   }
 }
