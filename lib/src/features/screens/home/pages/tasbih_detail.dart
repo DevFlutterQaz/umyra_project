@@ -139,9 +139,7 @@ class _TasbihDetailState extends State<TasbihDetail> {
                                       color: Colors.white),
                                   child: InkWell(
                                     onLongPress: () {
-                                      setState(() {
-                                        number.value = 0;
-                                      });
+                                      number.value = 0;
                                     },
                                     child: Icon(
                                       Icons.replay,
