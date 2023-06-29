@@ -23,43 +23,51 @@ class CustomHomeButtom extends StatelessWidget {
         child: Column(
           children: [
             Container(
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  boxShadow: kElevationToShadow[3],
-                  color: AppColors.whiteColor,
-                ),
-                child: image.contains('tasbih')
-                    ? Padding(
-                        padding: const EdgeInsets.all(15),
-                        child: Stack(
-                          children: [
-                            SvgPicture.asset(image),
-                            Positioned.fill(
-                              child: Align(
-                                alignment: Alignment.center,
-                                child: Text('33',
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .bodySmall
-                                        ?.copyWith(
-                                            color: AppColors.contentBlue,
-                                            fontWeight: FontWeight.w500)),
-                              ),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                boxShadow: kElevationToShadow[3],
+                color: AppColors.whiteColor,
+              ),
+              child: image.contains('tasbih')
+                  ? Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Stack(
+                        children: [
+                          SvgPicture.asset(image, height: 28),
+                          Positioned.fill(
+                            child: Align(
+                              alignment: Alignment.center,
+                              child: Text('33',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyMedium
+                                      ?.copyWith(
+                                          color: AppColors.contentBlue,
+                                          fontWeight: FontWeight.w500)),
                             ),
-                          ],
-                        ),
-                      )
-                    : Padding(
-                        padding:
-                            EdgeInsets.all(image.contains('svg') ? 15 : 14),
-                        child: image.contains('svg')
-                            ? SvgPicture.asset(image, height: 24)
-                            : Image.asset(image),
-                      )),
+                          ),
+                        ],
+                      ),
+                    )
+                  : Padding(
+                      padding: EdgeInsets.all(image.contains('svg') ? 15 : 14),
+                      child: image.contains('svg')
+                          ? SvgPicture.asset(image, height: 28)
+                          : Image.asset(image),
+                    ),
+            ),
             const ColumnSpacer(0.8),
             Text(title,
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                    fontWeight: FontWeight.w500, color: AppColors.whiteColor)),
+                style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                    fontWeight: FontWeight.w500,
+                    color: AppColors.whiteColor,
+                    shadows: [
+                      const Shadow(
+                        offset: Offset(0, 6),
+                        blurRadius: 30.0,
+                        color: Color.fromARGB(255, 0, 0, 0),
+                      ),
+                    ])),
           ],
         ),
       ),

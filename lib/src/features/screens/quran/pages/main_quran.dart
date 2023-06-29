@@ -50,25 +50,31 @@ class MainQuranScrenn extends StatelessWidget {
           child: BlocBuilder<QuranBloc, QuranState>(
             builder: (context, state) {
               if (state is QuranSuccess) {
-                return ListView.separated(
-                  itemBuilder: (context, index) => CustomQuranButton(
-                    onTap: () {
-                      context.router.push(
-                        QuarnDetailScreenRoute(
-                          quranData: state.quranData.data.surahs[index],
-                          quranArabData: state.quranArabData.data.surahs[index],
-                        ),
-                      );
-                    },
-                    title: state.quranData.data.surahs[index].englishName,
-                    city: state.quranArabData.data.surahs[index].revelationType,
-                    numberSura:
-                        state.quranArabData.data.surahs[index].ayahs.length,
-                    numberOfSurahs:
-                        state.quranArabData.data.surahs[index].number,
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 10),
+                  child: ListView.separated(
+                    itemBuilder: (context, index) => CustomQuranButton(
+                      onTap: () {
+                        context.router.push(
+                          QuarnDetailScreenRoute(
+                            quranData: state.quranData.data.surahs[index],
+                            quranArabData:
+                                state.quranArabData.data.surahs[index],
+                          ),
+                        );
+                      },
+                      title: state.quranData.data.surahs[index].englishName,
+                      city:
+                          state.quranArabData.data.surahs[index].revelationType,
+                      numberSura:
+                          state.quranArabData.data.surahs[index].ayahs.length,
+                      numberOfSurahs:
+                          state.quranArabData.data.surahs[index].number,
+                    ),
+                    separatorBuilder: (context, index) =>
+                        const ColumnSpacer(0.8),
+                    itemCount: state.quranData.data.surahs.length,
                   ),
-                  separatorBuilder: (context, index) => const ColumnSpacer(0.8),
-                  itemCount: state.quranData.data.surahs.length,
                 );
               } else if (state is QuranLoading) {
                 return const Center(child: CircleLoader());

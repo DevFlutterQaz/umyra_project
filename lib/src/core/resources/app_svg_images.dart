@@ -44,6 +44,8 @@ class AppSvgImages {
   static const String counterDecor = 'assets/images/svg/counterDecor.svg';
   static const String moonLittle = 'assets/images/svg/moon_little.svg';
   static const String compass = 'assets/images/svg/compass.svg';
+  static const String zamok = 'assets/images/svg/zamok.svg';
+  static const String zamokClose = 'assets/images/svg/zamokClose.svg';
   static const String whatsappLogo = 'assets/images/svg/whatsappLogo.svg';
   static const String telegaLogo = 'assets/images/svg/telegaLogo.svg';
 }

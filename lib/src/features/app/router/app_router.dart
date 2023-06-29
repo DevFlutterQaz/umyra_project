@@ -7,6 +7,22 @@ import 'package:umyra/src/features/screens/auth/pages/log_in.dart';
 import 'package:umyra/src/features/screens/auth/pages/register.dart';
 import 'package:umyra/src/features/screens/home/logic/api/model/model_tasbih.dart';
 import 'package:umyra/src/features/screens/home/pages/calendar_page.dart';
+import 'package:umyra/src/features/screens/home/pages/course/hair/hair1.dart';
+import 'package:umyra/src/features/screens/home/pages/course/hair/hair_main.dart';
+import 'package:umyra/src/features/screens/home/pages/course/ihram/course_ihram.dart';
+import 'package:umyra/src/features/screens/home/pages/course/ihram/course_ihram2.dart';
+import 'package:umyra/src/features/screens/home/pages/course/ihram/course_ihram3.dart';
+import 'package:umyra/src/features/screens/home/pages/course/ihram/course_ihram4.dart';
+import 'package:umyra/src/features/screens/home/pages/course/ihram/course_ihram_detail.dart';
+import 'package:umyra/src/features/screens/home/pages/course/talbiyah/talbiah1.dart';
+import 'package:umyra/src/features/screens/home/pages/course/talbiyah/talbiah2.dart';
+import 'package:umyra/src/features/screens/home/pages/course/talbiyah/talbiah3.dart';
+import 'package:umyra/src/features/screens/home/pages/course/talbiyah/talbiah4.dart';
+import 'package:umyra/src/features/screens/home/pages/course/talbiyah/talbiah_main.dart';
+import 'package:umyra/src/features/screens/home/pages/course/tawaf/tawaf2.dart';
+import 'package:umyra/src/features/screens/home/pages/course/tawaf/tawaf3.dart';
+import 'package:umyra/src/features/screens/home/pages/course/tawaf/tawaf_main.dart';
+import 'package:umyra/src/features/screens/home/pages/course/tawaf/tawag1.dart';
 import 'package:umyra/src/features/screens/home/pages/location_page.dart';
 import 'package:umyra/src/features/screens/home/pages/namaz_page.dart';
 import 'package:umyra/src/features/screens/home/pages/navigation_page.dart';
@@ -116,6 +132,70 @@ part 'app_router.gr.dart';
           AutoRoute(
             page: UmraCourseScreen,
             path: 'umracourse',
+          ),
+          AutoRoute(
+            page: CouseTeoreticalPage,
+            path: 'umracourseteoria',
+          ),
+          AutoRoute(
+            page: CourseIhramDetailPage,
+            path: 'umracoursedetail',
+          ),
+          AutoRoute(
+            page: CourseIhram2Page,
+            path: 'umracourse2',
+          ),
+          AutoRoute(
+            page: CourseIhram3Page,
+            path: 'umracourse3',
+          ),
+          AutoRoute(
+            page: CourseIhram4Page,
+            path: 'umracourse4',
+          ),
+          AutoRoute(
+            page: CourseTalbiyahPage,
+            path: 'umracoursetalibiyah',
+          ),
+          AutoRoute(
+            page: CourseTalbiah1Page,
+            path: 'umracoursetalibiyah1',
+          ),
+          AutoRoute(
+            page: CourseTalbiah2Page,
+            path: 'umracoursetalibiyah2',
+          ),
+          AutoRoute(
+            page: CourseTalbiah3Page,
+            path: 'umracoursetalibiyah3',
+          ),
+          AutoRoute(
+            page: CourseTalbiah4Page,
+            path: 'umracoursetalibiyah4',
+          ),
+          AutoRoute(
+            page: CouseHairPage,
+            path: 'umracoursehair',
+          ),
+          AutoRoute(
+            page: CourseHair1Page,
+            path: 'umracoursehair1',
+          ),
+          AutoRoute(
+            page: CouseTawafPage,
+            path: 'umracoursetawaf',
+          ),
+          AutoRoute(
+            page: CourseTawaf1Page,
+            path: 'umracoursetawaf1',
+          ),
+          AutoRoute(
+            page: CourseTawaf2Page,
+            path: 'umracoursetawaf2',
+          ),
+          AutoRoute(
+            page: CourseTawaf3Page,
+            path: 'umracoursetawaf3',
           ),
           AutoRoute(
             page: UmraLessan,

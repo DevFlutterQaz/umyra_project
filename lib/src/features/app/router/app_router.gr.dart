@@ -135,6 +135,102 @@ class _$AppRouter extends RootStackRouter {
         child: const UmraCourseScreen(),
       );
     },
+    CouseTeoreticalPageRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const CouseTeoreticalPage(),
+      );
+    },
+    CourseIhramDetailPageRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const CourseIhramDetailPage(),
+      );
+    },
+    CourseIhram2PageRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const CourseIhram2Page(),
+      );
+    },
+    CourseIhram3PageRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const CourseIhram3Page(),
+      );
+    },
+    CourseIhram4PageRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const CourseIhram4Page(),
+      );
+    },
+    CourseTalbiyahPageRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const CourseTalbiyahPage(),
+      );
+    },
+    CourseTalbiah1PageRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const CourseTalbiah1Page(),
+      );
+    },
+    CourseTalbiah2PageRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const CourseTalbiah2Page(),
+      );
+    },
+    CourseTalbiah3PageRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const CourseTalbiah3Page(),
+      );
+    },
+    CourseTalbiah4PageRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const CourseTalbiah4Page(),
+      );
+    },
+    CouseHairPageRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const CouseHairPage(),
+      );
+    },
+    CourseHair1PageRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const CourseHair1Page(),
+      );
+    },
+    CouseTawafPageRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const CouseTawafPage(),
+      );
+    },
+    CourseTawaf1PageRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const CourseTawaf1Page(),
+      );
+    },
+    CourseTawaf2PageRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const CourseTawaf2Page(),
+      );
+    },
+    CourseTawaf3PageRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const CourseTawaf3Page(),
+      );
+    },
     UmraLessanRoute.name: (routeData) {
       final args = routeData.argsAs<UmraLessanRouteArgs>();
       return MaterialPageX<dynamic>(
@@ -385,6 +481,86 @@ class _$AppRouter extends RootStackRouter {
                 RouteConfig(
                   UmraCourseScreenRoute.name,
                   path: 'umracourse',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  CouseTeoreticalPageRoute.name,
+                  path: 'umracourseteoria',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  CourseIhramDetailPageRoute.name,
+                  path: 'umracoursedetail',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  CourseIhram2PageRoute.name,
+                  path: 'umracourse2',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  CourseIhram3PageRoute.name,
+                  path: 'umracourse3',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  CourseIhram4PageRoute.name,
+                  path: 'umracourse4',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  CourseTalbiyahPageRoute.name,
+                  path: 'umracoursetalibiyah',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  CourseTalbiah1PageRoute.name,
+                  path: 'umracoursetalibiyah1',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  CourseTalbiah2PageRoute.name,
+                  path: 'umracoursetalibiyah2',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  CourseTalbiah3PageRoute.name,
+                  path: 'umracoursetalibiyah3',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  CourseTalbiah4PageRoute.name,
+                  path: 'umracoursetalibiyah4',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  CouseHairPageRoute.name,
+                  path: 'umracoursehair',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  CourseHair1PageRoute.name,
+                  path: 'umracoursehair1',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  CouseTawafPageRoute.name,
+                  path: 'umracoursetawaf',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  CourseTawaf1PageRoute.name,
+                  path: 'umracoursetawaf1',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  CourseTawaf2PageRoute.name,
+                  path: 'umracoursetawaf2',
+                  parent: HomeRoute.name,
+                ),
+                RouteConfig(
+                  CourseTawaf3PageRoute.name,
+                  path: 'umracoursetawaf3',
                   parent: HomeRoute.name,
                 ),
                 RouteConfig(
@@ -801,6 +977,198 @@ class UmraCourseScreenRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [CouseTeoreticalPage]
+class CouseTeoreticalPageRoute extends PageRouteInfo<void> {
+  const CouseTeoreticalPageRoute()
+      : super(
+          CouseTeoreticalPageRoute.name,
+          path: 'umracourseteoria',
+        );
+
+  static const String name = 'CouseTeoreticalPageRoute';
+}
+
+/// generated route for
+/// [CourseIhramDetailPage]
+class CourseIhramDetailPageRoute extends PageRouteInfo<void> {
+  const CourseIhramDetailPageRoute()
+      : super(
+          CourseIhramDetailPageRoute.name,
+          path: 'umracoursedetail',
+        );
+
+  static const String name = 'CourseIhramDetailPageRoute';
+}
+
+/// generated route for
+/// [CourseIhram2Page]
+class CourseIhram2PageRoute extends PageRouteInfo<void> {
+  const CourseIhram2PageRoute()
+      : super(
+          CourseIhram2PageRoute.name,
+          path: 'umracourse2',
+        );
+
+  static const String name = 'CourseIhram2PageRoute';
+}
+
+/// generated route for
+/// [CourseIhram3Page]
+class CourseIhram3PageRoute extends PageRouteInfo<void> {
+  const CourseIhram3PageRoute()
+      : super(
+          CourseIhram3PageRoute.name,
+          path: 'umracourse3',
+        );
+
+  static const String name = 'CourseIhram3PageRoute';
+}
+
+/// generated route for
+/// [CourseIhram4Page]
+class CourseIhram4PageRoute extends PageRouteInfo<void> {
+  const CourseIhram4PageRoute()
+      : super(
+          CourseIhram4PageRoute.name,
+          path: 'umracourse4',
+        );
+
+  static const String name = 'CourseIhram4PageRoute';
+}
+
+/// generated route for
+/// [CourseTalbiyahPage]
+class CourseTalbiyahPageRoute extends PageRouteInfo<void> {
+  const CourseTalbiyahPageRoute()
+      : super(
+          CourseTalbiyahPageRoute.name,
+          path: 'umracoursetalibiyah',
+        );
+
+  static const String name = 'CourseTalbiyahPageRoute';
+}
+
+/// generated route for
+/// [CourseTalbiah1Page]
+class CourseTalbiah1PageRoute extends PageRouteInfo<void> {
+  const CourseTalbiah1PageRoute()
+      : super(
+          CourseTalbiah1PageRoute.name,
+          path: 'umracoursetalibiyah1',
+        );
+
+  static const String name = 'CourseTalbiah1PageRoute';
+}
+
+/// generated route for
+/// [CourseTalbiah2Page]
+class CourseTalbiah2PageRoute extends PageRouteInfo<void> {
+  const CourseTalbiah2PageRoute()
+      : super(
+          CourseTalbiah2PageRoute.name,
+          path: 'umracoursetalibiyah2',
+        );
+
+  static const String name = 'CourseTalbiah2PageRoute';
+}
+
+/// generated route for
+/// [CourseTalbiah3Page]
+class CourseTalbiah3PageRoute extends PageRouteInfo<void> {
+  const CourseTalbiah3PageRoute()
+      : super(
+          CourseTalbiah3PageRoute.name,
+          path: 'umracoursetalibiyah3',
+        );
+
+  static const String name = 'CourseTalbiah3PageRoute';
+}
+
+/// generated route for
+/// [CourseTalbiah4Page]
+class CourseTalbiah4PageRoute extends PageRouteInfo<void> {
+  const CourseTalbiah4PageRoute()
+      : super(
+          CourseTalbiah4PageRoute.name,
+          path: 'umracoursetalibiyah4',
+        );
+
+  static const String name = 'CourseTalbiah4PageRoute';
+}
+
+/// generated route for
+/// [CouseHairPage]
+class CouseHairPageRoute extends PageRouteInfo<void> {
+  const CouseHairPageRoute()
+      : super(
+          CouseHairPageRoute.name,
+          path: 'umracoursehair',
+        );
+
+  static const String name = 'CouseHairPageRoute';
+}
+
+/// generated route for
+/// [CourseHair1Page]
+class CourseHair1PageRoute extends PageRouteInfo<void> {
+  const CourseHair1PageRoute()
+      : super(
+          CourseHair1PageRoute.name,
+          path: 'umracoursehair1',
+        );
+
+  static const String name = 'CourseHair1PageRoute';
+}
+
+/// generated route for
+/// [CouseTawafPage]
+class CouseTawafPageRoute extends PageRouteInfo<void> {
+  const CouseTawafPageRoute()
+      : super(
+          CouseTawafPageRoute.name,
+          path: 'umracoursetawaf',
+        );
+
+  static const String name = 'CouseTawafPageRoute';
+}
+
+/// generated route for
+/// [CourseTawaf1Page]
+class CourseTawaf1PageRoute extends PageRouteInfo<void> {
+  const CourseTawaf1PageRoute()
+      : super(
+          CourseTawaf1PageRoute.name,
+          path: 'umracoursetawaf1',
+        );
+
+  static const String name = 'CourseTawaf1PageRoute';
+}
+
+/// generated route for
+/// [CourseTawaf2Page]
+class CourseTawaf2PageRoute extends PageRouteInfo<void> {
+  const CourseTawaf2PageRoute()
+      : super(
+          CourseTawaf2PageRoute.name,
+          path: 'umracoursetawaf2',
+        );
+
+  static const String name = 'CourseTawaf2PageRoute';
+}
+
+/// generated route for
+/// [CourseTawaf3Page]
+class CourseTawaf3PageRoute extends PageRouteInfo<void> {
+  const CourseTawaf3PageRoute()
+      : super(
+          CourseTawaf3PageRoute.name,
+          path: 'umracoursetawaf3',
+        );
+
+  static const String name = 'CourseTawaf3PageRoute';
+}
+
+/// generated route for
 /// [UmraLessan]
 class UmraLessanRoute extends PageRouteInfo<UmraLessanRouteArgs> {
   UmraLessanRoute({
@@ -871,7 +1239,7 @@ class IhramScreenRouteArgs {
 /// generated route for
 /// [TawafScreen]
 class TawafScreenRoute extends PageRouteInfo<void> {
-  const TawafScreenRoute({required int index})
+  const TawafScreenRoute()
       : super(
           TawafScreenRoute.name,
           path: 'tawahscreen',
