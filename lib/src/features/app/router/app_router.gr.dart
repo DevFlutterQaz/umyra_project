@@ -357,52 +357,16 @@ class _$AppRouter extends RootStackRouter {
         child: const AboutProjectScreen(),
       );
     },
-    BoughtServicesScreenRoute.name: (routeData) {
-      return MaterialPageX<dynamic>(
-        routeData: routeData,
-        child: const BoughtServicesScreen(),
-      );
-    },
     ChangePasswordScreenRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
         child: const ChangePasswordScreen(),
       );
     },
-    FaqScreenRoute.name: (routeData) {
-      return MaterialPageX<dynamic>(
-        routeData: routeData,
-        child: const FaqScreen(),
-      );
-    },
-    LanguageScreenRoute.name: (routeData) {
-      return MaterialPageX<dynamic>(
-        routeData: routeData,
-        child: const LanguageScreen(),
-      );
-    },
-    MyCardsScreenRoute.name: (routeData) {
-      return MaterialPageX<dynamic>(
-        routeData: routeData,
-        child: const MyCardsScreen(),
-      );
-    },
     MyInformationScreenRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
         child: const MyInformationScreen(),
-      );
-    },
-    TechnicalSupportScreenRoute.name: (routeData) {
-      return MaterialPageX<dynamic>(
-        routeData: routeData,
-        child: const TechnicalSupportScreen(),
-      );
-    },
-    MessageNoteScreenRoute.name: (routeData) {
-      return MaterialPageX<dynamic>(
-        routeData: routeData,
-        child: const MessageNoteScreen(),
       );
     },
     NewPasswordScreenRoute.name: (routeData) {

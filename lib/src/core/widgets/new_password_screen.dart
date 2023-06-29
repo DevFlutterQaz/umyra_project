@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:umyra/src/core/resources/app_colors.dart';
 
 import 'arrow_button.dart';
 import 'custom_text_field.dart';
@@ -19,6 +20,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
     return GestureDetector(
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
+        backgroundColor: AppColors.whiteColor,
         body: SafeArea(
             child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 19),
@@ -29,6 +31,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
               Row(
                 children: [
                   ArrowButton(
+                    iconColor: AppColors.contentBlue,
                     onPressed: () => context.router.pop(),
                   ),
                   const SizedBox(width: 20),
@@ -36,7 +39,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                     'Құпия сөзді қалпына келтіру',
                     style: Theme.of(context).textTheme.titleLarge?.copyWith(
                           fontWeight: FontWeight.w600,
-                          color: Colors.black,
+                          color: AppColors.contentBlue,
                         ),
                   ),
                 ],
@@ -49,7 +52,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                   onTap: () => setState(() => visibility = !visibility),
                   child: Icon(
                     visibility ? Icons.visibility : Icons.visibility_off,
-                    color: Colors.grey,
+                    color: AppColors.contentBlue,
                   ),
                 ),
               ),
@@ -62,7 +65,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                       setState(() => visibilityConfirm = !visibilityConfirm),
                   child: Icon(
                     visibility ? Icons.visibility : Icons.visibility_off,
-                    color: Colors.grey,
+                    color: AppColors.contentBlue,
                   ),
                 ),
               ),

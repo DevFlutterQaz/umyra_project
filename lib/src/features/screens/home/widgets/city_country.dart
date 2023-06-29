@@ -11,8 +11,11 @@ class CityCountryColumn extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Almaty',
-            style: TextStyle(color: AppColors.contentBlue, fontSize: 18)),
+        InkWell(
+          onTap: () => Navigator.pop(context),
+          child: const Text('Almaty',
+              style: TextStyle(color: AppColors.contentBlue, fontSize: 18)),
+        ),
         Text(
           'Kazakhstan',
           style: Theme.of(context).textTheme.bodyMedium?.copyWith(

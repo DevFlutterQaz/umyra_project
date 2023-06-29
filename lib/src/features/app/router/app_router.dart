@@ -32,13 +32,8 @@ import 'package:umyra/src/features/screens/home/pages/umra_detail_page.dart';
 import 'package:umyra/src/features/screens/home/pages/umra_lesson.dart';
 import 'package:umyra/src/features/screens/home/pages/umra_page.dart';
 import 'package:umyra/src/features/screens/home/widgets/tawaf_page_view.dart';
-import 'package:umyra/src/features/screens/profile/pages/bought_services_page.dart';
-import 'package:umyra/src/features/screens/profile/pages/faq_page.dart';
-import 'package:umyra/src/features/screens/profile/pages/language_page.dart';
-import 'package:umyra/src/features/screens/profile/pages/message_note_page.dart';
-import 'package:umyra/src/features/screens/profile/pages/my_cards_page.dart';
+
 import 'package:umyra/src/features/screens/profile/pages/my_information_page.dart';
-import 'package:umyra/src/features/screens/profile/pages/techncal_support_page.dart';
 import 'package:umyra/src/features/screens/quran/logic/data/model/model_arab_quran.dart';
 import 'package:umyra/src/features/screens/quran/logic/data/model/model_quran.dart';
 import 'package:umyra/src/features/screens/quran/pages/dugalar_screen.dart';
@@ -277,14 +272,8 @@ part 'app_router.gr.dart';
         children: [
           AutoRoute(page: ProfileScreen, path: ''),
           AutoRoute(page: AboutProjectScreen, path: 'aboutproject'),
-          AutoRoute(page: BoughtServicesScreen, path: 'boughtservices'),
           AutoRoute(page: ChangePasswordScreen, path: 'changepassword'),
-          AutoRoute(page: FaqScreen, path: 'faqscreen'),
-          AutoRoute(page: LanguageScreen, path: 'languagescreen'),
-          AutoRoute(page: MyCardsScreen, path: 'mycardsscreen'),
           AutoRoute(page: MyInformationScreen, path: 'myinformationscreen'),
-          AutoRoute(page: TechnicalSupportScreen, path: 'technicalsupport'),
-          AutoRoute(page: MessageNoteScreen, path: 'messagenotescreen'),
           AutoRoute(page: NewPasswordScreen, path: 'newpasswordscreen'),
         ],
       ),
