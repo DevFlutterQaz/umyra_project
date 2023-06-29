@@ -49,5 +49,24 @@ class TimeBloc extends Bloc<TimeEvent, TimeState> {
         }
       },
     );
+
+    on<GetGuids>((event, emit) async {
+      emit(GuidsLoading());
+      try {
+        emit(GuidsSuccess(data: await homeRepository.getUmraRequest()));
+      } on DioError catch (e) {
+        emit(GuidsFailed(message: e.message ?? 'Error'));
+      }
+    });
+
+    on<GetGuidsDetail>((event, emit) async {
+      emit(GuidsDetailLoading());
+      try {
+        emit(GuidsDetailSuccess(
+            data: await homeRepository.getUmraDetailRequest(event.id)));
+      } on DioError catch (e) {
+        emit(GuidsDetailFailed(message: e.message ?? 'Error'));
+      }
+    });
   }
 }

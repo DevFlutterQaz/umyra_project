@@ -124,9 +124,14 @@ class _$AppRouter extends RootStackRouter {
       );
     },
     UmraDetailScreenRoute.name: (routeData) {
+      final args = routeData.argsAs<UmraDetailScreenRouteArgs>();
       return MaterialPageX<dynamic>(
         routeData: routeData,
-        child: const UmraDetailScreen(),
+        child: UmraDetailScreen(
+          key: args.key,
+          title: args.title,
+          id: args.id,
+        ),
       );
     },
     UmraCourseScreenRoute.name: (routeData) {
@@ -652,43 +657,13 @@ class _$AppRouter extends RootStackRouter {
                   parent: ProfileRouter.name,
                 ),
                 RouteConfig(
-                  BoughtServicesScreenRoute.name,
-                  path: 'boughtservices',
-                  parent: ProfileRouter.name,
-                ),
-                RouteConfig(
                   ChangePasswordScreenRoute.name,
                   path: 'changepassword',
                   parent: ProfileRouter.name,
                 ),
                 RouteConfig(
-                  FaqScreenRoute.name,
-                  path: 'faqscreen',
-                  parent: ProfileRouter.name,
-                ),
-                RouteConfig(
-                  LanguageScreenRoute.name,
-                  path: 'languagescreen',
-                  parent: ProfileRouter.name,
-                ),
-                RouteConfig(
-                  MyCardsScreenRoute.name,
-                  path: 'mycardsscreen',
-                  parent: ProfileRouter.name,
-                ),
-                RouteConfig(
                   MyInformationScreenRoute.name,
                   path: 'myinformationscreen',
-                  parent: ProfileRouter.name,
-                ),
-                RouteConfig(
-                  TechnicalSupportScreenRoute.name,
-                  path: 'technicalsupport',
-                  parent: ProfileRouter.name,
-                ),
-                RouteConfig(
-                  MessageNoteScreenRoute.name,
-                  path: 'messagenotescreen',
                   parent: ProfileRouter.name,
                 ),
                 RouteConfig(
@@ -936,14 +911,41 @@ class UmraScreenRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [UmraDetailScreen]
-class UmraDetailScreenRoute extends PageRouteInfo<void> {
-  const UmraDetailScreenRoute()
-      : super(
+class UmraDetailScreenRoute extends PageRouteInfo<UmraDetailScreenRouteArgs> {
+  UmraDetailScreenRoute({
+    Key? key,
+    required String title,
+    required String id,
+  }) : super(
           UmraDetailScreenRoute.name,
           path: 'umradetail',
+          args: UmraDetailScreenRouteArgs(
+            key: key,
+            title: title,
+            id: id,
+          ),
         );
 
   static const String name = 'UmraDetailScreenRoute';
+}
+
+class UmraDetailScreenRouteArgs {
+  const UmraDetailScreenRouteArgs({
+    this.key,
+    required this.title,
+    required this.id,
+  });
+
+  final Key? key;
+
+  final String title;
+
+  final String id;
+
+  @override
+  String toString() {
+    return 'UmraDetailScreenRouteArgs{key: $key, title: $title, id: $id}';
+  }
 }
 
 /// generated route for
@@ -1497,18 +1499,6 @@ class AboutProjectScreenRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [BoughtServicesScreen]
-class BoughtServicesScreenRoute extends PageRouteInfo<void> {
-  const BoughtServicesScreenRoute()
-      : super(
-          BoughtServicesScreenRoute.name,
-          path: 'boughtservices',
-        );
-
-  static const String name = 'BoughtServicesScreenRoute';
-}
-
-/// generated route for
 /// [ChangePasswordScreen]
 class ChangePasswordScreenRoute extends PageRouteInfo<void> {
   const ChangePasswordScreenRoute()
@@ -1521,42 +1511,6 @@ class ChangePasswordScreenRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [FaqScreen]
-class FaqScreenRoute extends PageRouteInfo<void> {
-  const FaqScreenRoute()
-      : super(
-          FaqScreenRoute.name,
-          path: 'faqscreen',
-        );
-
-  static const String name = 'FaqScreenRoute';
-}
-
-/// generated route for
-/// [LanguageScreen]
-class LanguageScreenRoute extends PageRouteInfo<void> {
-  const LanguageScreenRoute()
-      : super(
-          LanguageScreenRoute.name,
-          path: 'languagescreen',
-        );
-
-  static const String name = 'LanguageScreenRoute';
-}
-
-/// generated route for
-/// [MyCardsScreen]
-class MyCardsScreenRoute extends PageRouteInfo<void> {
-  const MyCardsScreenRoute()
-      : super(
-          MyCardsScreenRoute.name,
-          path: 'mycardsscreen',
-        );
-
-  static const String name = 'MyCardsScreenRoute';
-}
-
-/// generated route for
 /// [MyInformationScreen]
 class MyInformationScreenRoute extends PageRouteInfo<void> {
   const MyInformationScreenRoute()
@@ -1566,30 +1520,6 @@ class MyInformationScreenRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'MyInformationScreenRoute';
-}
-
-/// generated route for
-/// [TechnicalSupportScreen]
-class TechnicalSupportScreenRoute extends PageRouteInfo<void> {
-  const TechnicalSupportScreenRoute()
-      : super(
-          TechnicalSupportScreenRoute.name,
-          path: 'technicalsupport',
-        );
-
-  static const String name = 'TechnicalSupportScreenRoute';
-}
-
-/// generated route for
-/// [MessageNoteScreen]
-class MessageNoteScreenRoute extends PageRouteInfo<void> {
-  const MessageNoteScreenRoute()
-      : super(
-          MessageNoteScreenRoute.name,
-          path: 'messagenotescreen',
-        );
-
-  static const String name = 'MessageNoteScreenRoute';
 }
 
 /// generated route for

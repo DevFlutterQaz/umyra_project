@@ -2,8 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:umyra/src/core/resources/app_colors.dart';
 
 class ExpansionQuestionAnswear extends StatelessWidget {
+  final String question;
+  final String answer;
+  final String index;
   const ExpansionQuestionAnswear({
     super.key,
+    required this.question,
+    required this.answer,
+    required this.index,
   });
 
   @override
@@ -16,7 +22,7 @@ class ExpansionQuestionAnswear extends StatelessWidget {
       ),
       elevation: 0,
       child: ExpansionTile(
-        title: Text('Some Question',
+        title: Text('$index. $question',
             style: Theme.of(context)
                 .textTheme
                 .titleMedium
@@ -26,12 +32,10 @@ class ExpansionQuestionAnswear extends StatelessWidget {
         collapsedIconColor: Colors.black,
         textColor: Colors.black,
         childrenPadding:
-            const EdgeInsets.symmetric(horizontal: 17, vertical: 9),
+            const EdgeInsets.symmetric(horizontal: 17, vertical: 12),
         expandedCrossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text(
-              'Бұл жерде жауап болады. Здесь будет ответ. Бұл жерде жауап болады. Здесь будет ответ. Бұл жерде жауап болады. Здесь будет ответ. ',
-              style: Theme.of(context).textTheme.titleMedium),
+          Text(answer, style: Theme.of(context).textTheme.titleMedium),
         ],
       ),
     );

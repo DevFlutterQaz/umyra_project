@@ -2,6 +2,8 @@ import 'package:umyra/src/features/screens/home/logic/api/model/model_event.dart
 import 'package:umyra/src/features/screens/home/logic/api/model/model_navigation.dart';
 import 'package:umyra/src/features/screens/home/logic/api/model/model_tasbih.dart';
 import 'package:umyra/src/features/screens/home/logic/api/model/namaz_time_model.dart';
+import 'package:umyra/src/features/screens/home/logic/data/model/guids.dart';
+import 'package:umyra/src/features/screens/home/logic/data/model/guids_detail.dart';
 
 class TimeState {}
 
@@ -65,4 +67,34 @@ class EventFailed extends TimeState {
   final String message;
 
   EventFailed({required this.message});
+}
+
+// [Guids]
+class GuidsLoading extends TimeState {}
+
+class GuidsSuccess extends TimeState {
+  final List<ModelUmraGuids> data;
+
+  GuidsSuccess({required this.data});
+}
+
+class GuidsFailed extends TimeState {
+  final String message;
+
+  GuidsFailed({required this.message});
+}
+
+// [Guids Detail]
+class GuidsDetailLoading extends TimeState {}
+
+class GuidsDetailSuccess extends TimeState {
+  final List<GuidsDetailModel> data;
+
+  GuidsDetailSuccess({required this.data});
+}
+
+class GuidsDetailFailed extends TimeState {
+  final String message;
+
+  GuidsDetailFailed({required this.message});
 }
