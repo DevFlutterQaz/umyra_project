@@ -25,13 +25,6 @@ class MainProfileContent extends StatelessWidget {
                 text: 'Менің деректерім',
                 onTap: () =>
                     context.router.push(const MyInformationScreenRoute())),
-            CustomProfileButton(
-                text: 'Сатып алынған қызметтер',
-                onTap: () =>
-                    context.router.push(const BoughtServicesScreenRoute())),
-            CustomProfileButton(
-                text: 'Менің карталарым',
-                onTap: () => context.router.push(const MyCardsScreenRoute())),
           ],
         ),
       ),
