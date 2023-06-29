@@ -52,4 +52,5 @@ class AppSvgImages {
   static const String phone2 = 'assets/images/svg/phone_2.svg';
   static const String mail2 = 'assets/images/svg/mail_2.svg';
   static const String saparLogo = 'assets/images/svg/sapar.svg';
+  static const String vv = 'assets/images/svg/vv.svg';
 }

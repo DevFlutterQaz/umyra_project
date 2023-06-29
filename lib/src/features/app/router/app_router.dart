@@ -24,6 +24,7 @@ import 'package:umyra/src/features/screens/home/pages/course/tawaf/tawaf3.dart';
 import 'package:umyra/src/features/screens/home/pages/course/tawaf/tawaf_main.dart';
 import 'package:umyra/src/features/screens/home/pages/course/tawaf/tawag1.dart';
 import 'package:umyra/src/features/screens/home/pages/location_page.dart';
+import 'package:umyra/src/features/screens/home/pages/main_calendar.dart';
 import 'package:umyra/src/features/screens/home/pages/namaz_page.dart';
 import 'package:umyra/src/features/screens/home/pages/navigation_page.dart';
 import 'package:umyra/src/features/screens/home/pages/pdf_viewer_page%20copy.dart';
@@ -221,6 +222,10 @@ part 'app_router.gr.dart';
           AutoRoute(
             page: QiblaScreen,
             path: 'qiblascreen',
+          ),
+          AutoRoute(
+            page: MainCalendarPage,
+            path: 'maincalendar',
           ),
         ],
       ),

@@ -20,28 +20,30 @@ class CalendarScreen extends StatelessWidget {
         body: BlocBuilder<TimeBloc, TimeState>(
           builder: (context, state) {
             if (state is EventSuccess) {
-              return SafeArea(
-                child: Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      end: Alignment.bottomCenter,
-                      begin: Alignment.topCenter,
-                      colors: [
-                        Color(0xff14BCC2),
-                        Color(0xff14BCC2),
-                        Color(0xff025452),
-                      ],
-                    ),
+              return Container(
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    end: Alignment.bottomCenter,
+                    begin: Alignment.topCenter,
+                    colors: [
+                      Color(0xff14BCC2),
+                      Color(0xff14BCC2),
+                      Color(0xff025452),
+                    ],
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 19),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        const ColumnSpacer(1),
-                        const CustomAppBar(title: 'Calendar'),
-                        const ColumnSpacer(2),
-                        Expanded(
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 19),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      const ColumnSpacer(6),
+                      const CustomAppBar(title: 'Calendar'),
+                      const ColumnSpacer(2),
+                      MediaQuery.removePadding(
+                        context: context,
+                        removeTop: true,
+                        child: Expanded(
                           child: ListView.separated(
                             itemBuilder: (context, index) => CustomEventWidget(
                                 eventData: state.eventData[index]),
@@ -50,9 +52,9 @@ class CalendarScreen extends StatelessWidget {
                             itemCount: state.eventData.length,
                           ),
                         ),
-                        const ColumnSpacer(0.8),
-                      ],
-                    ),
+                      ),
+                      const ColumnSpacer(0.8),
+                    ],
                   ),
                 ),
               );
