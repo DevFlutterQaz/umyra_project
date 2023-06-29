@@ -50,4 +50,5 @@ class AppImages {
   static const String tt = 'assets/images/png/tt.png';
   static const String tt1 = 'assets/images/png/tt2.png';
   static const String umraQibla = 'umra_qibla.jpg';
+  static const String ss = 'assets/images/png/ss.png';
 }
