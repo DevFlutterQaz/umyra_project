@@ -7,6 +7,7 @@ import 'package:umyra/src/core/widgets/column_spacer.dart';
 import 'package:umyra/src/core/widgets/custom_app_bar.dart';
 import 'package:umyra/src/core/widgets/row_spacer.dart';
 import 'package:umyra/src/features/app/router/app_router.dart';
+import 'package:umyra/src/features/screens/home/pages/course/tawaf/tawaf_data.dart';
 import 'package:umyra/src/features/screens/home/widgets/zamok_btn.dart';
 
 class CouseTawafPage extends StatelessWidget {
@@ -87,7 +88,8 @@ class CouseTawafPage extends StatelessWidget {
                     ),
                     const ColumnSpacer(4),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () =>
+                          context.router.push(CourseTawaf3PageRoute(title: 'Tawaf1', index: 1, list: TawafData().list[0], subTitle: TawafData().title[0])),
                       child: Container(
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
