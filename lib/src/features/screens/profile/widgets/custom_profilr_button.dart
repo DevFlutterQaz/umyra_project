@@ -30,7 +30,9 @@ class CustomProfileButton extends StatelessWidget {
                 ? MainAxisAlignment.spaceBetween
                 : MainAxisAlignment.start,
             children: [
-              Text(text, style: Theme.of(context).textTheme.titleLarge),
+              Text(text,
+                  style: const TextStyle(
+                      fontSize: 18, fontWeight: FontWeight.w600)),
               language ? const Spacer() : Container(),
               language
                   ? Text(
@@ -42,7 +44,10 @@ class CustomProfileButton extends StatelessWidget {
                     )
                   : Container(),
               const RowSpacer(1.2),
-              SvgPicture.asset(AppSvgImages.next)
+              SvgPicture.asset(
+                AppSvgImages.next,
+                color: AppColors.contentBlue,
+              )
             ],
           ),
         ),

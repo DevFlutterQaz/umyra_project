@@ -15,44 +15,56 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Profile',
-          style: Theme.of(context)
-              .textTheme
-              .headlineSmall
-              ?.copyWith(fontWeight: FontWeight.w500),
-        ),
-        backgroundColor: AppColors.background,
-        elevation: 0,
-      ),
       body: SafeArea(
-        child: ListView(
-          children: [
-            const ColumnSpacer(2),
-            const CustomProfileAvatar(),
-            const ColumnSpacer(0.8),
-            Text(
-              'Балабек Динмухамед',
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.headlineSmall,
-            ),
-            const ColumnSpacer(2),
-            const MainProfileContent(),
-            const ColumnSpacer(1.2),
-            const QuestionProfileContent(),
-            const ColumnSpacer(1.2),
-            const OtherProfileContent(),
-            const ColumnSpacer(1.2),
-            CustomExitButton(
-              onTap: () => showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return const ModalMessage();
-                  }),
-            ),
-            const ColumnSpacer(1.2),
-          ],
+        child: Container(
+          decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  end: Alignment.bottomCenter,
+                  begin: Alignment.topCenter,
+                  colors: [
+                Color(0xff14BCC2),
+                Color(0xff14BCC2),
+                Color(0xff025452),
+              ])),
+          child: ListView(
+            children: [
+              const ColumnSpacer(2),
+              Align(
+                alignment: Alignment.center,
+                child: Text(
+                  'Authorization',
+                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                      fontWeight: FontWeight.w700, color: AppColors.whiteColor),
+                ),
+              ),
+              const ColumnSpacer(2),
+              const CustomProfileAvatar(),
+              const ColumnSpacer(0.8),
+              const Text(
+                'Sultan Qondybai',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: AppColors.whiteColor,
+                    fontSize: 25,
+                    fontWeight: FontWeight.w500),
+              ),
+              const ColumnSpacer(2),
+              const MainProfileContent(),
+              const ColumnSpacer(1.2),
+              const QuestionProfileContent(),
+              const ColumnSpacer(1.2),
+              const OtherProfileContent(),
+              const ColumnSpacer(1.2),
+              CustomExitButton(
+                onTap: () => showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return const ModalMessage();
+                    }),
+              ),
+              const ColumnSpacer(1.2),
+            ],
+          ),
         ),
       ),
     );

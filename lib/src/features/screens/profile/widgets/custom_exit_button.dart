@@ -24,10 +24,18 @@ class CustomExitButton extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SvgPicture.asset(AppSvgImages.exit),
+                SvgPicture.asset(
+                  AppSvgImages.exit,
+                  color: AppColors.contentBlue,
+                ),
                 const RowSpacer(1),
-                Text('Шығу', style: Theme.of(context).textTheme.titleLarge),
+                const Text('Шығу',
+                    style: TextStyle(
+                        color: AppColors.contentBlue,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500)),
               ],
             ),
           ),

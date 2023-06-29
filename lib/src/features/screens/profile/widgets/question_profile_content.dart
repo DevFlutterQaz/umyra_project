@@ -25,13 +25,6 @@ class QuestionProfileContent extends StatelessWidget {
                 text: 'Жоба туралы',
                 onTap: () =>
                     context.router.push(const AboutProjectScreenRoute())),
-            CustomProfileButton(
-                text: 'FAQ',
-                onTap: () => context.router.push(const FaqScreenRoute())),
-            CustomProfileButton(
-                text: 'Техникалық қолдау',
-                onTap: () =>
-                    context.router.push(const TechnicalSupportScreenRoute())),
           ],
         ),
       ),
