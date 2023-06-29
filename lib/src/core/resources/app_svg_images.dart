@@ -49,4 +49,7 @@ class AppSvgImages {
   static const String whatsappLogo = 'assets/images/svg/whatsappLogo.svg';
   static const String telegaLogo = 'assets/images/svg/telegaLogo.svg';
   static const String bookread = 'assets/images/svg/bookread.svg';
+  static const String phone2 = 'assets/images/svg/phone_2.svg';
+  static const String mail2 = 'assets/images/svg/mail_2.svg';
+  static const String saparLogo = 'assets/images/svg/sapar.svg';
 }

@@ -2,9 +2,9 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:umyra/src/core/dependencies/injection_container.dart';
+import 'package:umyra/src/core/resources/app_colors.dart';
 import 'package:umyra/src/core/widgets/alert_widgets.dart';
 import 'package:umyra/src/core/widgets/column_spacer.dart';
-import 'package:umyra/src/core/widgets/custom_app_bar.dart';
 import 'package:umyra/src/core/widgets/custom_button.dart';
 import 'package:umyra/src/features/app/router/app_router.dart';
 import 'package:umyra/src/features/screens/auth/logic/bloc/auth_bloc.dart';
@@ -33,10 +33,22 @@ class _LogInScreenState extends State<LogInScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  const CustomAppBar(title: 'Авторизация'),
-                  const ColumnSpacer(6),
+                  const ColumnSpacer(2),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      'Authorization',
+                      style: Theme.of(context)
+                          .textTheme
+                          .headlineSmall
+                          ?.copyWith(
+                              fontWeight: FontWeight.w700,
+                              color: AppColors.contentBlue),
+                    ),
+                  ),
+                  const ColumnSpacer(10),
                   Text(
-                    'Қош келдіңіз',
+                    'Welcome!',
                     style: Theme.of(context)
                         .textTheme
                         .headlineSmall
@@ -65,11 +77,23 @@ class _LogInScreenState extends State<LogInScreen> {
                           : null;
                     },
                     builder: (context, state) {
-                      return CustomButton(
-                        label: 'Кіру',
-                        onPressed: () => context.read<AuthBloc>().add(LogInUser(
-                            userName: userNameController.text,
-                            password: passwordController.text)),
+                      return Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          CustomButton(
+                            label: 'Log in',
+                            onPressed: () => context.read<AuthBloc>().add(
+                                LogInUser(
+                                    userName: userNameController.text,
+                                    password: passwordController.text)),
+                          ),
+                          const ColumnSpacer(2),
+                          CustomButton(
+                            label: 'Регистрация',
+                            onPressed: () => context.router
+                                .push(const RegisterScreenRoute()),
+                          ),
+                        ],
                       );
                     },
                   ),

@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +7,7 @@ class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
     required this.onPressed,
-    this.color = AppColors.greenColor,
+    this.color = AppColors.contentBlue,
     required this.label,
   });
   final VoidCallback onPressed;
@@ -25,11 +24,10 @@ class CustomButton extends StatelessWidget {
       child: Text(
         label.toUpperCase(),
         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-              color: color == AppColors.greenColor
-                  ? AppColors.whiteColor
-                  : AppColors.greenColor,
+              color: color == AppColors.whiteColor
+                  ? Colors.blue
+                  : AppColors.whiteColor,
             ),
-
       ),
     );
   }

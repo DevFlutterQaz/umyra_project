@@ -22,17 +22,9 @@ class OtherProfileContent extends StatelessWidget {
         child: Column(
           children: [
             CustomProfileButton(
-                text: 'Тіл өзгерту',
-                language: true,
-                onTap: () => context.router.push(const LanguageScreenRoute())),
-            CustomProfileButton(
                 text: 'Құпия сөзді өзгерту',
                 onTap: () =>
                     context.router.push(const NewPasswordScreenRoute())),
-            CustomProfileButton(
-                text: 'Хабарлама',
-                onTap: () =>
-                    context.router.push(const MessageNoteScreenRoute())),
           ],
         ),
       ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:umyra/src/core/resources/app_colors.dart';
 import 'package:umyra/src/core/widgets/column_spacer.dart';
-import 'package:umyra/src/core/widgets/custom_app_bar.dart';
+import 'package:umyra/src/core/widgets/custom_app_bar_blue.dart';
 import 'package:umyra/src/features/screens/home/widgets/city_country.dart';
 import 'package:umyra/src/features/screens/home/widgets/search_text.dart';
 
@@ -18,7 +18,7 @@ class LocationScreen extends StatelessWidget {
           children: [
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 19),
-              child: CustomAppBar(
+              child: CustomAppBarBlue(
                 title: 'Местоположение',
               ),
             ),
