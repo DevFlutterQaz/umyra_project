@@ -36,4 +36,5 @@ class AppImages {
   static const String namazAqsham = 'aqsham_namaz.jpg';
   static const String namazIsha = 'isha_namaz.jpg';
   static const String namazIshaUtir = 'utir_uazhip_namaz.jpg';
+  static const String umraQibla = 'umra_qibla.jpg';
 }
