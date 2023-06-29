@@ -43,10 +43,10 @@ class NavigationScreen extends StatelessWidget {
                                 navigationData: state.navigationData[index]),
                             separatorBuilder: (context, index) =>
                                 const ColumnSpacer(0.8),
-                            itemCount: state.navigationData.length,
+                            itemCount: 1,
                           ),
                         ),
-                        const ColumnSpacer(0.8)
+                        const ColumnSpacer(0.8),
                       ],
                     ),
                   ),

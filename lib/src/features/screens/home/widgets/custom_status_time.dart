@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:slide_digital_clock/slide_digital_clock.dart';
@@ -78,12 +76,30 @@ class StatusTimeCustomWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                NamazTime(name: 'Таң', time: namazData.time.fajr),
-                NamazTime(name: 'Күн', time: namazData.time.sunrise),
-                NamazTime(name: 'Бесін', time: namazData.time.sunrise),
-                NamazTime(name: 'Екінті', time: namazData.time.dhuhr),
-                NamazTime(name: 'Шам', time: namazData.time.asr),
-                NamazTime(name: 'Құптан', time: namazData.time.isha),
+                NamazTime(
+                    name: 'Таң',
+                    time: namazData.time.fajr,
+                    namazData: namazData),
+                NamazTime(
+                    name: 'Күн',
+                    time: namazData.time.sunrise,
+                    namazData: namazData),
+                NamazTime(
+                    name: 'Бесін',
+                    time: namazData.time.dhuhr,
+                    namazData: namazData),
+                NamazTime(
+                    name: 'Екінті',
+                    time: namazData.time.asr,
+                    namazData: namazData),
+                NamazTime(
+                    name: 'Шам',
+                    time: namazData.time.maghrib,
+                    namazData: namazData),
+                NamazTime(
+                    name: 'Құптан',
+                    time: namazData.time.isha,
+                    namazData: namazData),
               ],
             ),
           ],

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:umyra/src/core/resources/app_colors.dart';
-import 'package:umyra/src/core/resources/resources.dart';
 import 'package:umyra/src/core/widgets/column_spacer.dart';
-import 'package:umyra/src/features/screens/tour/widgets/custom_tour_widget.dart';
-import 'package:umyra/src/features/screens/tour/widgets/custom_text_filed.dart';
+import 'package:umyra/src/features/screens/tour/widgets/custom_cards.dart';
 
 class TourScreen extends StatefulWidget {
   const TourScreen({super.key});
@@ -16,104 +14,99 @@ class _TourScreenState extends State<TourScreen> {
   TextEditingController fromController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'Umra&Hajj',
-            style: Theme.of(context)
-                .textTheme
-                .headlineSmall
-                ?.copyWith(fontWeight: FontWeight.w500),
-          ),
-          backgroundColor: AppColors.background,
-          elevation: 0,
-        ),
-        bottomNavigationBar: Padding(
-          padding: const EdgeInsets.all(19),
-          child: GestureDetector(
-            onTap: () {},
-            child: Container(
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: AppColors.whiteColor,
-                borderRadius: const BorderRadius.all(Radius.circular(12)),
-                boxShadow: kElevationToShadow[1],
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(16),
-                child: Text(
-                  'Confirm',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context)
-                      .textTheme
-                      .titleMedium
-                      ?.copyWith(fontWeight: FontWeight.w500),
-                ),
-              ),
+    return Scaffold(
+      body: SafeArea(
+        child: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              end: Alignment.bottomCenter,
+              begin: Alignment.topCenter,
+              colors: [
+                Color(0xff14BCC2),
+                Color(0xff14BCC2),
+                Color(0xff025452),
+              ],
             ),
           ),
-        ),
-        body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 19),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                const ColumnSpacer(3.2),
-                Container(
-                  decoration: const BoxDecoration(
-                    color: AppColors.whiteColor,
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                  ),
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 0, vertical: 16),
-                    child: Column(
-                      children: [
-                        CustomTextField(
-                            palceholder: 'Откуда', controller: fromController),
-                        const Divider(color: AppColors.lightgrayColor6),
-                        CustomTextField(
-                            palceholder: 'Куда', controller: fromController),
-                      ],
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  const ColumnSpacer(1),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      'Umra',
+                      style:
+                          Theme.of(context).textTheme.headlineSmall?.copyWith(
+                        fontWeight: FontWeight.w700,
+                        color: AppColors.whiteColor,
+                        shadows: [
+                          const Shadow(
+                            offset: Offset(0, 6),
+                            blurRadius: 30.0,
+                            color: Color.fromARGB(255, 0, 0, 0),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                const ColumnSpacer(1),
-                CustomTourWidget(
-                  onTap: () {},
-                  label: 'Месяц поездки',
-                  text: 'Май',
-                  icon: AppSvgImages.calendar2,
-                ),
-                const ColumnSpacer(1),
-                CustomTourWidget(
-                  onTap: () {},
-                  label: 'Количество людей',
-                  text: '1 взрослый',
-                  icon: AppSvgImages.users,
-                ),
-                const ColumnSpacer(1),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    CustomTourWidget(
-                      onTap: () {},
-                      label: 'Вид поездки',
-                      text: 'Умра',
-                      icon: AppSvgImages.glob,
-                    ),
-                    CustomTourWidget(
-                      onTap: () {},
-                      label: 'Тариф',
-                      text: 'Комфорт',
-                      icon: AppSvgImages.tarif,
-                    ),
-                  ],
-                ),
-              ],
+                  const ColumnSpacer(2),
+                  const CustomCards(
+                    data: 'Дата : 11.06.2023 - 25.06.2023',
+                    title: 'Atlas Tourism',
+                    cost: '1 000 000 ₸',
+                    costName: 'Стоимость',
+                    mesto: 'Количество мест : 50',
+                    phoneNumber: '+7 708 235 79 87',
+                    plane: 'Air Astana',
+                    // telegramAppFunc: () {
+                    //   launchUrl(Uri.parse('https://t.me/sltnkondy'));
+                    // },
+                  ),
+                  const ColumnSpacer(2),
+                  const CustomCards(
+                    data: 'Дата : 16.08.2023 - 30.08.2023',
+                    title: 'Zam Zam Travel',
+                    cost: '930 000 ₸',
+                    costName: 'Стоимость',
+                    mesto: 'Количество мест : 30',
+                    phoneNumber: '+7 708 200 44 67',
+                    plane: 'Air Astana',
+                    // telegramAppFunc: () {
+                    //   launchUrl(Uri.parse('https://t.me/sltnkondy'));
+                    // },
+                  ),
+                  const ColumnSpacer(2),
+                  const CustomCards(
+                    data: 'Дата : 06.09.2023 - 20.09.2023',
+                    title: 'Atlas Tourism',
+                    cost: '1 080 000 ₸',
+                    costName: 'Стоимость',
+                    mesto: 'Количество мест : 25',
+                    phoneNumber: '+7 747 050 56 10',
+                    plane: 'Scat Airlines',
+                    // telegramAppFunc: () {
+                    //   launchUrl(Uri.parse('https://t.me/sltnkondy'));
+                    // },
+                  ),
+                  const ColumnSpacer(2),
+                  const CustomCards(
+                    data: 'Дата : 15.10.2023 - 29.10.2023',
+                    title: 'Alash Travel',
+                    cost: '700 000 ₸',
+                    costName: 'Стоимость',
+                    mesto: 'Количество мест : 35',
+                    phoneNumber: '+7 747 050 56 10',
+                    plane: 'Air Astana',
+                    // telegramAppFunc: () {
+                    //   launchUrl(Uri.parse('https://t.me/sltnkondy'));
+                    // },
+                  ),
+                  const ColumnSpacer(2),
+                ],
+              ),
             ),
           ),
         ),
