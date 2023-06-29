@@ -16,6 +16,13 @@ class QiblaScreen extends StatefulWidget {
 class _QiblaScreenState extends State<QiblaScreen> {
   bool hasPermissions = false;
   @override
+  void initState() {
+    super.initState();
+
+    _fetchPermissionStatus();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
@@ -79,8 +86,7 @@ class _QiblaScreenState extends State<QiblaScreen> {
           child: Transform.rotate(
             angle: (direction * (math.pi / 180) * -1),
             child: Image.asset(
-              'assets/compass.png',
-              color: Colors.white,
+              'assets/images/png/frame.png',
               fit: BoxFit.fill,
             ),
           ),
